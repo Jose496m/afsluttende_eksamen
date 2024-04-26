@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets";
+import højre from "../assets/images/forside1.png";
+import venstre from "../assets/images/forside2.png";
+---
+
+<section>
+  <div class="flex">
+    <Image class="pic" src={venstre} alt="venstre" />
+
+    <Image class="pic" src={højre} alt="højre" />
+  </div>
+</section>
+
+<style>
+  .flex {
+    display: flex;
+  }
+  .pic {
+    width: 50%;
+  }
+</style>

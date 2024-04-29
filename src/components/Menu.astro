@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+import logo from "../assets/images/logo.png";
+import bag from "../assets/images/shoppingbag.png";
+const { variant } = Astro.props;
+---
+
+<nav class={variant}>
+  <ul>
+    <li><a href="/"><Image class="logo" src={logo} alt="logo" /></a></li>
+    <div class="liste">
+      <li><a href="/about">ABOUT</a></li>
+      <li><a href="/analyse">ANALYSE</a></li>
+      <li><a href="/shop">SHOP</a></li>
+    </div>
+    <li><Image class="bag" src={bag} alt="bag" /></li>
+  </ul>
+</nav>
+
+<style>
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+  }
+
+  .liste {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    gap: 12px;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    margin-left: 194px;
+  }
+  .bag {
+    margin-left: 390px;
+    width: 40px;
+    height: auto;
+  }
+  .logo {
+    width: 60px;
+    height: auto;
+  }
+</style>

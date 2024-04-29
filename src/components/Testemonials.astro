@@ -1,0 +1,61 @@
+---
+import { Image } from "astro:assets";
+import testemonials from "../assets/images/testemonials.png";
+---
+
+<section class="slideshow">
+  <div class="flex">
+    <Image class="pic" src={testemonials} alt="testemonials" />
+    <Image class="pic" src={testemonials} alt="testemonials" />
+    <Image class="pic" src={testemonials} alt="testemonials" />
+  </div>
+</section>
+
+<script>
+  const pics = [
+    "path/to/your/image1.jpg",
+    "path/to/your/image2.jpg",
+    "path/to/your/image3.jpg",
+    "path/to/your/image4.jpg",
+    "path/to/your/image5.jpg",
+    "path/to/your/image6.jpg",
+  ];
+  let currentIndex = 0;
+  const picElements = document.querySelectorAll(".pic");
+
+  function showNextSet() {
+    currentIndex = (currentIndex + 1) % pics.length;
+    for (let i = 0; i < picElements.length; i++) {
+      const newIndex = (i + currentIndex) % pics.length;
+      picElements[i].src = pics[newIndex];
+    }
+  }
+
+  function startSlideshow() {
+    setInterval(showNextSet, 4000); // Skift sæt hvert 4. sekund
+  }
+
+  startSlideshow();
+</script>
+
+<style>
+  section {
+    background-color: #46433b;
+  }
+
+  .slideshow {
+    background-color: #46433b;
+    overflow: hidden;
+  }
+
+  .flex {
+    display: flex;
+    gap: 50px;
+  }
+
+  .pic {
+    width: 250px;
+    height: auto;
+    transition: opacity 1s ease-in-out; /* Tilføj eventuelt en overgangseffekt */
+  }
+</style>

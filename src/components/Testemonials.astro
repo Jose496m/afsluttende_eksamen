@@ -1,61 +1,124 @@
 ---
 import { Image } from "astro:assets";
-import testemonials from "../assets/images/testemonials.png";
+import testimonials from "../assets/images/testimonials1.png";
+import test from "../assets/images/test2.png";
+import test2 from "../assets/images/test.png";
 ---
 
 <section class="slideshow">
-  <div class="flex">
-    <Image class="pic" src={testemonials} alt="testemonials" />
-    <Image class="pic" src={testemonials} alt="testemonials" />
-    <Image class="pic" src={testemonials} alt="testemonials" />
+  <div class="container">
+    <div class="slider-wrapper">
+      <div class="image-list" id="imageList">
+        <Image class="picture pic7" src={testimonials} alt="testemonials" />
+        <Image class="picture" src={test} alt="testemonials" id="img1" />
+        <Image class="picture" src={test2} alt="testemonials" id="img2" />
+        <Image
+          class="picture"
+          src={testimonials}
+          alt="testemonials"
+          id="img3"
+        />
+        <Image class="picture" src={test} alt="testemonials" id="img4" />
+        <Image class="picture" src={test2} alt="testemonials" id="img5" />
+      </div>
+    </div>
+    <div class="slider-scrollbar">
+      <div class="scrollbar-track">
+        <div class="scrollbar-thumb"></div>
+      </div>
+    </div>
   </div>
 </section>
 
 <script>
-  const pics = [
-    "path/to/your/image1.jpg",
-    "path/to/your/image2.jpg",
-    "path/to/your/image3.jpg",
-    "path/to/your/image4.jpg",
-    "path/to/your/image5.jpg",
-    "path/to/your/image6.jpg",
-  ];
-  let currentIndex = 0;
-  const picElements = document.querySelectorAll(".pic");
+  const images = ["testimonials1.png", "test2.png", "test.png"];
 
-  function showNextSet() {
-    currentIndex = (currentIndex + 1) % pics.length;
-    for (let i = 0; i < picElements.length; i++) {
-      const newIndex = (i + currentIndex) % pics.length;
-      picElements[i].src = pics[newIndex];
+  let currentIndex = 0;
+  const imageList = document.getElementById("imageList");
+
+  function changeImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    const imageUrl = images[currentIndex];
+    const currentImage = document.createElement("img");
+    currentImage.classList.add("picture");
+    currentImage.src = imageUrl;
+    currentImage.alt = "testimonials";
+    imageList.appendChild(currentImage);
+    const imagesToRemove = document.querySelectorAll(".picture");
+    if (imagesToRemove.length > 3) {
+      imagesToRemove[0].remove();
     }
   }
 
-  function startSlideshow() {
-    setInterval(showNextSet, 4000); // Skift sæt hvert 4. sekund
-  }
-
-  startSlideshow();
+  setInterval(changeImage, 4000); // Skift hvert 3. sekund (3000 ms)
 </script>
 
 <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
   section {
-    background-color: #46433b;
+    background-color: #120f0c;
+    padding: 100px;
   }
-
-  .slideshow {
-    background-color: #46433b;
-    overflow: hidden;
+  .slider-wrapper .image-list {
+    display: grid;
+    gap: 140px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    grid-template-columns: repeat(6, 1fr);
   }
-
-  .flex {
-    display: flex;
-    gap: 50px;
+  .slider-wrapper .image-list::-webkit-scrollbar {
+    display: none;
   }
-
-  .pic {
-    width: 250px;
+  .slider-wrapper .image-list .pic {
+    width: 420px;
     height: auto;
-    transition: opacity 1s ease-in-out; /* Tilføj eventuelt en overgangseffekt */
+    object-fit: cover;
+  }
+  .container {
+    max-width: 1600px;
+    width: 95%;
+  }
+
+  .container .slider-scrollbar {
+    height: 24px;
+    widows: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .slider-scrollbar .scrollbar-track {
+    height: 2px;
+    width: 100%;
+
+    position: relative;
+    border-radius: 4px;
+  }
+
+  .slider-scrollbar .scrollbar-thumb {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    border-radius: inherit;
+  }
+
+  .slider-scrollbar .scrollbar-thumb::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+  }
+  .pic7 {
+    margin-left: -120px;
+  }
+  .picture {
+    width: 400px;
+    height: auto;
   }
 </style>

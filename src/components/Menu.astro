@@ -18,32 +18,34 @@ const { variant } = Astro.props;
 </nav>
 
 <style>
-  ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    list-style: none;
-  }
+  @media (min-width: 1025px) {
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      list-style: none;
+    }
 
-  .liste {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    align-items: center;
-    gap: 12px;
-  }
-  a {
-    text-decoration: none;
-    color: black;
-    margin-left: 194px;
-  }
-  .bag {
-    margin-left: 390px;
-    width: 40px;
-    height: auto;
-  }
-  .logo {
-    width: 60px;
-    height: auto;
+    .liste {
+      display: flex;
+      flex-direction: row;
+      justify-content: end;
+      align-items: center;
+      gap: 12px;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+      margin-left: 194px;
+    }
+    .bag {
+      margin-left: 390px;
+      width: 40px;
+      height: auto;
+    }
+    .logo {
+      width: 60px;
+      height: auto;
+    }
   }
 </style>

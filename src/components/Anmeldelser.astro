@@ -1,0 +1,132 @@
+---
+import { Image } from "astro:assets";
+import testimonials from "../assets/images/testimonials1.png";
+import test from "../assets/images/test2.png";
+import test2 from "../assets/images/test.png";
+---
+
+<section>
+  <div class="slider background body">
+    <div class="slide-track">
+      <div class="slide">
+        <Image class="pic1" src={testimonials} alt="testimonials" />
+      </div>
+      <div class="slide">
+        <Image class="pic1" src={test} alt="testimonials" id="img1" />
+      </div>
+      <div class="slide">
+        <Image class="pic1" src={test2} alt="testimonials" id="img2" />
+      </div>
+      <div class="slide">
+        <Image class="pic1" src={testimonials} alt="testimonials" />
+      </div>
+      <div class="slide">
+        <Image class="pic1" src={test} alt="testimonials" id="img1" />
+      </div>
+      <div class="slid">
+        <Image class="pic1" src={test2} alt="testimonials" id="img2" />
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  @media (min-width: 1025px) {
+    section {
+      display: grid;
+      place-items: center;
+    }
+    .background {
+      background-color: #120f0c;
+      padding: 100px;
+    }
+    .slider {
+      margin: auto;
+      position: relative;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+    .slide-track {
+      display: flex;
+      width: calc(230px * 6);
+      animation: scroll 20s linear infinite;
+    }
+
+    .slide-track:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-240px * 3));
+      }
+    }
+
+    .slide {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      perspective: 100px;
+    }
+    .pic1 {
+      width: 400px;
+      height: 400px;
+    }
+
+    img:hover {
+      transform: translateZ(10px);
+    }
+
+    .slider::before {
+      left: 0;
+      top: 0;
+    }
+  }
+
+  @media (max-width: 999px) {
+    section {
+      display: grid;
+      place-items: center;
+      width: 1600px;
+    }
+    .background {
+      background-color: #120f0c;
+      padding: 100px;
+      width: 100%;
+    }
+    .slider {
+      position: relative;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+    .slide-track {
+      display: flex;
+      width: calc(230px * 3);
+      animation: scroll 20s linear infinite;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-240px * 3));
+      }
+    }
+
+    .slide {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      perspective: 100px;
+    }
+    .pic1 {
+      width: 1000px;
+      height: 900px;
+    }
+  }
+</style>

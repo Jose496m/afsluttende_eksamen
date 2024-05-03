@@ -1,0 +1,273 @@
+---
+import { Image, imageConfig } from "astro:assets";
+import abouthero from "../assets/images/heropic.png";
+import about2 from "../assets/images/about2.png";
+import about3 from "../assets/images/about3.png";
+import about5 from "../assets/images/about5.png";
+import about4 from "../assets/images/about4.png";
+import Menu from "./Menu.astro";
+import Menumobil from "./Menumobil.astro";
+---
+
+<section>
+  <div class="menu1"><Menumobil /></div>
+  <div class="menu"><Menu /></div>
+  <Image class="abouthero" src={abouthero} alt="abouthero" />
+  <div class="baggrundsfarve">
+    <h1>ABOUT THE BRAND</h1>
+    <p class="about">
+      Welcome to I AM Skincare - where self-love meets conscious beauty. Our
+      ethos revolves around crafting vegan skincare products that embody
+      self-care, mindfulness, and ethical practices. Rooted in the principles of
+      cleanliness, organic sourcing, and ethical production, our beauty line is
+      a testament to purity and integrity. Each product is lovingly handcrafted
+      and meticulously formulated right here in Denmark, ensuring the highest
+      quality and freshness. With I AM, you can trust in skincare that not only
+      nourishes your skin but also aligns with your values. Embrace the power of
+      clean, organic, and ethical beauty - because when you love yourself, you
+      choose the best for your skin.
+    </p>
+  </div>
+</section>
+
+<section class="flex">
+  <div class="baggrund">
+    <div>
+      <Image class="illustration hidden" src={about4} alt="illustration" />
+    </div>
+    <h2 class="color">WHO ARE WE</h2>
+    <p class="color1">
+      We met in Copenhagen November 2019. Nelle, a holistic beauty expert, and
+      Blake, a photographer, both entrepreneurs sharing the same mission: to
+      bring more pleasure, presence, and nature into people's lives. Quickly
+      discovering our commonalities, we realized we were living parallel lives,
+      navigating life's profound questions, and always finding our way back to
+      our essence through nature.As partners, our mission and desires grew
+      clearer over the years. We aimed to craft products that nurture a profound
+      connection with oneself, elevating daily life by bringing more pleasure to
+      the everyday experience through nature's enchanting ingredients. Our
+      products transcend gender, race, skin color, and age, focusing on the
+      essence of the human being.
+    </p>
+  </div>
+  <div><Image class="about2" src={about2} alt="about2" /></div>
+</section>
+
+<section class="baggrund2">
+  <div class="center">
+    <h2 class="value2">OUR VALUES</h2>
+    <p class="value">
+      Embracing the philosophy of 'I AM', we believe in the transformative power
+      of energy, influenced by our thoughts and feelings. Choosing to embrace
+      life's positivity is a conscious decision. We aim to accompany you on this
+      journey, infusing our products with self-love, consciousness, and
+      empowering mantras. These mantras resonate wherever you are on your path,
+      a constant support in your journey.
+    </p>
+  </div>
+</section>
+
+<section class="flex1">
+  <div><Image class="about3" src={about3} alt="about3" /></div>
+  <div><Image class="about5" src={about5} alt="about5" /></div>
+  <div class="baggrund1">
+    <h2 class="center1">
+      Struggling to find the perfect match <br /> for your skin? Look no further!
+    </h2>
+    <p class="about4">
+      Our quick quiz is here to revolutionize your skincare routine and lead you
+      straight to your ideal match made in heaven. Whether you're battling with
+      dryness, breakouts, or simply seeking that coveted youthful glow, our
+      personalized quiz will analyze your unique needs and preferences to
+      pinpoint the perfect product for you. Say goodbye to guesswork and hello
+      to glowing, radiant skin! With just a few simple questions, you'll be on
+      your way to discovering the skincare solution you've been dreaming of.So
+      why wait?
+    </p>
+  </div>
+</section>
+
+<style>
+  body {
+    background-color: #f5f1eb;
+  }
+  @media (min-width: 1025px) {
+    .menu1 {
+      display: none;
+    }
+    .hidden {
+      display: none;
+    }
+    .menu {
+      position: absolute;
+      margin-top: 40px;
+      margin-left: -70px;
+    }
+    .abouthero {
+      height: 1300px;
+      width: 100%;
+    }
+    h1 {
+      position: absolute;
+      margin-top: 200px;
+      margin-left: 50px;
+      color: white;
+    }
+    .about {
+      position: absolute;
+      margin-top: 250px;
+      margin-left: 50px;
+      width: 500px;
+      color: white;
+    }
+    .flex {
+      display: flex;
+    }
+    .flex1 {
+      display: flex;
+    }
+    .baggrund {
+      background-color: #46433b;
+      padding: 170px;
+      margin-top: -5px;
+    }
+    .about2 {
+      margin-top: -5px;
+      width: 100%;
+    }
+    .color {
+      margin-top: -1300px;
+    }
+    .color1 {
+      width: 500px;
+    }
+    .center {
+      text-align: center;
+    }
+    .value {
+      width: 400px;
+      margin-left: 600px;
+    }
+    .value2 {
+      margin-top: 120px;
+    }
+    .center1 {
+      text-align: center;
+      margin-top: 250px;
+      margin-left: 90px;
+      color: white;
+    }
+    .about4 {
+      width: 500px;
+      margin-left: 150px;
+      color: white;
+    }
+    .about3 {
+      margin-top: 90px;
+    }
+    .baggrund1 {
+      background-color: #46433b;
+      height: 842px;
+      margin-top: 91px;
+      width: 850px;
+      margin-left: -580px;
+    }
+    .about5 {
+      margin-left: -640px;
+      margin-top: 1050px;
+      margin-bottom: 150px;
+    }
+  }
+
+  @media (max-width: 999px) {
+    .menu {
+      display: none;
+    }
+
+    .menu1 {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000; /* Sørg for, at Menumobil er øverst */
+    }
+    .baggrundsfarve {
+      background-color: #46433b;
+      width: 100%;
+      padding: 374px;
+      margin-top: -10px;
+    }
+    h1 {
+      color: white;
+    }
+    .about {
+      color: white;
+    }
+    .abouthero {
+      height: 1300px;
+      width: 1712px;
+    }
+    .illustration {
+      width: 1710px;
+      height: 360px;
+    }
+
+    .baggrund {
+    }
+    .about2 {
+      margin-top: -5px;
+      width: 1712px;
+      height: 1500px;
+    }
+    .color {
+      margin-left: 650px;
+      margin-top: 150px;
+    }
+    .color1 {
+      width: 860px;
+      margin-left: 445px;
+      margin-bottom: 150px;
+    }
+    .center {
+      text-align: center;
+      margin-left: 550px;
+    }
+    .value {
+      width: 600px;
+      color: white;
+      text-align: left;
+      margin-left: -50px;
+    }
+    .value2 {
+      margin-top: 120px;
+      margin-left: -450px;
+      color: white;
+    }
+    .center1 {
+      text-align: center;
+
+      margin-left: 90px;
+    }
+    .about4 {
+      width: 500px;
+      margin-left: 150px;
+    }
+    .about3 {
+      width: 1700px;
+      height: 1200px;
+    }
+    .baggrund1 {
+    }
+    .about5 {
+      margin-left: 275px;
+      margin-top: 150px;
+      margin-bottom: 150px;
+    }
+    .baggrund2 {
+      background-color: #46433b;
+      padding: 100px;
+      width: 1510px;
+      margin-top: -5px;
+    }
+  }
+</style>

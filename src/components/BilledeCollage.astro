@@ -31,13 +31,28 @@ import land4 from "../assets/images/land4.png";
       width: 100%;
     }
   }
-  @media (max-width: 999px) {
+
+  @media (min-width: 600px) and (max-width: 1024px) {
     .flex {
       display: flex;
     }
     .land {
       margin-top: 40px;
       width: 500px;
+      height: auto;
+    }
+    .hidden {
+      display: none;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .flex {
+      display: flex;
+    }
+    .land {
+      margin-top: 40px;
+      width: 815px;
       height: auto;
     }
     .hidden {

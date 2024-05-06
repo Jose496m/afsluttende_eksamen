@@ -2,12 +2,13 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Landingsite from "../components/Landingsite.astro";
 import Footer from "../components/Footer.astro";
-
 import Anmeldelser from "../components/Anmeldelser.astro";
 import BilledeCollage from "../components/BilledeCollage.astro";
 ---
 
-<Landingsite />
-<Anmeldelser />
-<BilledeCollage />
-<Footer />
+<BaseLayout>
+  <Landingsite />
+  <Anmeldelser />
+  <BilledeCollage />
+  <Footer />
+</BaseLayout>

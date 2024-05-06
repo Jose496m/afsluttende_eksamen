@@ -66,11 +66,11 @@ import Menumobil from "./Menumobil.astro";
   <div class="produkt">
     <div>
       <Image class="pic2" src={pro3} alt="pro1" />
-      <p>I AM HEALING <br /> FACE OIL <br /> 415 kr</p>
+      <p class="tekst">I AM HEALING <br /> FACE OIL <br /> 415 kr</p>
     </div>
     <div>
       <Image class="pic2" src={pro1} alt="pro1" />
-      <p>
+      <p class="tekst">
         I AM PURIFIED <br />
         FACE WASH <br />
         225 kr
@@ -78,7 +78,7 @@ import Menumobil from "./Menumobil.astro";
     </div>
     <div>
       <Image class="pic2" src={pro2} alt="pro1" />
-      <p>
+      <p class="tekst">
         I AM NOURISHED <br />
         BODY OIL <br />
         355 kr
@@ -174,7 +174,7 @@ import Menumobil from "./Menumobil.astro";
     }
   }
 
-  @media (max-width: 999px) {
+  @media (min-width: 600px) and (max-width: 1024px) {
     .menu1 {
       position: fixed;
       top: 0;
@@ -254,6 +254,105 @@ import Menumobil from "./Menumobil.astro";
     }
     p {
       margin-top: 50px;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .menu1 {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000; /* Sørg for, at Menumobil er øverst */
+    }
+    body {
+      background-color: #f5f1eb;
+      width: 100%;
+    }
+    .menu {
+      display: none;
+    }
+    .flex {
+      display: flex;
+    }
+    .pic {
+      margin-right: 335px;
+      width: 900px;
+      height: 1100px;
+    }
+    h3 {
+      margin-top: 144px;
+      margin-left: 100px;
+    }
+    .pic3 {
+      width: 500px;
+      height: auto;
+    }
+    .hero {
+      width: 220px;
+      margin-left: 80px;
+    }
+
+    h4 {
+      text-align: center;
+      padding: 100px;
+      margin-left: 400px;
+      width: 900px;
+      font-size: 43px;
+    }
+
+    .bestseller {
+      width: 1700px;
+      height: auto;
+    }
+
+    .bestseller1 {
+      background-color: #46433b;
+      padding: 100px;
+    }
+    .best {
+      margin-left: 600px;
+      color: white;
+      font-size: 50px;
+    }
+    .bestseller2 {
+      width: 730px;
+      margin-left: 464px;
+      margin-right: 300px;
+      margin-top: 30px;
+      color: white;
+      font-size: 30px;
+    }
+    .bestseller3 {
+      margin-left: 492px;
+      color: white;
+      width: 692px;
+      margin-top: 50px;
+      font-size: 50px;
+    }
+    .pic1 {
+      width: 100%;
+      height: auto;
+    }
+    .produkter {
+      margin-left: 600px;
+      margin-top: 150px;
+      font-size: 60px;
+    }
+    .pic2 {
+      margin-top: 250px;
+      margin-left: 400px;
+      width: 900px;
+    }
+    p {
+      margin-top: 50px;
+    }
+    .tekst {
+      margin-top: 50px;
+      margin-left: 708px;
+      width: 290px;
+      font-size: 40px;
+      margin-bottom: 150px;
     }
   }
 </style>

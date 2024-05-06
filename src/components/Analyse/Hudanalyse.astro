@@ -1,0 +1,152 @@
+---
+import { Image } from "astro:assets";
+import creme from "../../assets/images/cremebaggrund.png";
+
+import insta from "../../assets/images/instagram.png";
+import facebook from "../../assets/images/facebook.png";
+import Menu from "../Menu.astro";
+import Menumobil from "../Menumobil.astro";
+import BilledeCollageHud from "./BilledeCollageHud.astro";
+---
+
+<section class="header">
+  <div class="menu1"><Menumobil /></div>
+  <div class="menu"><Menu /></div>
+  <div>
+    <h1>SKIN ANALYSIS</h1>
+    <p class="hudanalyse">
+      Embracing the philosophy of 'I AM', we believe in the transformative power
+      of energy, influenced by our thoughts and feelings. Choosing to embrace
+      life's positivity is a conscious decision. We aim to accompany you on this
+      journey, infusing our products with self-love, consciousness, and
+      empowering mantras. These mantras resonate wherever you are on your path,
+      a constant support in.
+    </p>
+  </div>
+  <div>
+    <Image class="creme" src={creme} alt="creme" />
+  </div>
+</section>
+
+<section>
+  <div class="flex">
+    <div>
+      <h4>FOLLOW US ON OUR SOCIAL MEDIA</h4>
+
+      <a href="https://www.instagram.com/i.am.selfcare/">
+        <Image class="insta" src={insta} alt="insta" /></a
+      >
+    </div>
+    <div>
+      <BilledeCollageHud />
+    </div>
+  </div>
+</section>
+<section></section>
+
+<style>
+  @media (min-width: 1025px) {
+    body {
+      background-color: #f5f1eb;
+    }
+    .menu {
+      position: absolute;
+      margin-left: -70px;
+      margin-top: -100px;
+    }
+    .menu1 {
+      display: none;
+    }
+    .creme {
+      width: 40%;
+      margin-top: -50px;
+      margin-left: 191px;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 150px;
+    }
+    h4 {
+      margin-left: 69px;
+      margin-top: 50px;
+    }
+    .insta {
+      width: 65px;
+      margin-left: 126px;
+      margin-top: 10px;
+    }
+
+    .hudanalyse {
+      width: 600px;
+      margin-left: 500px;
+      margin-top: 50px;
+    }
+    .flex {
+      display: flex;
+      margin-top: 150px;
+    }
+  }
+
+  @media (min-width: 600px) and (max-width: 1024px) {
+    body {
+      background-color: #f5f1eb;
+    }
+    .menu {
+      display: none;
+    }
+    .creme {
+      width: 70%;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+    }
+    h4 {
+      margin-top: 10px;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+    .insta {
+      width: 45px;
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+
+    .hudanalyse {
+      width: 350px;
+      margin-left: 60px;
+      margin-top: 50px;
+    }
+  }
+  @media (max-width: 599px) {
+    body {
+      background-color: #f5f1eb;
+    }
+    .menu {
+      display: none;
+    }
+    .creme {
+      width: 70%;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+    }
+    h4 {
+      margin-top: 100px;
+      text-align: center;
+      font-size: 14px;
+    }
+    .insta {
+      width: 45px;
+      margin-left: 200px;
+      margin-top: 10px;
+    }
+
+    .hudanalyse {
+      width: 350px;
+      margin-left: 60px;
+      margin-top: 50px;
+    }
+  }
+</style>

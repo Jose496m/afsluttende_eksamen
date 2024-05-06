@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+import pic1 from "../../assets/images/insta1.png";
+import pic2 from "../../assets/images/insta2.png";
+import pic3 from "../../assets/images/insta3.png";
+import pic4 from "../../assets/images/insta4.png";
+---
+
+<section>
+  <div class="flex2">
+    <div class="grid">
+      <Image class="pic" src={pic1} alt="pic1" />
+      <Image class="pic" src={pic2} alt="pic2" />
+      <Image class="pic" src={pic3} alt="pic3" />
+      <Image class="pic" src={pic4} alt="pic4" />
+    </div>
+  </div>
+</section>
+
+<style>
+  @media (min-width: 1025px) {
+    .flex2 {
+      display: flex;
+    }
+    .pic {
+      width: 300px;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 2fr 2fr;
+    }
+  }
+</style>

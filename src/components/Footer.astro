@@ -13,17 +13,52 @@
 </section>
 
 <style>
-  section {
-    background-color: #120f0c;
+  @media (min-width: 1025px) {
+    section {
+      background-color: #120f0c;
+    }
+    .flex {
+      display: flex;
+      gap: 50px;
+    }
+    h1 {
+      color: white;
+    }
+    p {
+      color: white;
+    }
   }
-  .flex {
-    display: flex;
-    gap: 50px;
+
+  @media (min-width: 600px) and (max-width: 1024px) {
+    section {
+      background-color: #120f0c;
+    }
+    .flex {
+      display: flex;
+      gap: 50px;
+    }
+    h1 {
+      color: white;
+    }
+    p {
+      color: white;
+    }
   }
-  h1 {
-    color: white;
-  }
-  p {
-    color: white;
+
+  @media (max-width: 599px) {
+    section {
+      background-color: #120f0c;
+      padding: 100px;
+    }
+    .flex {
+      display: flex;
+      gap: 50px;
+    }
+    h1 {
+      color: white;
+    }
+    p {
+      color: white;
+    }
   }
 </style>

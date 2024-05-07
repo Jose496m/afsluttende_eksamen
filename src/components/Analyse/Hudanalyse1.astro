@@ -1,0 +1,131 @@
+---
+import Menu from "../Menu.astro";
+import Menumobil from "../Menumobil.astro";
+import HudAnalyseKnap from "./HudAnalyseKnap.astro";
+---
+
+<section>
+  <div class="menu1"><Menumobil /></div>
+  <div class="menu"><Menu /></div>
+  <div>
+    <h1>What is your skin type?</h1>
+    <p class="tekst">
+      Your skin tells its own story. So tell me, girl, what's your skin type? Is
+      it thirsty, oily, complicated, or oh-so-sensitive?
+    </p>
+  </div>
+</section>
+<section>
+  <div class="text">
+    <div>
+      <p class="boks"><input type="checkbox" />Dry</p>
+    </div>
+    <div>
+      <p class="boks"><input type="checkbox" />Oily</p>
+    </div>
+    <div>
+      <p class="boks"><input type="checkbox" /> Combination</p>
+    </div>
+    <div>
+      <p class="boks boks2"><input type="checkbox" />Normal</p>
+    </div>
+    <div>
+      <p class="boks boks2"><input type="checkbox" />Sensitive</p>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="button">
+    <a href="/Hudanalyse/analyse2"> <HudAnalyseKnap title="NEXT" /></a>
+  </div>
+</section>
+
+<style>
+  @media (min-width: 1025px) {
+    body {
+      background-image: url(../../assets/images/hudanalyse1.png);
+    }
+    .menu {
+      position: absolute;
+      margin-left: 30px;
+      margin-top: -100px;
+    }
+    .menu1 {
+      display: none;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 150px;
+    }
+    .tekst {
+      width: 450px;
+      text-align: center;
+      margin-left: 550px;
+      margin-top: 20px;
+    }
+
+    .text {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-top: -70px;
+    }
+
+    .boks input[type="checkbox"] {
+      /* Skjul den standard checkboks */
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      /* Opret en brugerdefineret checkboks */
+      width: 16px;
+      height: 16px;
+      position: relative;
+      border: 1px solid black;
+      border-radius: 20px; /* Gør kanterne lidt afrundede */
+      margin-right: 10px; /* Tilføj lidt plads mellem checkboksen og teksten */
+    }
+
+    /* Opret checkhakket inden i den brugerdefinerede checkboks */
+    .boks input[type="checkbox"]::before {
+      content: "\2713"; /* Brug unicode-tegnet for check-hakket */
+      font-size: 12px; /* Juster størrelsen efter behov */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: black; /* Farve på checkhakket */
+      opacity: 0; /* Start med at være usynlig */
+    }
+
+    /* Stil den brugerdefinerede checkboks, når den er markeret */
+    .boks input[type="checkbox"]:checked::before {
+      opacity: 1; /* Gør checkhakket synligt */
+    }
+
+    .boks {
+      border: 1px solid black;
+      background-color: transparent;
+      padding: 50px;
+      margin: 120px;
+      text-align: center;
+    }
+    .boks2 {
+      margin-top: -50px;
+    }
+    .button {
+      border: 1px solid black;
+      width: 200px;
+      height: 35px;
+      margin-left: 688px;
+      text-align: center;
+      color: black;
+      padding: 10px;
+      margin-top: 20px;
+      margin-top: -50px;
+    }
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      color: black;
+    }
+  }
+</style>

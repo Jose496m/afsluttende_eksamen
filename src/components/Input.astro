@@ -1,0 +1,55 @@
+---
+const { label, placeholder } = Astro.props;
+---
+
+<div class="grid">
+  <label class="label">
+    <input type="checkbox" class="checkbox" />
+    {label}
+    <span></span>
+  </label>
+  <input type="text" class="border" placeholder={placeholder} />
+</div>
+
+<script></script>
+
+<style>
+  @media (min-width: 1025px) {
+    .grid {
+      position: relative;
+    }
+    .border {
+      border: 1px solid black;
+      background-color: transparent;
+      padding: 20px;
+      text-align: center;
+      padding-left: 30px; /* Justering for at give plads til checkboxen */
+    }
+    .label {
+      position: absolute;
+      top: 50%;
+      left: 5px;
+
+      transform: translateY(-50%);
+    }
+    .checkbox {
+      position: absolute;
+      top: 50%;
+
+      transform: translateY(-50%);
+    }
+    .checkbox:hover {
+      cursor: pointer;
+    }
+    /* Style for hover-effekten */
+    .checkbox:checked + span::before {
+      content: "\2714"; /* Tilføj et check-tegn (✓) */
+      font-size: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: black; /* Farve på check-tegnet */
+    }
+  }
+</style>

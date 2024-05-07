@@ -1,0 +1,40 @@
+---
+import Menu from "../Menu.astro";
+import Menumobil from "../Menumobil.astro";
+---
+
+<section>
+  <div class="menu1"><Menumobil /></div>
+  <div class="menu"><Menu /></div>
+
+  <div class="plads1">
+    <h1>MEET YOUR MATCH</h1>
+    <p>I AM PURIFIED</p>
+  </div>
+</section>
+
+<style>
+  @media (min-width: 1025px) {
+    body {
+      background-color: #f5f1eb;
+    }
+
+    .menu {
+      position: absolute;
+      margin-left: 30px;
+      margin-top: 20px;
+    }
+    .menu1 {
+      display: none;
+    }
+    .plads1 {
+      text-align: center;
+    }
+    h1 {
+      margin-top: 150px;
+    }
+    p {
+      margin-top: 100px;
+    }
+  }
+</style>

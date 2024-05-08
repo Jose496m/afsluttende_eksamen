@@ -132,4 +132,90 @@ import HudAnalyseKnap from "./HudAnalyseKnap.astro";
       margin-top: 20px;
     }
   }
+  @media (max-width: 599px) {
+    body {
+      background-image: url(../../assets/images/hudanalyse1.png);
+    }
+
+    .menu {
+      display: none;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 150px;
+    }
+    .tekst {
+      width: 306px;
+      text-align: center;
+      margin-left: 53px;
+      margin-top: 20px;
+    }
+
+    .boks input[type="checkbox"] {
+      /* Skjul den standard checkboks */
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      /* Opret en brugerdefineret checkboks */
+      width: 16px;
+      height: 16px;
+
+      border: 1px solid black;
+      border-radius: 20px; /* Gør kanterne lidt afrundede */
+      margin-right: 10px; /* Tilføj lidt plads mellem checkboksen og teksten */
+    }
+
+    /* Opret checkhakket inden i den brugerdefinerede checkboks */
+    .boks input[type="checkbox"]::before {
+      content: "\2713"; /* Brug unicode-tegnet for check-hakket */
+      font-size: 12px; /* Juster størrelsen efter behov */
+
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: black; /* Farve på checkhakket */
+      opacity: 0; /* Start med at være usynlig */
+    }
+
+    /* Stil den brugerdefinerede checkboks, når den er markeret */
+    .boks input[type="checkbox"]:checked::before {
+      opacity: 1; /* Gør checkhakket synligt */
+    }
+
+    .boks {
+      border: 1px solid black;
+      background-color: transparent;
+      padding: 50px;
+      margin: 55px;
+      text-align: center;
+    }
+
+    .button {
+      border: 1px solid black;
+      width: 200px;
+      height: 35px;
+      text-align: center;
+      color: black;
+      padding: 10px;
+      margin-bottom: 70px;
+      margin-top: -30px;
+      margin-left: 120px;
+    }
+    .button2 {
+      border: 1px solid black;
+      width: 200px;
+      height: 35px;
+      text-align: center;
+      color: black;
+      padding: 10px;
+      margin-bottom: 70px;
+      margin-top: -30px;
+      margin-left: 120px;
+    }
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      color: black;
+    }
+  }
 </style>

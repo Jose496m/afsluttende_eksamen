@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+import hudtest from "../../assets/images/hudtest.png";
+import hudtest2 from "../../assets/images/hudtest2.png";
 import Menu from "../Menu.astro";
 import Menumobil from "../Menumobil.astro";
 ---
@@ -11,6 +14,12 @@ import Menumobil from "../Menumobil.astro";
     <h1>MEET YOUR MATCH</h1>
     <p>I AM PURIFIED</p>
   </div>
+</section>
+<section>
+  <Image class="hudtest" src={hudtest} alt="hudtest" />
+</section>
+<section>
+  <Image class="hudtest2" src={hudtest2} alt="hudtest2" />
 </section>
 
 <style>
@@ -32,9 +41,21 @@ import Menumobil from "../Menumobil.astro";
     }
     h1 {
       margin-top: 150px;
+      position: absolute;
+      text-align: center;
+      margin-left: 670px;
     }
     p {
-      margin-top: 100px;
+      margin-top: 208px;
+      position: absolute;
+      text-align: center;
+      margin-left: 730px;
+    }
+    .hudtest {
+      width: 1100px;
+      height: auto;
+      margin-top: 226px;
+      margin-left: 280px;
     }
   }
 </style>

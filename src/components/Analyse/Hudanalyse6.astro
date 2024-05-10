@@ -1,28 +1,96 @@
 ---
 import { Image } from "astro:assets";
 import hudtest from "../../assets/images/hudtest.png";
+import hudtest2 from "../../assets/images/hudtest2.png";
+import hudtest3 from "../../assets/images/hudtest3.png";
+import hudtest4 from "../../assets/images/hudtest4.png";
+import hudtest5 from "../../assets/images/hudtest5.png";
+import hudtest6 from "../../assets/images/hudtest6.png";
 import Menu from "../Menu.astro";
 import Menumobil from "../Menumobil.astro";
 ---
 
-<section>
+<section class="baggrund">
   <div class="menu1"><Menumobil /></div>
   <div class="menu"><Menu /></div>
 
   <div class="plads1">
     <h1>MEET YOUR MATCH</h1>
-    <p>I AM PURIFIED</p>
+    <h3>I AM PURIFIED</h3>
   </div>
-</section>
-<section>
   <Image class="hudtest" src={hudtest} alt="hudtest" />
 </section>
-<section></section>
+
+<section>
+  <div class="flex">
+    <div>
+      <Image class="hudtest2" src={hudtest2} alt="hudtest2" />
+      <div class="line"></div>
+    </div>
+
+    <div>
+      <h2>NOT JUST A <br />FACE OIL</h2>
+      <p>
+        I AM PURITY is more than just a facial cleanser - it's a daily reminder
+        to embrace purity in all aspects of your life.Infused with natural
+        ingredients like Strawberry and Calendula, this cleanser helps to uplift
+        your spirit and promote inner peace. Made with only the purest, most
+        natural ingredients, it's gentle enough for even the most sensitive skin
+        types. Discover the power of purity with I AM PURITY, and let it nourish
+        and rejuvenate your skin, leaving it feeling soft, smooth, and
+        refreshed,making it the perfect addition to your skincare routine.
+      </p>
+      <p>Ingrediens:</p>
+      <p>
+        Aqua/Water, Glycerin, Cetyl Alcohol, Stearic Acid.Dimethicone,
+        Tocopheryl Acetate (Vitamin E Acetate), Disodium EDTA,
+        Ethylhexylglycerin, Hyaluronic Acid, Sodium Lauroyl Sarcosinate:
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h4>
+    I AM HEALING it's a daily dose of purity, ensuring your skin feels as
+    radiant as your most cherished moments. Add it to your narrative for skin
+    that's not just seen but celebrated.
+  </h4>
+
+  <Image class="hudtest3" src={hudtest3} alt="hudtest3" />
+</section>
+
+<section>
+  <div>
+    <h2 class="h2">Discover Your Perfect Pair</h2>
+  </div>
+  <div class="grid">
+    <div>
+      <Image class="hudtest4" src={hudtest4} alt="hudtest4" />
+      <h5>I AM PROTECTED</h5>
+      <p class="p">face oil</p>
+    </div>
+    <div>
+      <Image class="hudtest5" src={hudtest5} alt="hudtest5" />
+      <h5 class="text">I AM YIN</h5>
+      <p class="p text2">limited edition oil cleanser</p>
+    </div>
+
+    <div>
+      <Image class="hudtest6" src={hudtest6} alt="hudtest6" />
+      <h5>I AM HEALING</h5>
+      <p class="p">face oil</p>
+    </div>
+  </div>
+</section>
 
 <style>
   @media (min-width: 1025px) {
     body {
       background-color: #f5f1eb;
+    }
+    .baggrund {
+      background-image: url(../../assets/images/hudanalyse1.png);
     }
 
     .menu {
@@ -42,7 +110,7 @@ import Menumobil from "../Menumobil.astro";
       text-align: center;
       margin-left: 670px;
     }
-    p {
+    h3 {
       margin-top: 208px;
       position: absolute;
       text-align: center;
@@ -53,6 +121,110 @@ import Menumobil from "../Menumobil.astro";
       height: auto;
       margin-top: 226px;
       margin-left: 280px;
+    }
+    .hudtest2 {
+      width: 740px;
+    }
+    .break1 {
+      margin-top: 50px;
+    }
+    h2 {
+      text-align: center;
+      margin-top: 130px;
+    }
+    p {
+      width: 500px;
+      margin-top: 20px;
+    }
+    .flex {
+      display: flex;
+    }
+
+    .line {
+      border-bottom: 2px solid black;
+      width: 63%;
+      margin-top: -668px;
+      margin-left: 761px;
+    }
+    .hudtest3 {
+      margin-top: 350px;
+      width: 100%;
+      height: 700px;
+    }
+    h4 {
+      position: absolute;
+      margin-left: 30px;
+      margin-top: 934px;
+      color: white;
+      width: 500px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-left: 150px;
+      margin-top: 150px;
+    }
+    .hudtest4 {
+      width: 243px;
+      height: 420px;
+    }
+    .hudtest5,
+    .hudtest6 {
+      width: 200px;
+      height: 400px;
+    }
+    .h2 {
+      text-align: left;
+      margin-left: 150px;
+    }
+    .p {
+      margin-left: 86px;
+      margin-bottom: 250px;
+    }
+    h5 {
+      margin-left: 50px;
+    }
+    .text {
+      margin-left: 72px;
+    }
+    .text2 {
+      margin-left: 8px;
+    }
+  }
+
+  @media (max-width: 599px) {
+    body {
+      background-color: #f5f1eb;
+    }
+    .baggrund {
+      background-image: url(../../assets/images/hudanalyse1.png);
+    }
+    .menu {
+      display: none;
+    }
+    h1 {
+      margin-left: 100px;
+      margin-top: 50px;
+    }
+    h3 {
+      margin-left: 150px;
+      margin-top: 5px;
+    }
+
+    .flex {
+      display: flex;
+    }
+    h4 {
+      position: absolute;
+      margin-top: 251px;
+      color: white;
+      width: 400px;
+    }
+    .hudtest2 {
+      display: none;
+    }
+    .hudtest3 {
+      margin-top: 100px;
     }
   }
 </style>

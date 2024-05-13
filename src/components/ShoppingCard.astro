@@ -1,0 +1,66 @@
+---
+const { text, text2, text3 } = Astro.props;
+---
+
+<section class="container">
+  <div class="farve">
+    <slot />
+    <h2>{text}</h2>
+    <h3>{text2}</h3>
+    <p>{text3}</p>
+  </div>
+</section>
+<style>
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .farve {
+    background-color: #e7dfd4;
+    height: 525px;
+    width: 400px;
+    margin: 30px;
+    padding: 20px;
+    margin-top: 150px;
+  }
+  h2 {
+    text-align: center;
+    margin-top: 10px;
+  }
+  h3 {
+    text-align: center;
+    margin-top: 10px;
+  }
+  p {
+    text-align: center;
+    margin-top: 10px;
+  }
+  @media (max-width: 599px) {
+    .container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .farve {
+      background-color: #e7dfd4;
+      height: 625px;
+      width: 400px;
+      margin: 30px;
+      padding: 20px;
+      margin-top: 150px;
+    }
+    h2 {
+      text-align: center;
+      margin-top: 10px;
+    }
+    h3 {
+      text-align: center;
+      margin-top: 10px;
+    }
+    p {
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
+</style>

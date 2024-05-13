@@ -1,0 +1,298 @@
+---
+import Menu from "./Menu.astro";
+import Menumobil from "./Menumobil.astro";
+import { Image } from "astro:assets";
+import ShoppingCard from "./ShoppingCard.astro";
+import shop1 from "../assets/images/shop1.png";
+import shop2 from "../assets/images/shop2.png";
+import shop3 from "../assets/images/shop3.png";
+import shop4 from "../assets/images/shop4.png";
+import shop5 from "../assets/images/shop5.png";
+import shop6 from "../assets/images/shop6.png";
+import shop7 from "../assets/images/shop7.png";
+import shop8 from "../assets/images/shop8.png";
+import shop9 from "../assets/images/shop9.png";
+import shop10 from "../assets/images/shop10.png";
+import ShopKnap from "./ShopKnap.astro";
+---
+
+<section class="header">
+  <div class="menu1"><Menumobil /></div>
+  <div class="menu"><Menu /></div>
+</section>
+<h1 class="product">PRODUCT CATEGORY</h1>
+<section>
+  <div>
+    <div class="liste min-sektion">
+      <nav>
+        <ul>
+          <li>All products</li>
+          <li>Body Oil</li>
+          <li>Body Tools</li>
+          <li>Bundle</li>
+          <li>Face Cleanser</li>
+          <li>Face Oil</li>
+          <li>Palo Santo</li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<section class="card_container grid">
+  <p>
+    “I AM, empowers self-awareness through mantras, guiding you to actively
+    shape your journey and become an expert in yourself” <br />
+    <br />Embracing the philosophy of 'I AM', we believe in the transformative
+    power of energy, influenced by our thoughts and feelings. Choosing to
+    embrace life's positivity is a conscious decision.
+  </p>
+  <ShoppingCard
+    class="placering1 farve"
+    text="Spring Bundle "
+    text2="Face oil, body oil & oil cleanser"
+    text3="925 DKK"
+  >
+    <Image class="shop1" src={shop1} alt="shop1" />
+    <a href="../produkt"><ShopKnap /></a>
+  </ShoppingCard>
+  <ShoppingCard
+    class="placering2 farve"
+    text="Travel Kit "
+    text2="Face oil, face oil & oil cleanser"
+    text3="425 DKK"
+  >
+    <Image class="shop2" src={shop2} alt="shop2" />
+    <ShopKnap />
+  </ShoppingCard>
+  <ShoppingCard
+    class="placering3 farve"
+    text="I AM YIN "
+    text2="limited edition oil cleanser"
+    text3="250 DKK"
+  >
+    <Image class="shop3" src={shop3} alt="shop3" />
+    <ShopKnap />
+  </ShoppingCard>
+  <ShoppingCard
+    class="placering1 farve"
+    text="I AM PROTECTED "
+    text2="Face oil"
+    text3="415 DKK"
+  >
+    <Image class="shop4" src={shop4} alt="shop4" />
+    <ShopKnap />
+  </ShoppingCard>
+  <ShoppingCard
+    class="placering1 farve"
+    text="I AM HEALING "
+    text2="Face oil"
+    text3="415 DKK"
+  >
+    <Image class="shop5" src={shop5} alt="shop5" />
+    <ShopKnap />
+  </ShoppingCard>
+  <ShoppingCard
+    class="placering1 farve"
+    text="I AM NOURISHED "
+    text2="Body oil"
+    text3="355 DKK"
+  >
+    <Image class="shop6" src={shop6} alt="shop6" />
+    <ShopKnap />
+  </ShoppingCard>
+  <ShoppingCard
+    class="placering1 farve"
+    text="I AM PURIFIED "
+    text2="Cleansing oil"
+    text3="225 DKK"
+  >
+    <Image class="shop7" src={shop7} alt="shop7" />
+    <ShopKnap />
+  </ShoppingCard>
+  <ShoppingCard
+    class="placering1 farve"
+    text="I AM MERIDIAN "
+    text2="Massage Comb"
+    text3="225 DKK"
+  >
+    <Image class="shop8" src={shop8} alt="shop8" />
+    <ShopKnap />
+  </ShoppingCard>
+  <ShoppingCard
+    class="placering1 farve"
+    text="Ethically sourced Palo Santo "
+    text3="25 DKK"
+  >
+    <Image class="shop9" src={shop9} alt="shop9" />
+    <ShopKnap />
+  </ShoppingCard>
+</section>
+<section>
+  <h4 class="h4">
+    Wondering which product will make your skin fall head over heels?
+  </h4>
+  <p class="p">Our quick quiz will set you up with your ideal skincare match</p>
+  <Image class="shop10" src={shop10} alt="shop10" />
+</section>
+
+<style>
+  @media (min-width: 1025px) {
+    body {
+      background-color: #f5f1eb;
+    }
+    .menu1 {
+      display: none;
+    }
+    .menu {
+      margin-left: 30px;
+      margin-top: 50px;
+    }
+    .min-sektion {
+      background-color: #161616; /* Tilpas farven efter behov */
+      padding: 20px; /* Tilføj eventuelt ekstra padding for at give plads omkring indholdet */
+      margin-top: 50px;
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      list-style: none;
+      color: white;
+    }
+
+    h1 {
+      margin-top: 100px;
+      margin-left: 50px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    p {
+      margin-top: 180px;
+      width: 370px;
+      margin-left: 50px;
+    }
+    .shop1,
+    .shop2,
+    .shop3,
+    .shop4,
+    .shop5,
+    .shop6,
+    .shop7,
+    .shop8,
+    .shop9 {
+      width: 200px;
+      margin-left: 80px;
+      margin-top: 20px;
+    }
+    .shop2 {
+      margin-top: 50px;
+      width: 260px;
+      margin-left: 45px;
+    }
+    .shop1 {
+      width: 260px;
+      margin-left: 45px;
+    }
+    .p,
+    .h4 {
+      position: absolute;
+      color: white;
+      margin-left: 1000px;
+    }
+    .h4 {
+      margin-top: 500px;
+    }
+    .p {
+      margin-top: 550px;
+    }
+    .shop10 {
+      margin-top: 50px;
+    }
+  }
+  @media (max-width: 599px) {
+    body {
+      background-color: #f5f1eb;
+    }
+    .menu1 {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    .menu {
+      display: none;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .shop1,
+    .shop2,
+    .shop3,
+    .shop4,
+    .shop5,
+    .shop6,
+    .shop7,
+    .shop8,
+    .shop9 {
+      width: 200px;
+      margin-left: 80px;
+      margin-top: 20px;
+    }
+    .shop2 {
+      margin-top: 44px;
+      width: 357px;
+      margin-left: 0px;
+    }
+    .shop1 {
+      margin-top: 44px;
+      width: 357px;
+      margin-left: 0px;
+    }
+    .p,
+    .h4 {
+      position: absolute;
+      color: white;
+      margin-left: 700px;
+    }
+    .h4 {
+      margin-top: 300px;
+      width: 250px;
+    }
+    .p {
+      margin-top: 400px;
+      width: 250px;
+    }
+    .shop10 {
+      margin-top: 50px;
+      width: 1076px;
+    }
+    h1 {
+      margin-top: 200px;
+      margin-left: 50px;
+    }
+
+    p {
+      margin-top: 180px;
+      width: 370px;
+      margin-left: 50px;
+    }
+    .min-sektion {
+      background-color: #161616; /* Tilpas farven efter behov */
+      padding: 20px; /* Tilføj eventuelt ekstra padding for at give plads omkring indholdet */
+      margin-top: 50px;
+      width: 1075px;
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      list-style: none;
+      color: white;
+    }
+  }
+</style>

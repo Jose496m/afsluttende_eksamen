@@ -1,0 +1,213 @@
+---
+import Menu from "./Menu.astro";
+import Menumobil from "./Menumobil.astro";
+import { Image } from "astro:assets";
+import shop1 from "../assets/images/shop1.png";
+import pro1 from "../assets/images/pro1.png";
+import pro2 from "../assets/images/pro2.png";
+import pro3 from "../assets/images/pro3.png";
+import pro4 from "../assets/images/pro4.png";
+import pro5 from "../assets/images/pro5.png";
+import pro6 from "../assets/images/pro6.png";
+import pro7 from "../assets/images/pro7.png";
+import pro8 from "../assets/images/pro8.png";
+import stjerne from "../assets/images/stjerne.png";
+import shop3 from "../assets/images/shop3.png";
+import shop5 from "../assets/images/shop5.png";
+import shop6 from "../assets/images/shop6.png";
+---
+
+<section class="header">
+  <div class="menu1"><Menumobil /></div>
+  <div class="menu"><Menu /></div>
+</section>
+<section>
+  <div class="grid">
+    <div>
+      <Image class="produkt1" src={pro1} alt="produkt1" />
+      <Image class="produkt2" src={pro2} alt="produkt2" />
+      <Image class="produkt3" src={pro3} alt="produkt3" />
+    </div>
+    <div>
+      <Image class="shop1" src={shop1} alt="shop1" />
+    </div>
+    <div>
+      <h1>Spring Bundle</h1>
+      <p class="p1">
+        Our "I AM Bundles" offer includes our luxurious Body oil, our gentle yet
+        effective Face wash. As an added bonus, you can choose from our Face oil
+        options or to complete your skincare routine.
+      </p>
+      <Image class="stjerne" src={stjerne} alt="stjerne" />
+      <Image class="stjerne" src={stjerne} alt="stjerne" />
+      <Image class="stjerne" src={stjerne} alt="stjerne" />
+      <Image class="stjerne" src={stjerne} alt="stjerne" />
+      <Image class="stjerne" src={stjerne} alt="stjerne" />
+
+      <p class="p2">10 reviews</p>
+      <p>925,00 DKK</p>
+      <div class="boks">
+        <p class="boks1">- 1 +</p>
+      </div>
+      <p>knap</p>
+      <p>Free shipping in EU above 499 DKK</p>
+      <div class="line"></div>
+      <h3>Suited to</h3>
+      <p>Oily, combination and open-pored skin, warm and humid climates</p>
+      <div class="line2"></div>
+      <h3>Skin feel</h3>
+      <p>Radiant, nourished, healthy and youthfull.</p>
+      <div class="line2"></div>
+      <h3>Key ingredients</h3>
+      <p>
+        Raspberry Seed Oil, Kalahari Melon Seed Oil,Nourishing Pequi Oil,
+        Balancing Squalene, Pequi Oil, Vitamin-E Non GMO.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="grid_1-1">
+    <div>
+      <Image class="produkt4" src={pro4} alt="produkt4" />
+    </div>
+    <div>
+      <p>HOW TO USE</p>
+      <h4>
+        Massage 4-6 drops onto clean, slightly damp skin, mix with cream, or use
+        it alone. We recommend using this in the evening.
+      </h4>
+      <div class="line"></div>
+      <h5>Some of the skin loving benefits:</h5>
+      <p>
+        Rich in antioxidants and Vitamin C, reduces redness,and protects against
+        environmental damage. Enhances skin elasticity and supports a healthy
+        skin barrier, leaving the skin fresh and revitalized. Smoothes irritated
+        skin and promotes the skin's natural healing.
+      </p>
+      <div class="flex">
+        <Image class="produkt5" src={pro5} alt="produkt5" />
+        <Image class="produkt6" src={pro6} alt="produkt6" />
+        <Image class="produkt7" src={pro7} alt="produkt7" />
+        <Image class="produkt8" src={pro8} alt="produkt8" />
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div>
+    <h2>OTHER CUSTOMER BOUGHT</h2>
+    <div class="flex2">
+      <div>
+        <Image class="shop3" src={shop3} alt="shop3" />
+        <p>I AM YIN</p>
+        <p>limited edition oil cleanser</p>
+      </div>
+      <div>
+        <Image class="shop6" src={shop6} alt="shop6" />
+        <p>I AM NOURISHED</p>
+        <p>body oil</p>
+      </div>
+      <div>
+        <Image class="shop5" src={shop5} alt="shop5" />
+        <p>I AM HEALING</p>
+        <p>face oil</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @media (min-width: 1025px) {
+    body {
+      background-color: #f5f1eb;
+    }
+    .menu1 {
+      display: none;
+    }
+    .menu {
+      margin-left: 30px;
+      margin-top: 50px;
+    }
+    .produkt1,
+    .produkt2,
+    .produkt3 {
+      width: 100px;
+      display: flex;
+      margin-left: 50px;
+      margin-top: 50px;
+    }
+    .shop1 {
+      width: 500px;
+      margin-left: -50px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .stjerne {
+      width: 10px;
+    }
+    .boks {
+      border: 1px solid black;
+      width: 60px;
+    }
+    .boks1 {
+      text-align: center;
+    }
+    .line {
+      border-bottom: 2px solid black;
+      width: 70%;
+    }
+    .line2 {
+      border-bottom: 1px solid black;
+      width: 70%;
+    }
+    .produkt4 {
+      width: 800px;
+      height: auto;
+    }
+    .grid_1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .flex {
+      display: flex;
+      gap: 100px;
+    }
+    .produkt5,
+    .produkt6,
+    .produkt7,
+    .produkt8 {
+      width: 100px;
+    }
+    .flex2 {
+      display: flex;
+      gap: 250px;
+    }
+    .shop3,
+    .shop5,
+    .shop6 {
+      width: 300px;
+      height: auto;
+      margin-left: 40px;
+      margin-top: 150px;
+    }
+    h1 {
+      margin-top: 90px;
+    }
+    .p1 {
+      width: 380px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .stjerne {
+      margin-bottom: 10px;
+    }
+    .p2 {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+</style>

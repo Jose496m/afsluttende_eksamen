@@ -13,7 +13,11 @@ const { variant } = Astro.props;
       <li><a href="/Hudanalyse/analyse">ANALYSE</a></li>
       <li><a href="/shop">SHOP</a></li>
     </div>
-    <li><Image class="bag" src={bag} alt="bag" /></li>
+    <li>
+      <a href="../../src/components/Kflow/købs1.astro"
+        ><Image class="bag" src={bag} alt="bag" /></a
+      >
+    </li>
   </ul>
 </nav>
 
@@ -39,7 +43,6 @@ const { variant } = Astro.props;
       margin-left: 194px;
     }
     .bag {
-      margin-left: 390px;
       width: 40px;
       height: auto;
     }

@@ -6,7 +6,9 @@ import { Image } from "astro:assets";
 import logo from "../assets/images/logo.png";
 import Produktknap from "./Produktknap.astro";
 import flow from "../assets/images/koebsflow1.png";
-import Input from "./Input.astro";
+import paypal from "../assets/images/paypal.png";
+import mobilepay from "../assets/images/mobilepay.png";
+import Klarna from "../assets/images/klarna.png";
 ---
 
 <section class="header">
@@ -20,37 +22,57 @@ import Input from "./Input.astro";
   <div class="container">
     <div class="white-side">
       <div class="left">
-        <h1>CONTACT</h1>
-        <Flowinput placeholder="Email" />
-        <h2>SHIPPING ADDRESS</h2>
-        <p class="p">Country/Region</p>
+        <h1>PAYMENT</h1>
+        <Flowinput placeholder="Card number" />
 
-        <Flowinput placeholder="Denmark" />
         <div class="flex">
-          <Flowinput placeholder="First Name" />
-          <Flowinput placeholder="Last Name" />
+          <Flowinput placeholder="Exspire date" />
+          <Flowinput placeholder="Security code" />
         </div>
-        <Flowinput placeholder="Address" />
-        <Flowinput placeholder="Appartment, suite, etc. (optional)" />
-        <div class="flex">
-          <Flowinput placeholder="Post code" />
-          <Flowinput placeholder="City" />
+
+        <Flowinput placeholder="Name on card" />
+        <div class="label2">
+          <label>
+            <input type="checkbox" name="terms" value="terms" />
+            Use shipping address as billing address
+          </label>
         </div>
-        <Flowinput placeholder="Phone" />
-      </div>
-      <div class="label">
-        <label>
-          <input type="checkbox" name="terms" value="terms" />
-          Save this information for next time
-        </label>
-        <br />
-        <label>
-          <input type="checkbox" name="newsletter" value="newsletter" />
-          Text me with news and offers
-        </label>
-      </div>
-      <div class="knap">
-        <a href="/flowkoebs3"><Produktknap text="CONTINUE TO SHIPPING" /></a>
+        <h2>OTHER PAYMENT METODE</h2>
+
+        <div class="label other-payment">
+          <label>
+            <input type="checkbox" name="paypal" value="paypal" />
+            Paypal
+          </label>
+          <Image class="paypal" src={paypal} alt="paypal" />
+        </div>
+        <div class="line5"></div>
+        <div class="label other-payment">
+          <label>
+            <input type="checkbox" name="klarna" value="klarna" />
+            Klarna
+          </label>
+          <Image class="klarna" src={Klarna} alt="klarna" />
+        </div>
+        <div class="line5"></div>
+        <div class="label other-payment">
+          <label>
+            <input type="checkbox" name="mobilepay" value="mobilepay" />
+            MobilePay
+          </label>
+          <Image class="mobilepay" src={mobilepay} alt="mobilepay" />
+        </div>
+        <div class="line5"></div>
+        <div class="label2">
+          <label>
+            <input type="checkbox" name="terms" value="terms" />
+            Save my information for a faster check out
+          </label>
+        </div>
+
+        <div class="knap">
+          <a href="/flowkoebs4"><Produktknap text="CONTINUE TO SHIPPING" /></a>
+        </div>
       </div>
     </div>
     <div class="black-side">
@@ -116,6 +138,8 @@ import Input from "./Input.astro";
     }
     h2 {
       margin-left: 50px;
+      margin-top: 50px;
+      margin-bottom: 50px;
     }
     .p {
       margin-left: 50px;
@@ -146,6 +170,13 @@ import Input from "./Input.astro";
       margin-bottom: 10px;
       margin-left: 50px;
       margin-top: 50px;
+    }
+    .line5 {
+      border-bottom: 1px solid black;
+      width: 57%;
+      margin-bottom: 20px;
+      margin-left: 50px;
+      margin-top: 10px;
     }
     .flex2 {
       display: flex;
@@ -186,6 +217,49 @@ import Input from "./Input.astro";
       margin-top: 10px;
       margin-bottom: 10px;
       margin-left: 100px;
+    }
+
+    .other-payment input[type="checkbox"] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border: 1px solid #000; /* Sort kant */
+      border-radius: 50%; /* Runde form */
+      width: 20px;
+      height: 20px;
+      outline: none; /* Fjerner konturen ved fokus */
+      cursor: pointer;
+      background-color: transparent; /* Gennemsigtig baggrund */
+      margin-left: -150px;
+    }
+
+    /* Tilpasning af markøren (check) når den er markeret */
+    .other-payment input[type="checkbox"]:checked::before {
+      content: ""; /* Skaber markøren */
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 40%; /* Runde form */
+      background-color: #000; /* Sort farve */
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* Centrerer markøren */
+    }
+    .label2 {
+      margin-left: 50px;
+    }
+    .paypal {
+      width: 50px;
+      margin-left: 400px;
+    }
+    .mobilepay {
+      width: 70px;
+      margin-left: 360px;
+    }
+    .klarna {
+      width: 50px;
+      margin-left: 400px;
     }
   }
 </style>

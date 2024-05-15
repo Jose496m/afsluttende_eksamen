@@ -1,0 +1,25 @@
+---
+const { label, placeholder } = Astro.props;
+---
+
+<div class="grid">
+  <label>{label}</label>
+  <input type="text" class="border" placeholder={placeholder} />
+</div>
+
+<style>
+  @media (min-width: 1025px) {
+    .grid {
+      margin-left: 50px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    .border {
+      border: none;
+      outline: none;
+      border-bottom: 1px solid black;
+      width: 60%;
+      background-color: transparent;
+    }
+  }
+</style>

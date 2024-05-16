@@ -20,12 +20,19 @@ const { variant } = Astro.props;
 </nav>
 
 <style>
+  @font-face {
+    font-family: ZapfHumanist;
+    src: url("/fonts/ZapfHumanist601Regular.ttf");
+  }
   @media (min-width: 1025px) {
     ul {
       display: flex;
       align-items: center;
       justify-content: space-between;
       list-style: none;
+    }
+    li {
+      font-family: ZapfHumanist;
     }
 
     .liste {

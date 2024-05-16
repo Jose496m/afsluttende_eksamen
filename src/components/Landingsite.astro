@@ -7,24 +7,31 @@ import forside from "../assets/images/forside1.png";
 import pro1 from "../assets/images/produkt1.png";
 import pro2 from "../assets/images/produkt2.png";
 import pro3 from "../assets/images/produkt3.png";
+import landing1 from "../assets/images/landingpage1.png";
 import Menumobil from "./Menumobil.astro";
+import Produktknap from "./Produktknap.astro";
 ---
 
 <section class="header">
   <div class="menu1"><Menumobil /></div>
   <div class="menu"><Menu /></div>
-
+  <h1>I AM BEAUTIFUL</h1>
   <div class="flex">
+    <div></div>
     <div>
       <Image class="pic" src={venstre} alt="venstre" />
     </div>
     <div>
-      <h3>I AM PROTECTED</h3>
-      <Image class="pic3" src={højre} alt="venstre" />
+      <h3>OUR GLOWGETTER:</h3>
+      <p>SHIELDING SHINE FOR SUNNY DAYS!</p>
+      <Image class="pic3" src={landing1} alt="landing1" />
       <p class="hero">
-        Luxuriously soothing and deeply moisturizing, it swiftly penetrates the
-        skin, making it your go-to for daytime radiance.
+        Our luxuriously face oil soothes and deeply moisturizing, it swiftly
+        penetrates the skin, making it your go-to for summer radiance.
       </p>
+      <div class="knap">
+        <a href="/shop"><Produktknap text="DISCOVER PRODUCT" /></a>
+      </div>
     </div>
   </div>
 </section>
@@ -87,6 +94,22 @@ import Menumobil from "./Menumobil.astro";
   </div>
 </section>
 <style>
+  @font-face {
+    font-family: fahkwangRegular;
+    src: url("/fonts/Fahkwang-Regular.ttf");
+  }
+  @font-face {
+    font-family: PlayfairdisplayBold;
+    src: url("/fonts/PlayFairDisplay-Bold.ttf");
+  }
+  @font-face {
+    font-family: PlayfairdisplayRegular;
+    src: url("/fonts/PlayFairDisplay-Regular.ttf");
+  }
+  @font-face {
+    font-family: ZapfHumanist;
+    src: url("/fonts/ZapfHumanist601Regular.ttf");
+  }
   @media (min-width: 1025px) {
     body {
       background-color: #f5f1eb;
@@ -97,6 +120,13 @@ import Menumobil from "./Menumobil.astro";
     .flex {
       display: flex;
       margin-left: -191px;
+    }
+    h1 {
+      position: absolute;
+      margin-top: 150px;
+      font-family: fahkwangRegular;
+      font-size: 76px;
+      margin-left: 440px;
     }
     .header {
       position: relative;
@@ -110,6 +140,9 @@ import Menumobil from "./Menumobil.astro";
     h4 {
       text-align: center;
       padding: 100px;
+    }
+    .knap {
+      margin-left: 300px;
     }
     .citat {
       width: auto;
@@ -138,11 +171,11 @@ import Menumobil from "./Menumobil.astro";
     }
     .pic {
       width: 1000px;
-      height: 870px;
+      height: 910px;
     }
     .pic3 {
-      margin-left: 288px;
-      width: 250px;
+      margin-left: 305px;
+      width: 210px;
       height: auto;
     }
     .pic1 {
@@ -160,17 +193,32 @@ import Menumobil from "./Menumobil.astro";
       margin: 30px;
     }
     h3 {
-      margin-top: 180px;
-      margin-left: 325px;
+      margin-top: 300px;
+      margin-left: 250px;
+      font-family: PlayfairdisplayBold;
+      font-size: 32px;
+    }
+    p {
+      margin-left: 223px;
+      margin-top: 10px;
+      font-family: PlayfairdisplayRegular;
+      font-size: 22px;
     }
     .hero {
-      width: 338px;
-      margin-left: 263px;
+      width: 534px;
+      margin-left: 191px;
+      font-family: ZapfHumanist;
+      font-size: 22px;
     }
     .bestseller3 {
       color: white;
       margin-left: 150px;
       margin-top: 5px;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+      cursor: pointer;
     }
   }
 

@@ -9,6 +9,7 @@ import flow from "../assets/images/koebsflow1.png";
 import paypal from "../assets/images/paypal.png";
 import mobilepay from "../assets/images/mobilepay.png";
 import Klarna from "../assets/images/klarna.png";
+import Flow4knap from "../components/Flow4knap.astro";
 ---
 
 <section class="header">
@@ -22,62 +23,25 @@ import Klarna from "../assets/images/klarna.png";
   <div class="container">
     <div class="white-side">
       <div class="left">
-        <h1>PAYMENT</h1>
-        <Flowinput placeholder="Card number" />
-
-        <div class="flex">
-          <Flowinput placeholder="Exspire date" />
-          <Flowinput placeholder="Security code" />
+        <div>
+          <h1>THANK YOU</h1>
+          <p>
+            Thank you for your order! Just like the perfect pair of shoes can
+            lift your spirits, we hope our products do the same for you. We're
+            carefully packing your items with extra love and can't wait to send
+            them your way. If you have any questions or just want to chat about
+            your purchase, we're here for you. Thanks again for bringing a piece
+            of our passion into your life. Cheers to new beginnings and fabulous
+            finds!
+          </p>
         </div>
-
-        <Flowinput placeholder="Name on card" />
-        <div class="label2">
-          <label>
-            <input type="checkbox" name="terms" value="terms" />
-            Use shipping address as billing address
-          </label>
-        </div>
-        <h2>OTHER PAYMENT METODE</h2>
-
-        <div class="label other-payment">
-          <label>
-            <input type="checkbox" name="paypal" value="paypal" />
-            Paypal
-          </label>
-          <Image class="paypal" src={paypal} alt="paypal" />
-        </div>
-        <div class="line5"></div>
-        <div class="label other-payment">
-          <label>
-            <input type="checkbox" name="klarna" value="klarna" />
-            Klarna
-          </label>
-          <Image class="klarna" src={Klarna} alt="klarna" />
-        </div>
-        <div class="line5"></div>
-        <div class="label other-payment">
-          <label>
-            <input type="checkbox" name="mobilepay" value="mobilepay" />
-            MobilePay
-          </label>
-          <Image class="mobilepay" src={mobilepay} alt="mobilepay" />
-        </div>
-        <div class="line5"></div>
-        <div class="label2">
-          <label>
-            <input type="checkbox" name="terms" value="terms" />
-            Save my information for a faster check out
-          </label>
-        </div>
-
         <div class="knap">
-          <a href="/"><Produktknap text="CONTINUE TO SHIPPING" /></a>
+          <Flow4knap />
         </div>
       </div>
     </div>
     <div class="black-side">
       <div class="line3"></div>
-
       <div class="flex2">
         <Image class="flow" src={flow} alt="flow" />
         <h4>I am purified</h4>
@@ -261,9 +225,6 @@ import Klarna from "../assets/images/klarna.png";
     .klarna {
       width: 50px;
       margin-left: 400px;
-    }
-    h6 {
-      color: white;
     }
   }
 </style>

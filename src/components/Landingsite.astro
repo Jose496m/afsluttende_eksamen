@@ -49,20 +49,26 @@ import Produktknap from "./Produktknap.astro";
 <section class="bestseller">
   <div class="bestseller1">
     <h2 class="best">BEST SELLER</h2>
-    <h3 class="bestseller3">
-      Introducing our Bestseller - our faceoils Bestseller Face Oil
-    </h3>
+    <h3 class="bestseller3">I AM PURIFIED Cleansing Oil</h3>
+    <p class="bestseller2">Some of the love-infused benefits:</p>
     <p class="bestseller2">
-      Some of the love-infused benefits: Radiance-Boosting Raspberry Seed Oil:
-      Enriched with potent antioxidants, this elixir strengthens your skin's
-      defenses against daily stressors, ensuring a flawless, luminous
-      complexion. Balancing Squalene Formula: Experience the magic of balanced
-      hydration as this lightweight elixir harmonizes your skin's natural oils,
-      leaving it resilient, supple, and deeply nourished. Luxurious Pequi Oil
-      Blend: Indulge in the ultimate skin treat! Our blend of pequi oil, rich in
-      essential fatty acids and vitamins, deeply nourishes your skin, unveiling
-      a captivating glow and lasting vitality.
+      Radiance-Boosting Raspberry Seed Oil: Enriched with potent antioxidants,
+      this elixir strengthens your skin's defenses against daily stressors,
+      ensuring a flawless, luminous complexion.
     </p>
+    <p class="bestseller2">
+      Balancing Squalene Formula: Experience the magic of balanced hydration as
+      this lightweight elixir harmonizes your skin's natural oils, leaving it
+      resilient, supple, and deeply nourished.
+    </p>
+    <p class="bestseller2">
+      Luxurious Pequi Oil Blend: Indulge in the ultimate skin treat! Our blend
+      of pequi oil, rich in essential fatty acids and vitamins, deeply nourishes
+      your skin, unveiling a captivating glow and lasting vitality.
+    </p>
+    <div class="knap2">
+      <a href="/shop"><Produktknap text="ADD TO CARD" /></a>
+    </div>
   </div>
   <div>
     <Image class="pic1" src={forside} alt="højre" />
@@ -110,6 +116,11 @@ import Produktknap from "./Produktknap.astro";
     font-family: ZapfHumanist;
     src: url("/fonts/ZapfHumanist601Regular.ttf");
   }
+  @font-face {
+    font-family: fahkwangMedium;
+    src: url("/fonts/Fahkwang-Medium.ttf");
+  }
+
   @media (min-width: 1025px) {
     body {
       background-color: #f5f1eb;
@@ -140,9 +151,12 @@ import Produktknap from "./Produktknap.astro";
     h4 {
       text-align: center;
       padding: 100px;
+      font-family: PlayfairdisplayRegular;
+      font-size: 26px;
     }
     .knap {
       margin-left: 300px;
+      font-family: ;
     }
     .citat {
       width: auto;
@@ -158,16 +172,21 @@ import Produktknap from "./Produktknap.astro";
       background-color: #46433b;
     }
     h2 {
-      margin-left: 150px;
-      margin-top: 150px;
+      margin-left: 50px;
+      margin-top: 50px;
       color: white;
+      margin-bottom: 100px;
+      font-family: PlayfairdisplayRegular;
+      font-size: 30px;
     }
     .bestseller2 {
       width: 510px;
-      margin-left: 150px;
+      margin-left: 100px;
       margin-right: 300px;
       margin-top: 30px;
       color: white;
+      font-family: ZapfHumanist;
+      font-size: 16px;
     }
     .pic {
       width: 1000px;
@@ -179,12 +198,14 @@ import Produktknap from "./Produktknap.astro";
       height: auto;
     }
     .pic1 {
-      width: 630px;
-      height: 600px;
+      width: 693px;
+      height: 640px;
     }
     .produkter {
       color: black;
       margin-left: 28px;
+      font-family: fahkwangMedium;
+      font-size: 30;
     }
     .produkt {
       display: flex;
@@ -212,13 +233,25 @@ import Produktknap from "./Produktknap.astro";
     }
     .bestseller3 {
       color: white;
-      margin-left: 150px;
+      margin-left: 100px;
       margin-top: 5px;
+      font-family: fahkwangMedium;
+      font-size: 32px;
     }
     a {
       text-decoration: none;
       color: black;
       cursor: pointer;
+    }
+    .knap2 {
+      margin-left: 100px;
+    }
+    .tekst {
+      font-family: ZapfHumanist;
+      font-size: 16px;
+      margin-left: 0px;
+      margin-top: 10px;
+      margin-bottom: 10px;
     }
   }
 
@@ -240,6 +273,7 @@ import Produktknap from "./Produktknap.astro";
     .flex {
       display: flex;
     }
+
     .pic {
       margin-right: 335px;
       width: 900px;
@@ -319,6 +353,13 @@ import Produktknap from "./Produktknap.astro";
     }
     .menu {
       display: none;
+    }
+    h1 {
+      position: absolute;
+      margin-top: 150px;
+      font-family: fahkwangRegular;
+      font-size: 76px;
+      margin-left: 440px;
     }
     .flex {
       display: flex;

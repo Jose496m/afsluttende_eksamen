@@ -5,128 +5,148 @@ import test from "../assets/images/test2.png";
 import test2 from "../assets/images/test.png";
 ---
 
-<section>
-  <div class="slider background body">
+<section class="testimonial-slider">
+  <div class="slider">
     <div class="slide-track">
       <div class="slide">
-        <Image class="pic1" src={testimonials} alt="testimonials" />
+        <Image class="pic" src={testimonials} alt="testimonials" />
       </div>
       <div class="slide">
-        <Image class="pic1" src={test} alt="testimonials" id="img1" />
+        <Image class="pic" src={test} alt="testimonials" />
       </div>
       <div class="slide">
-        <Image class="pic1" src={test2} alt="testimonials" id="img2" />
+        <Image class="pic" src={test2} alt="testimonials" />
       </div>
       <div class="slide">
-        <Image class="pic1" src={testimonials} alt="testimonials" />
+        <Image class="pic" src={testimonials} alt="testimonials" />
       </div>
       <div class="slide">
-        <Image class="pic1" src={test} alt="testimonials" id="img1" />
+        <Image class="pic" src={test} alt="testimonials" />
       </div>
-      <div class="slid">
-        <Image class="pic1" src={test2} alt="testimonials" id="img2" />
+      <div class="slide">
+        <Image class="pic" src={test2} alt="testimonials" />
       </div>
     </div>
   </div>
 </section>
 <style>
-  @media (min-width: 1025px) {
-    section {
-      display: grid;
-      place-items: center;
-    }
-    .background {
-      background-color: #120f0c;
-      padding: 100px;
-    }
-    .slider {
-      margin: auto;
-      position: relative;
-      display: grid;
-      place-items: center;
-      overflow: hidden;
-    }
-    .slide-track {
-      display: flex;
-      width: calc(230px * 6);
-      animation: scroll 20s linear infinite;
-    }
+  body {
+    margin: 0;
+    background-color: #f5f1eb;
+  }
 
-    .slide-track:hover {
-      animation-play-state: paused;
-    }
+  .testimonial-slider {
+    display: grid;
+    place-items: center;
+    background-color: #120f0c;
+    padding: 50px 0;
+  }
 
-    @keyframes scroll {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(calc(-240px * 3));
-      }
-    }
+  .slider {
+    position: relative;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    width: 100%;
+  }
 
-    .slide {
-      display: flex;
-      align-items: center;
-      padding: 15px;
-      perspective: 100px;
-    }
-    .pic1 {
-      width: 400px;
-      height: 400px;
-    }
+  .slide-track {
+    display: flex;
+    width: 100%;
+    animation: scroll 20s linear infinite;
+  }
 
-    img:hover {
-      transform: translateZ(10px);
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
     }
-
-    .slider::before {
-      left: 0;
-      top: 0;
+    100% {
+      transform: translateX(calc(-250px * 6));
     }
   }
 
-  @media (max-width: 599px) {
-    section {
-      display: grid;
-      place-items: center;
-      width: 1600px;
-    }
-    .background {
-      background-color: #120f0c;
-      padding: 100px;
-      width: 1730px;
-    }
-    .slider {
-      position: relative;
-      display: grid;
-      place-items: center;
-      overflow: hidden;
+  .slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    flex: 0 0 250px;
+  }
+
+  .pic {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+  }
+
+  img:hover {
+    transform: translateZ(10px);
+    transition: transform 0.3s;
+  }
+
+  /* Desktop Styles */
+  @media (min-width: 1025px) {
+    .testimonial-slider {
+      padding: 100px 0;
     }
     .slide-track {
-      display: flex;
-      width: calc(230px * 3);
-      animation: scroll 20s linear infinite;
+      width: calc(250px * 6);
     }
-
     @keyframes scroll {
       0% {
         transform: translateX(0);
       }
       100% {
-        transform: translateX(calc(-240px * 3));
+        transform: translateX(calc(-250px * 3));
       }
     }
-
-    .slide {
-      display: flex;
-      align-items: center;
-      padding: 15px;
-      perspective: 100px;
+    .pic {
+      max-width: 400px;
     }
-    .pic1 {
-      width: 1000px;
-      height: 900px;
+  }
+
+  /* Tablet Styles */
+  @media (min-width: 600px) and (max-width: 1024px) {
+    .slide-track {
+      width: calc(200px * 6);
+    }
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-200px * 3));
+      }
+    }
+    .slide {
+      flex: 0 0 200px;
+    }
+    .pic {
+      max-width: 200px;
+    }
+  }
+
+  /* Mobile Styles */
+  @media (max-width: 599px) {
+    .testimonial-slider {
+      padding: 50px 0;
+    }
+    .slide-track {
+      width: calc(150px * 6);
+    }
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-150px * 3));
+      }
+    }
+    .slide {
+      flex: 0 0 150px;
+    }
+    .pic {
+      max-width: 150px;
     }
   }
 </style>

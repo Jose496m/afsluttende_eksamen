@@ -14,8 +14,8 @@ import instagram from "../assets/images/instagram.svg";
       <p class="adresse">Adresse: <br /> Degnebanken 25, 4681 Herfølge</p>
       <p class="cvr">CVR <br /> 37932493</p>
     </div>
-    <div>
-      <Image class="instagram" src={instagram} alt="instagram" />
+    <div class="instagram">
+      <Image src={instagram} alt="instagram" />
     </div>
   </div>
 </section>
@@ -57,6 +57,8 @@ import instagram from "../assets/images/instagram.svg";
   }
 
   .instagram {
+    margin-left: auto;
+    margin-right: 40px;
   }
 
   @media (min-width: 600px) and (max-width: 1024px) {

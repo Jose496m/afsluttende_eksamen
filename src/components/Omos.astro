@@ -14,8 +14,32 @@ import Menumobil from "./Menumobil.astro";
   <div class="menu"><Menu /></div>
   <Image class="abouthero" src={abouthero} alt="abouthero" />
   <div class="baggrundsfarve">
-    <h1>ABOUT THE BRAND</h1>
+    <h1>WHO ARE WE</h1>
     <p class="about">
+      We met in Copenhagen November 2019. Nelle, a holistic beauty expert, and
+      Blake, a photographer, both entrepreneurs sharing the same mission: to
+      bring more pleasure, presence, and nature into people’s lives. Quickly
+      discovering our commonalities, we realized we were living parallel lives,
+      navigating life's profound questions, and always finding our way back to
+      our essence through nature. 
+      <br />
+      <br /> As partners, our mission and desires grew clearer over the years.
+      We aimed to craft products that nurture a profound connection with
+      oneself, elevating daily life by bringing more pleasure to the everyday
+      experience through nature's enchanting ingredients. Our products transcend
+      gender, race, skin color, and age, focusing on the essence of the human
+      being.
+    </p>
+  </div>
+</section>
+
+<section class="flex">
+  <div class="baggrund">
+    <div>
+      <Image class="illustration hidden" src={about4} alt="illustration" />
+    </div>
+    <h2 class="color">ABOUT US</h2>
+    <p class="color1">
       Welcome to I AM Skincare - where self-love meets conscious beauty. Our
       ethos revolves around crafting vegan skincare products that embody
       self-care, mindfulness, and ethical practices. Rooted in the principles of
@@ -26,28 +50,6 @@ import Menumobil from "./Menumobil.astro";
       nourishes your skin but also aligns with your values. Embrace the power of
       clean, organic, and ethical beauty - because when you love yourself, you
       choose the best for your skin.
-    </p>
-  </div>
-</section>
-
-<section class="flex">
-  <div class="baggrund">
-    <div>
-      <Image class="illustration hidden" src={about4} alt="illustration" />
-    </div>
-    <h2 class="color">WHO ARE WE</h2>
-    <p class="color1">
-      We met in Copenhagen November 2019. Nelle, a holistic beauty expert, and
-      Blake, a photographer, both entrepreneurs sharing the same mission: to
-      bring more pleasure, presence, and nature into people's lives. Quickly
-      discovering our commonalities, we realized we were living parallel lives,
-      navigating life's profound questions, and always finding our way back to
-      our essence through nature.As partners, our mission and desires grew
-      clearer over the years. We aimed to craft products that nurture a profound
-      connection with oneself, elevating daily life by bringing more pleasure to
-      the everyday experience through nature's enchanting ingredients. Our
-      products transcend gender, race, skin color, and age, focusing on the
-      essence of the human being.
     </p>
   </div>
   <div><Image class="about2" src={about2} alt="about2" /></div>
@@ -79,10 +81,12 @@ import Menumobil from "./Menumobil.astro";
       straight to your ideal match made in heaven. Whether you're battling with
       dryness, breakouts, or simply seeking that coveted youthful glow, our
       personalized quiz will analyze your unique needs and preferences to
-      pinpoint the perfect product for you. Say goodbye to guesswork and hello
-      to glowing, radiant skin! With just a few simple questions, you'll be on
-      your way to discovering the skincare solution you've been dreaming of.So
-      why wait?
+      pinpoint the perfect product for you.
+      <br />
+      <br />
+      Say goodbye to guesswork and hello to glowing, radiant skin! With just a few
+      simple questions, you'll be on your way to discovering the skincare solution
+      you've been dreaming of.So why wait?
     </p>
   </div>
 </section>
@@ -94,7 +98,10 @@ import Menumobil from "./Menumobil.astro";
   }
   body {
     background-color: #f5f1eb;
+    margin: 0;
+    font-family: "FahkwangRegular", sans-serif;
   }
+
   @media (min-width: 1025px) {
     .menu1 {
       display: none;
@@ -106,7 +113,6 @@ import Menumobil from "./Menumobil.astro";
     .menu {
       position: absolute;
       margin-top: 40px;
-      margin-left: 60px;
     }
     .abouthero {
       height: 1300px;
@@ -114,18 +120,19 @@ import Menumobil from "./Menumobil.astro";
     }
     h1 {
       position: absolute;
-      margin-top: 100px;
-      margin-left: 50px;
+      margin-top: 150px;
+      margin-left: 5rem;
       color: white;
-      font-size: 36px;
+      font-size: 30px;
+      letter-spacing: 4px;
     }
     .about {
       position: absolute;
-      margin-top: 150px;
-      margin-left: 50px;
-      width: 500px;
+      margin-top: 14rem;
+      margin-left: 5rem;
+      width: 650px;
       color: white;
-      font-size: 20px;
+      font-size: 16px;
     }
     .flex {
       display: flex;
@@ -135,62 +142,71 @@ import Menumobil from "./Menumobil.astro";
     }
     .baggrund {
       background-color: #46433b;
-      padding: 170px;
-      margin-top: -5px;
+      padding: 100px;
+      height: 600px;
+      margin-top: -6px;
     }
     .about2 {
-      margin-top: -5px;
-      width: 100%;
+      margin-top: -6px;
+      width: 620px;
+      height: 600px;
     }
     .color {
-      margin-top: -1300px;
+      margin-top: -1220px;
+      margin-left: 20px;
     }
     .color1 {
-      width: 500px;
+      width: 600px;
       font-size: 16px;
-      margin-top: 10px;
+      margin-top: 30px;
+      margin-left: 20px;
     }
     .center {
       text-align: center;
     }
     .value {
-      width: 700px;
-      margin-left: 440px;
+      margin-left: 240px;
+      margin-right: 240px;
       font-size: 20px;
-      margin-top: 20px;
+      margin-top: 50px;
+      margin-bottom: 130px;
     }
     .value2 {
-      margin-top: 120px;
+      margin-top: 200px;
+      letter-spacing: 4px;
+      color: ;
     }
     .center1 {
-      margin-top: 250px;
-      margin-left: 150px;
+      margin-top: 180px;
+      margin-left: 130px;
       color: white;
       margin-bottom: 20px;
-      font-size: 32px;
+      font-size: 25px;
     }
     .about4 {
-      width: 530px;
-      margin-left: 150px;
+      width: 480px;
+      margin-left: 130px;
       color: white;
       font-size: 16px;
+      line-height: 20px;
     }
     .about3 {
       margin-top: 89px;
-      width: 811px;
+      width: 700px;
+      height: 680px;
     }
     .baggrund1 {
       background-color: #46433b;
-      height: 842px;
+      height: 680px;
       margin-top: 89px;
       width: 1260px;
-      margin-left: -580px;
+      margin-left: -496px;
     }
     .about5 {
-      margin-left: -463px;
-      margin-top: 1050px;
+      margin-left: -440px;
+      margin-top: 940px;
       margin-bottom: 150px;
-      width: 1000px;
+      width: 935px;
     }
     h2 {
       font-family: fahkwangRegular;
@@ -212,47 +228,53 @@ import Menumobil from "./Menumobil.astro";
     }
     .baggrundsfarve {
       background-color: #46433b;
-      width: 1712px;
-      padding: 374px;
+      width: 600px;
+      height: 650px;
+      /*padding: 374px;*/
       margin-top: -10px;
     }
     h1 {
       color: white;
-      font-size: 80px;
-      margin-left: -295px;
+      font-size: 30px;
+      /*margin-left: -295px;*/
+      margin-left: 50px;
+      padding-top: 100px;
     }
     .about {
       color: white;
-      font-size: 60px;
-      width: 1500px;
-      margin-top: 20px;
-      margin-left: -300px;
+      font-size: 19px;
+      width: 500px;
+      margin-top: 50px;
+      /*margin-left: -300px;*/
+      margin-left: 50px;
     }
     .abouthero {
-      height: 1300px;
-      width: 1712px;
+      height: 780px;
+      width: 600px;
     }
-    .illustration {
+    /* .illustration {
       width: 1710px;
       height: 360px;
-    }
+    }*/
 
     .baggrund {
     }
     .about2 {
-      margin-top: -5px;
-      width: 1712px;
-      height: 1500px;
+      margin-top: 00%;
+      width: 600px;
+      height: 500px;
     }
     .color {
-      margin-left: 650px;
-      margin-top: 150px;
+      margin-left: 50px;
+      font-size: 30;
+      padding-top: 100px;
     }
     .color1 {
-      width: 1376px;
-      margin-left: 200px;
-      margin-bottom: 150px;
-      font-size: 50px;
+      width: 500px;
+      margin-left: 50px;
+      margin-bottom: 100px;
+      margin-top: 50px;
+      font-size: 20px;
     }
     .center {
       text-align: center;

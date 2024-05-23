@@ -202,7 +202,7 @@ import Produktknap from "./Produktknap.astro";
   }
 
   .pic1 {
-    width: 100%;
+    width: 73vh;
     height: auto;
     margin-top: 2vh;
   }
@@ -246,6 +246,7 @@ import Produktknap from "./Produktknap.astro";
       font-family: PlayfairdisplayRegular;
       font-size: 2vw;
     }
+
     .flex {
       display: flex;
       flex-direction: row;
@@ -259,20 +260,33 @@ import Produktknap from "./Produktknap.astro";
 
     h1 {
       position: absolute;
-      top: 150px;
-      left: 440px;
+      top: 140px;
+      left: 600px;
       font-size: 4vw;
+    }
+    .pic3 {
+      width: 20vh;
+      margin-left: 20vh;
     }
 
     .pic {
-      height: 180vh;
+      height: 145vh;
       margin-left: -14vh;
-      margin-top: -11vh;
+      margin-top: -49vh;
       width: 200vh;
+    }
+
+    h3 {
+      font-family: PlayfairdisplayBold;
+      font-size: 3vw;
+      margin: 10px 0;
+      margin-top: 30vh;
     }
 
     .hero {
       width: 534px;
+      font-size: 3vh;
+      text-align: left;
     }
     h4 {
       padding: 100px;
@@ -282,8 +296,7 @@ import Produktknap from "./Produktknap.astro";
       flex-direction: row;
     }
     .bestseller1 {
-      padding: 50px;
-      flex: 1;
+      width: 140vh;
     }
     .best {
       margin-top: 50px;
@@ -292,10 +305,15 @@ import Produktknap from "./Produktknap.astro";
       width: 630px;
       text-align: left;
     }
+    .knap {
+      margin-left: 10vh;
+    }
     .bestseller3 {
       margin-left: 0;
     }
     .produkt {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 160px;
       align-items: center;
       margin: 30px;
@@ -304,60 +322,111 @@ import Produktknap from "./Produktknap.astro";
 
   @media (min-width: 600px) and (max-width: 1024px) {
     .menu1 {
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      z-index: 1000;
     }
     .menu {
       display: none;
     }
     h1 {
-      font-size: 8vw;
+      font-size: 12vw;
       margin: 20px 0;
+      text-align: center;
+      position: absolute;
+      margin-top: 82vw;
     }
-    .flex {
-      flex-direction: row;
-      justify-content: center;
-    }
+
     .pic {
-      width: 50%;
+      width: 100%;
       height: auto;
     }
     h3 {
-      margin: 20px 0;
+      font-size: 8vw;
+      margin-top: 5vh;
+      margin-left: 6vh;
     }
     .pic3 {
-      width: 50%;
+      width: 40%;
+      margin: 0 auto;
+      margin-left: 22vh;
     }
     .hero {
-      width: 50%;
+      width: 73%;
       margin: 0 auto;
+      font-size: 4vw;
+      text-align: left;
     }
     h4 {
-      padding: 100px;
+      padding: 20px;
+      font-size: 5vw;
+      text-align: center;
+      width: 700px;
     }
     .bestseller {
-      flex-direction: row;
+      flex-direction: column;
     }
     .bestseller1 {
-      padding: 50px;
+      text-align: center;
+      background-color: #46433b;
+      padding: 35px;
+      width: 724px;
+      margin-left: -33px;
     }
     .best {
-      margin-left: 150px;
+      font-size: 8vw;
+      margin-left: -14vh;
     }
     .bestseller2 {
-      width: 510px;
-      margin-left: 150px;
+      width: 100%;
+      font-size: 4.5vw;
+      text-align: left;
     }
     .bestseller3 {
-      margin-left: 150px;
+      font-size: 5vw;
     }
     .produkt {
-      gap: 50px;
-      align-items: center;
-      margin: 30px;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .tekst {
+      font-size: 6vw;
+      margin-top: 20px;
+      margin-bottom: 50px;
+    }
+    .flex {
+      display: flex;
+      flex-direction: column;
+    }
+    p {
+      font-family: PlayfairdisplayRegular;
+      font-size: 5.5vw;
+      margin: 10px 0;
+      margin-left: 1vh;
+    }
+    .knap {
+      margin-left: 22vh;
+    }
+    .pic1 {
+      width: 69vh;
+      height: auto;
+      margin-top: 0;
+      margin-left: -4vh;
+    }
+    .produkter {
+      text-align: center;
+      font-family: fahkwangMedium;
+      font-size: 7.5vw;
+      margin: 20px 0;
+    }
+    .pic2 {
+      width: 50vh;
+      margin-left: 11vh;
+    }
+    .land {
+      width: 366px;
+      height: auto;
     }
   }
 
@@ -410,7 +479,7 @@ import Produktknap from "./Produktknap.astro";
     .bestseller1 {
       text-align: center;
       background-color: #46433b;
-      width: 46vh;
+      width: 54vh;
       padding: 20px;
     }
     .best {
@@ -419,7 +488,7 @@ import Produktknap from "./Produktknap.astro";
     }
     .bestseller2 {
       width: 100%;
-      font-size: 5.5vw;
+      font-size: 4.5vw;
       text-align: left;
     }
     .bestseller3 {

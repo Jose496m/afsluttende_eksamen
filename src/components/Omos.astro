@@ -214,7 +214,8 @@ import Menumobil from "./Menumobil.astro";
     }
   }
 
-  @media (max-width: 599px) {
+  /* ------ IPAD ----------*/
+  @media (min-width: 600px) and (max-width: 1024px) {
     .menu {
       display: none;
     }
@@ -228,29 +229,29 @@ import Menumobil from "./Menumobil.astro";
     }
     .baggrundsfarve {
       background-color: #46433b;
-      width: 600px;
+      width: 1024px;
       height: 650px;
       /*padding: 374px;*/
-      margin-top: -10px;
+      margin-top: 550px;
     }
     h1 {
       color: white;
       font-size: 30px;
       /*margin-left: -295px;*/
-      margin-left: 50px;
-      padding-top: 100px;
+      margin-left: 170px;
+      padding-top: 150px;
     }
     .about {
       color: white;
       font-size: 19px;
-      width: 500px;
+      width: 700px;
       margin-top: 50px;
       /*margin-left: -300px;*/
-      margin-left: 50px;
+      margin-left: 170px;
     }
     .abouthero {
-      height: 780px;
-      width: 600px;
+      height: 1024px;
+      width: 1024px;
     }
     /* .illustration {
       width: 1710px;
@@ -260,68 +261,196 @@ import Menumobil from "./Menumobil.astro";
     .baggrund {
     }
     .about2 {
-      margin-top: 00%;
-      width: 600px;
-      height: 500px;
+      margin-top: -10%;
+      width: 1024px;
+      height: 800px;
     }
     .color {
-      margin-left: 50px;
+      margin-left: 170px;
       font-size: 30;
-      padding-top: 100px;
+      margin-top: -1255px;
     }
     .color1 {
-      width: 500px;
-      margin-left: 50px;
+      width: 700px;
+      margin-left: 170px;
       margin-bottom: 100px;
       margin-top: 50px;
       font-size: 20px;
     }
     .center {
-      text-align: center;
-      margin-left: 550px;
+      /*text-align: center;
+      margin-left: 550px;*/
+      width: 700px;
     }
     .value {
-      width: 1200px;
-      color: white;
-      text-align: left;
-      margin-left: -300px;
-      font-size: 40px;
-      margin-top: 20px;
+      text-align: center;
+      color: black;
+      font-size: 19px;
+      margin-top: 50px;
+      margin-bottom: 50px;
     }
     .value2 {
-      margin-top: 120px;
-      margin-left: -450px;
-      color: white;
-      font-size: 60px;
+      text-align: center;
+      margin-top: 50px;
+      color: black;
+      font-size: 30px;
     }
     .center1 {
-      text-align: center;
-
-      margin-left: 90px;
+      background-color: #46433b;
+      color: white;
+      padding-top: 15%;
+      margin-left: 170px;
+      font-size: 20;
+      margin-top: -10px;
     }
     .about4 {
-      width: 1400px;
-      margin-left: 150px;
-      font-size: 50px;
+      background-color: #46433b;
+      color: white;
+      width: 700px;
+      margin-left: 170px;
+      font-size: 19px;
       margin-bottom: 100px;
-      margin-top: 20px;
+      margin-top: 50px;
     }
     .about3 {
-      width: 1700px;
-      height: 1200px;
+      width: 1024px;
+      height: 1000px;
     }
     .baggrund1 {
+      height: 590px;
+      background-color: #46433b;
+      width: 1024px;
+      margin-bottom: 32%;
     }
     .about5 {
-      margin-left: 275px;
-      margin-top: 150px;
-      margin-bottom: 150px;
-      width: 1200px;
+      position: absolute;
+      margin-left: 150px;
+      margin-top: 690px;
+      width: 700px;
     }
     .baggrund2 {
-      background-color: #46433b;
       padding: 100px;
-      width: 1712px;
+      width: 600px;
+      margin-top: -5px;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .menu {
+      display: none;
+    }
+
+    .menu1 {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000; /* Sørg for, at Menumobil er øverst */
+    }
+    .baggrundsfarve {
+      background-color: #46433b;
+      width: 400px;
+      height: 850px;
+      /*padding: 374px;*/
+      margin-top: 950px;
+    }
+    h1 {
+      color: white;
+      font-size: 30px;
+      /*margin-left: -295px;*/
+      margin-left: 50px;
+      padding-top: 150px;
+    }
+    .about {
+      color: white;
+      font-size: 19px;
+      width: 300px;
+      margin-top: 50px;
+      /*margin-left: -300px;*/
+      margin-left: 50px;
+    }
+    .abouthero {
+      height: 550px;
+      width: 400px;
+    }
+    /* .illustration {
+      width: 1710px;
+      height: 360px;
+    }*/
+
+    .baggrund {
+    }
+    .about2 {
+      margin-top: -35%;
+      width: 400px;
+      height: 330px;
+    }
+    .color {
+      margin-left: 50px;
+      font-size: 30;
+      margin-top: -1750px;
+    }
+    .color1 {
+      width: 300px;
+      margin-left: 50px;
+      margin-bottom: 125px;
+      margin-top: 50px;
+      font-size: 20px;
+    }
+    .center {
+      /*text-align: center;
+      margin-left: 550px;*/
+    }
+    .value {
+      text-align: center;
+      margin-left: -43px;
+      color: black;
+      font-size: 19px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      width: 300px;
+    }
+    .value2 {
+      margin-top: 50px;
+      color: black;
+      font-size: 30px;
+    }
+    .center1 {
+      background-color: #46433b;
+      color: white;
+      padding-top: 20%;
+      margin-left: 50px;
+      font-size: 20;
+      margin-top: -10px;
+    }
+    .about4 {
+      background-color: #46433b;
+      color: white;
+      width: 300px;
+      margin-left: 50px;
+      font-size: 19px;
+      margin-bottom: 100px;
+      margin-top: 50px;
+    }
+    .about3 {
+      width: 400px;
+      height: 400px;
+    }
+    .baggrund1 {
+      height: 725px;
+      background-color: #46433b;
+      width: 400px;
+      margin-bottom: 40%;
+    }
+    .about5 {
+      position: absolute;
+      margin-left: 40px;
+      margin-top: 780px;
+      width: 300px;
+    }
+    .baggrund2 {
+      padding: 100px;
+      width: 300px;
       margin-top: -5px;
     }
   }

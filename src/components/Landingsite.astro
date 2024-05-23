@@ -100,6 +100,11 @@ import Produktknap from "./Produktknap.astro";
   </div>
 </section>
 <style>
+  body {
+    margin: 0;
+
+    background-color: #f5f1eb;
+  }
   @font-face {
     font-family: fahkwangRegular;
     src: url("/fonts/Fahkwang-Regular.ttf");
@@ -121,137 +126,197 @@ import Produktknap from "./Produktknap.astro";
     src: url("/fonts/Fahkwang-Medium.ttf");
   }
 
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  h1 {
+    font-family: fahkwangRegular;
+    font-size: 4vw;
+    margin: 20px 0;
+  }
+
+  .pic {
+    height: auto;
+  }
+
+  .pic3 {
+    width: 20vh;
+    height: auto;
+  }
+
+  h3 {
+    font-family: PlayfairdisplayBold;
+    font-size: 3vw;
+    margin: 10px 0;
+    margin-top: 30vh;
+  }
+
+  p {
+    font-family: PlayfairdisplayRegular;
+    font-size: 1.5vw;
+    margin: 10px 0;
+  }
+
+  .hero {
+    font-family: ZapfHumanist;
+    font-size: 1.5vw;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .knap,
+  .knap2 {
+    margin: 20px 0;
+    margin-left: 15vh;
+  }
+
+  .knap2 {
+    margin-left: 13vh;
+  }
+
+  .bestseller {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+    color: white;
+  }
+
+  .bestseller1 {
+    text-align: center;
+    background-color: #46433b;
+  }
+
+  .best,
+  .bestseller3 {
+    font-family: fahkwangMedium;
+    margin: 10px 0;
+  }
+
+  .best {
+    font-size: 2.5vw;
+  }
+
+  .bestseller3 {
+    font-size: 2vw;
+  }
+
+  .bestseller2 {
+    font-family: ZapfHumanist;
+    font-size: 20px;
+    margin: 10px 0;
+  }
+
+  .pic1 {
+    width: 84vh;
+    height: 81vh;
+    margin-top: 2vh;
+  }
+
+  .produkter {
+    text-align: center;
+    font-family: fahkwangMedium;
+    font-size: 2.5vw;
+    margin: 20px 0;
+  }
+
+  .produkt {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .pic2 {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .tekst {
+    text-align: center;
+    font-family: ZapfHumanist;
+    font-size: 1.5vw;
+  }
+
   @media (min-width: 1025px) {
-    body {
-      background-color: #f5f1eb;
-    }
     .menu1 {
       display: none;
     }
-    .flex {
-      display: flex;
-      margin-left: -191px;
-    }
-    h1 {
-      position: absolute;
-      margin-top: 150px;
-      font-family: fahkwangRegular;
-      font-size: 76px;
-      margin-left: 440px;
-    }
-    .header {
-      position: relative;
-    }
     .menu {
       position: absolute;
-      margin-top: 40px;
-      margin-left: 60px;
+      top: 40px;
+      left: 60px;
     }
-
-    h4 {
+    .citat h4 {
       text-align: center;
-      padding: 100px;
       font-family: PlayfairdisplayRegular;
-      font-size: 26px;
+      font-size: 2vw;
     }
-    .knap {
-      margin-left: 300px;
-      font-family: ;
-    }
-    .citat {
-      width: auto;
-      height: auto;
-    }
-    .bestseller {
+    .flex {
       display: flex;
-      width: auto;
-      height: auto;
+      flex-direction: column;
+      align-items: center;
     }
 
-    .bestseller1 {
-      background-color: #46433b;
+    .flex > div {
+      margin: 10px;
     }
-    h2 {
-      margin-left: 50px;
-      margin-top: 50px;
-      color: white;
-      margin-bottom: 100px;
-      font-family: PlayfairdisplayRegular;
-      font-size: 30px;
+
+    h1 {
+      position: absolute;
+      top: 150px;
+      left: 440px;
+      font-size: 76px;
     }
-    .bestseller2 {
-      width: 510px;
-      margin-left: 100px;
-      margin-right: 300px;
-      margin-top: 30px;
-      color: white;
-      font-family: ZapfHumanist;
-      font-size: 16px;
+    .flex {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-left: -191px;
     }
     .pic {
-      width: 1000px;
-      height: 910px;
+      height: auto;
+      margin-top: -36vh;
     }
     .pic3 {
-      margin-left: 305px;
-      width: 210px;
-      height: auto;
     }
-    .pic1 {
-      width: 693px;
-      height: 640px;
+    .hero {
+      width: 534px;
     }
-    .produkter {
-      color: black;
-      margin-left: 28px;
-      font-family: fahkwangMedium;
-      font-size: 30;
+    h4 {
+      padding: 100px;
+      font-size: 26px;
+    }
+    .bestseller {
+      flex-direction: row;
+    }
+    .bestseller1 {
+      padding: 50px;
+      width: 300vh;
+      height: 80vh;
+      margin-left: -3vh;
+    }
+    .best {
+      margin-top: 50px;
+      margin-left: -23vh;
+    }
+    .bestseller2 {
+      width: 630px;
+      text-align: left;
+      margin-left: 13vh;
+    }
+    .bestseller3 {
+      margin-left: -4vh;
     }
     .produkt {
-      display: flex;
       gap: 160px;
       align-items: center;
       margin: 30px;
     }
-    h3 {
-      margin-top: 300px;
-      margin-left: 250px;
-      font-family: PlayfairdisplayBold;
-      font-size: 32px;
-    }
-    p {
-      margin-left: 223px;
-      margin-top: 10px;
-      font-family: PlayfairdisplayRegular;
-      font-size: 22px;
-    }
-    .hero {
-      width: 534px;
-      margin-left: 191px;
-      font-family: ZapfHumanist;
-      font-size: 22px;
-    }
-    .bestseller3 {
-      color: white;
-      margin-left: 100px;
-      margin-top: 5px;
-      font-family: fahkwangMedium;
-      font-size: 32px;
-    }
-    a {
-      text-decoration: none;
-      color: black;
-      cursor: pointer;
-    }
-    .knap2 {
-      margin-left: 100px;
-    }
     .tekst {
-      font-family: ZapfHumanist;
-      font-size: 16px;
-      margin-left: 0px;
-      margin-top: 10px;
-      margin-bottom: 10px;
+      margin: 10px 0;
     }
   }
 
@@ -261,187 +326,161 @@ import Produktknap from "./Produktknap.astro";
       top: 0;
       left: 0;
       width: 100%;
-      z-index: 1000; /* Sørg for, at Menumobil er øverst */
-    }
-    body {
-      background-color: #f5f1eb;
-      width: 100%;
-    }
-    .menu {
-      display: none;
-    }
-    .flex {
-      display: flex;
-    }
-
-    .pic {
-      margin-right: 335px;
-      width: 900px;
-      height: 1100px;
-    }
-    h3 {
-      margin-top: 144px;
-      margin-left: 100px;
-    }
-    .pic3 {
-      width: 500px;
-      height: auto;
-    }
-    .hero {
-      width: 220px;
-      margin-left: 80px;
-    }
-
-    h4 {
-      text-align: center;
-      padding: 100px;
-    }
-
-    .bestseller {
-      width: 1700px;
-      height: auto;
-    }
-
-    .bestseller1 {
-      background-color: #46433b;
-      padding: 100px;
-    }
-    .best {
-      margin-left: 150px;
-
-      color: white;
-    }
-    .bestseller2 {
-      width: 510px;
-      margin-left: 150px;
-      margin-right: 300px;
-      margin-top: 30px;
-      color: white;
-    }
-    .bestseller3 {
-      margin-left: 152px;
-      color: white;
-      width: 280px;
-      margin-top: 50px;
-    }
-    .pic1 {
-      width: 100%;
-      height: auto;
-    }
-    .produkter {
-      text-align: center;
-    }
-    .pic2 {
-      margin-top: 50px;
-    }
-    p {
-      margin-top: 50px;
-    }
-  }
-
-  @media (max-width: 599px) {
-    .menu1 {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
       z-index: 1000;
-    }
-    body {
-      background-color: #f5f1eb;
-      width: 100%;
     }
     .menu {
       display: none;
     }
     h1 {
+      margin: 20px 0;
+    }
+    .flex {
+      flex-direction: row;
+      justify-content: center;
+    }
+    .pic {
+      width: 50%;
+      height: auto;
+    }
+    h3 {
+      margin: 20px 0;
+    }
+    .pic3 {
+      width: 50%;
+    }
+    .hero {
+      width: 50%;
+      margin: 0 auto;
+    }
+    h4 {
+      padding: 100px;
+    }
+    .bestseller {
+      flex-direction: row;
+    }
+    .bestseller1 {
+      padding: 50px;
+    }
+    .best {
+      margin-left: 150px;
+    }
+    .bestseller2 {
+      width: 510px;
+      margin-left: 150px;
+    }
+    .bestseller3 {
+      margin-left: 152px;
+    }
+    .produkt {
+      gap: 50px;
+      align-items: center;
+      margin: 30px;
+    }
+    .tekst {
+      margin: 10px 0;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .menu1 {
       position: absolute;
-      margin-top: 150px;
-      font-family: fahkwangRegular;
-      font-size: 76px;
-      margin-left: 440px;
+      top: 0;
+      left: 0;
+      width: 180vh;
+    }
+    .menu {
+      display: none;
+    }
+    h1 {
+      margin: 20px 0;
+      font-size: 25vw; /* Juster skriftstørrelsen for at passe til små skærme */
+      white-space: nowrap; /* Forhindrer tekstbrud */
+      overflow: hidden; /* Skjuler eventuel overløbende tekst */
+      text-align: center; /* Centrerer teksten */
+      position: absolute;
+      margin-top: 20vh;
+      margin-left: 50vh;
+    }
+
+    .pic {
+      width: 115vh;
+      height: 160vh;
+    }
+    h3 {
+      margin-top: 41vh;
+      font-size: 8vh;
+      margin-left: 5vh;
+    }
+    .pic3 {
+      width: 30vh;
+      margin-left: 20vh;
+    }
+    .hero {
+      width: 55vh;
+      margin: 0 auto;
+      font-size: 10.5vw;
+      text-align: left;
+      margin-left: 10vh;
+    }
+    h4 {
+      padding: 20px;
+      font-size: 5vw;
+    }
+    .bestseller {
+      flex-direction: column;
+    }
+    .bestseller1 {
+      text-align: center;
+      background-color: #46433b;
+      width: 326vh;
+      padding: 300px;
+    }
+    .best {
+      margin: 20px 0;
+      font-size: 17vw;
+      margin-left: 600px;
+    }
+    .bestseller2 {
+      width: 1000px;
+      margin: 10px 0;
+      font-size: 10vw;
+      text-align: left;
+      margin-left: 1246px;
+    }
+    .bestseller3 {
+      margin: 20px 0;
+      font-size: 15vw;
+      margin-left: 1020px;
+    }
+    .produkt {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .tekst {
+      margin: 10px 0;
+      font-size: 4vw;
     }
     .flex {
       display: flex;
     }
-    .pic {
-      margin-right: 335px;
-      width: 900px;
-      height: 1100px;
+    p {
+      font-family: PlayfairdisplayRegular;
+      font-size: 10.5vw;
+      margin: 10px 0;
+      margin-left: 6vh;
     }
-    h3 {
-      margin-top: 144px;
-      margin-left: 100px;
-    }
-    .pic3 {
-      width: 500px;
-      height: auto;
-    }
-    .hero {
-      width: 220px;
-      margin-left: 80px;
-    }
-
-    h4 {
+    .citat h4 {
       text-align: center;
-      padding: 100px;
-      margin-left: 400px;
-      width: 900px;
-      font-size: 43px;
-    }
-
-    .bestseller {
-      width: 1700px;
-      height: auto;
-    }
-
-    .bestseller1 {
-      background-color: #46433b;
-      padding: 100px;
-    }
-    .best {
-      margin-left: 600px;
-      color: white;
-      font-size: 50px;
-    }
-    .bestseller2 {
-      width: 730px;
-      margin-left: 464px;
-      margin-right: 300px;
-      margin-top: 30px;
-      color: white;
-      font-size: 30px;
-    }
-    .bestseller3 {
-      margin-left: 492px;
-      color: white;
-      width: 692px;
-      margin-top: 50px;
-      font-size: 50px;
+      font-family: PlayfairdisplayRegular;
+      font-size: 16vw;
+      width: 1500px;
+      margin-left: 12vh;
+      margin-top: 20vh;
     }
     .pic1 {
-      width: 100%;
-      height: auto;
-    }
-    .produkter {
-      margin-left: 600px;
-      margin-top: 150px;
-      font-size: 60px;
-    }
-    .pic2 {
-      margin-top: 250px;
-      margin-left: 400px;
-      width: 900px;
-    }
-    p {
-      margin-top: 50px;
-    }
-    .tekst {
-      margin-top: 50px;
-      margin-left: 708px;
-      width: 290px;
-      font-size: 40px;
-      margin-bottom: 150px;
+      width: 184vh;
+      height: 140vh;
+      margin-left: 1320px;
     }
   }
 </style>

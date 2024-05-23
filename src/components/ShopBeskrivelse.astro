@@ -122,6 +122,10 @@ import Produktknap from "./Produktknap.astro";
   </section>
 
   <style>
+    @font-face {
+      font-family: ZapfHumanist;
+      src: url("/fonts/ZapfHumanist601Regular.ttf");
+    }
     @media (min-width: 1025px) {
       body {
         background-color: #f5f1eb;
@@ -168,6 +172,7 @@ import Produktknap from "./Produktknap.astro";
       .p3 {
         margin-top: 10px;
         margin-bottom: 10px;
+        font-size: 20px;
       }
       .line {
         border-bottom: 2px solid black;
@@ -217,17 +222,23 @@ import Produktknap from "./Produktknap.astro";
       }
       h1 {
         margin-top: 90px;
+        font-size: 36px;
       }
       .p1 {
         width: 380px;
         margin-top: 10px;
         margin-bottom: 10px;
+        font-size: 20px;
       }
       .stjerne {
         margin-bottom: 10px;
+        margin-top: 20px;
       }
       .p2 {
         margin-bottom: 10px;
+        font-size: 20px;
+        margin-top: 15px;
+        margin-left: 10px;
       }
       h3 {
         margin-top: 10px;
@@ -252,6 +263,10 @@ import Produktknap from "./Produktknap.astro";
         margin-left: 50px;
         width: 500px;
         margin-bottom: 40px;
+      }
+      p {
+        font-size: 20px;
+        width: 500px;
       }
     }
 

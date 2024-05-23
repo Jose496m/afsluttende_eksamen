@@ -13,14 +13,15 @@ import HudAnalyseKnap from "./HudAnalyseKnap.astro";
   <div class="menu1"><Menumobil /></div>
   <div class="menu"><Menu /></div>
   <div>
-    <h1>SKIN ANALYSIS</h1>
+    <h5>Find your ultimate skincare soulmate by taking our test</h5>
     <p class="hudanalyse">
-      Embracing the philosophy of 'I AM', we believe in the transformative power
-      of energy, influenced by our thoughts and feelings. Choosing to embrace
-      life's positivity is a conscious decision. We aim to accompany you on this
-      journey, infusing our products with self-love, consciousness, and
-      empowering mantras. These mantras resonate wherever you are on your path,
-      a constant support in.
+      Our personalized test is tailored to analyze your unique skin type,
+      concerns, and preferences, guiding you straight to your perfect skincare
+      products. Whether you're battling dryness, combating breakouts, or chasing
+      that youthful glow, our expertly crafted questions will lead you towards
+      the products that will transform your skin. <br /><br /> Say goodbye to guessing
+      games and hello to a customized routine that's made just for you. Take the
+      test now and discover the skincare solution you've been searching for!
     </p>
     <div class="button">
       <a href="/Hudanalyse/analyse1">
@@ -36,48 +37,72 @@ import HudAnalyseKnap from "./HudAnalyseKnap.astro";
 <section>
   <div class="flex">
     <div>
-      <h4>FOLLOW US ON OUR SOCIAL MEDIA</h4>
+      <h4>FOLLOW US ON OUR <br />SOCIAL MEDIA</h4>
 
       <a href="https://www.instagram.com/i.am.selfcare/">
         <Image class="insta" src={insta} alt="insta" /></a
       >
     </div>
-    <div>
-      <BilledeCollageHud />
-    </div>
   </div>
 </section>
-<section></section>
+<section>
+  <div>
+    <BilledeCollageHud />
+  </div>
+</section>
 
 <style>
+  @font-face {
+    font-family: fahkwangLight;
+    src: url("/fonts/Fahkwang-Light.ttf");
+  }
+  @font-face {
+    font-family: fahkwangRegular;
+    src: url("/fonts/Fahkwang-Regular.ttf");
+  }
+  @font-face {
+    font-family: fahkwangMedium;
+    src: url("/fonts/Fahkwang-Medium.ttf");
+  }
   @media (min-width: 1025px) {
     body {
       background-color: #f5f1eb;
+      margin: 0;
     }
+
+    .menu1 {
+      display: none;
+    }
+
     .menu {
       position: absolute;
       margin-left: 30px;
       margin-top: -100px;
     }
-    .menu1 {
-      display: none;
-    }
+
     .creme {
       width: 40%;
       margin-top: -50px;
       margin-left: 191px;
     }
-    h1 {
+
+    h5 {
       text-align: center;
       margin-top: 150px;
+      font-family: fahkwangMedium;
+      font-size: 32px;
     }
+
     h4 {
-      margin-left: 69px;
+      margin-left: -700px;
       margin-top: 50px;
+      font-family: fahkwangRegular;
+      font-size: 24px;
     }
+
     .insta {
       width: 65px;
-      margin-left: 160px;
+      margin-left: -636px;
       margin-top: 10px;
     }
 
@@ -85,88 +110,136 @@ import HudAnalyseKnap from "./HudAnalyseKnap.astro";
       width: 600px;
       margin-left: 500px;
       margin-top: 50px;
+      font-size: 20px;
     }
+
     .flex {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       margin-top: 150px;
+    }
+
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      color: black;
+    }
+
+    .button {
+      border: 1px solid black;
+      width: 251px;
+      height: 54px;
+      margin: 20px auto;
+      text-align: center;
+      color: black;
+      padding: 20px;
+    }
+  }
+
+  /* Tablet styles */
+  @media (min-width: 600px) and (max-width: 1024px) {
+    .menu {
+      display: none;
+    }
+    .creme {
+      width: 70%;
+      margin: 0 auto;
+    }
+    h1,
+    h5 {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 30px;
+    }
+    h4 {
+      margin-top: 100px;
+      text-align: center;
+      font-family: fahkwangRegular;
+      font-size: 30px;
+    }
+    .insta {
+      width: 100px;
+      margin: 10px auto;
+      align-items: center;
+      display: flex;
+    }
+    .hudanalyse {
+      margin: 30px auto;
+      font-size: 20px;
+      width: 80%;
+      text-align: center;
     }
     a {
       text-decoration: none;
       cursor: pointer;
       color: black;
     }
+
     .button {
       border: 1px solid black;
-      width: 200px;
-      height: 35px;
-      margin-left: 688px;
+      width: 251px;
+      height: 54px;
+      margin: 20px auto;
       text-align: center;
       color: black;
-      padding: 10px;
-      margin-top: 20px;
+      padding: 20px;
     }
-  }
-
-  @media (min-width: 600px) and (max-width: 1024px) {
-    body {
-      background-color: #f5f1eb;
-    }
-    .menu {
-      display: none;
-    }
-    .creme {
-      width: 70%;
-    }
-    h1 {
+    h5 {
       text-align: center;
-      margin-top: 50px;
-    }
-    h4 {
-      margin-top: 10px;
-      margin-left: 20px;
-      font-size: 14px;
-    }
-    .insta {
-      width: 45px;
-      margin-left: 20px;
-      margin-top: 10px;
-    }
-
-    .hudanalyse {
-      width: 350px;
-      margin-left: 60px;
-      margin-top: 50px;
+      margin-top: 150px;
+      font-family: fahkwangMedium;
+      font-size: 32px;
     }
   }
+
+  /* Mobile styles */
   @media (max-width: 599px) {
-    body {
-      background-color: #f5f1eb;
-    }
     .menu {
       display: none;
     }
     .creme {
       width: 70%;
+      margin: 0 auto;
     }
-    h1 {
+    h1,
+    h5 {
       text-align: center;
       margin-top: 50px;
+      font-size: 20px;
     }
     h4 {
       margin-top: 100px;
       text-align: center;
-      font-size: 14px;
+      font-family: fahkwangRegular;
+      font-size: 20px;
     }
     .insta {
       width: 45px;
-      margin-left: 200px;
-      margin-top: 10px;
+      margin: 14px auto;
+      align-items: center;
+      display: flex;
+    }
+    .hudanalyse {
+      width: 80%;
+      margin: 30px auto;
+      font-size: 14px;
+      text-align: center;
+    }
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      color: black;
     }
 
-    .hudanalyse {
-      width: 350px;
-      margin-left: 60px;
-      margin-top: 50px;
+    .button {
+      border: 1px solid black;
+      width: 251px;
+      height: 54px;
+      margin: 20px auto;
+      text-align: center;
+      color: black;
+      padding: 20px;
     }
   }
 </style>

@@ -38,14 +38,15 @@ import ShopKnap from "./ShopKnap.astro";
     </div>
   </div>
 </section>
-
+<h5>
+  “I AM, empowers self-awareness through mantras, guiding you to actively shape
+  your journey and become an expert in yourself”
+</h5>
 <section class="card_container grid">
   <p>
-    “I AM, empowers self-awareness through mantras, guiding you to actively
-    shape your journey and become an expert in yourself” <br />
-    <br />Embracing the philosophy of 'I AM', we believe in the transformative
-    power of energy, influenced by our thoughts and feelings. Choosing to
-    embrace life's positivity is a conscious decision.
+    Embracing the philosophy of 'I AM', we believe in the transformative power
+    of energy, influenced by our thoughts and feelings. Choosing to embrace
+    life's positivity is a conscious decision.
   </p>
   <ShoppingCard
     class="placering1 farve"
@@ -63,7 +64,7 @@ import ShopKnap from "./ShopKnap.astro";
     text3="425 DKK"
   >
     <Image class="shop2" src={shop2} alt="shop2" />
-    <ShopKnap />
+    <a href="../beskrivelseshop"><ShopKnap /></a>
   </ShoppingCard>
   <ShoppingCard
     class="placering3 farve"
@@ -72,7 +73,7 @@ import ShopKnap from "./ShopKnap.astro";
     text3="250 DKK"
   >
     <Image class="shop3" src={shop3} alt="shop3" />
-    <ShopKnap />
+    <a href="../beskrivelseshop"><ShopKnap /></a>
   </ShoppingCard>
   <ShoppingCard
     class="placering1 farve"
@@ -81,7 +82,7 @@ import ShopKnap from "./ShopKnap.astro";
     text3="415 DKK"
   >
     <Image class="shop4" src={shop4} alt="shop4" />
-    <ShopKnap />
+    <a href="../beskrivelseshop"><ShopKnap /></a>
   </ShoppingCard>
   <ShoppingCard
     class="placering1 farve"
@@ -90,7 +91,7 @@ import ShopKnap from "./ShopKnap.astro";
     text3="415 DKK"
   >
     <Image class="shop5" src={shop5} alt="shop5" />
-    <ShopKnap />
+    <a href="../beskrivelseshop"><ShopKnap /></a>
   </ShoppingCard>
   <ShoppingCard
     class="placering1 farve"
@@ -99,7 +100,7 @@ import ShopKnap from "./ShopKnap.astro";
     text3="355 DKK"
   >
     <Image class="shop6" src={shop6} alt="shop6" />
-    <ShopKnap />
+    <a href="../beskrivelseshop"><ShopKnap /></a>
   </ShoppingCard>
   <ShoppingCard
     class="placering1 farve"
@@ -108,7 +109,7 @@ import ShopKnap from "./ShopKnap.astro";
     text3="225 DKK"
   >
     <Image class="shop7" src={shop7} alt="shop7" />
-    <ShopKnap />
+    <a href="../beskrivelseshop"><ShopKnap /></a>
   </ShoppingCard>
   <ShoppingCard
     class="placering1 farve"
@@ -117,7 +118,7 @@ import ShopKnap from "./ShopKnap.astro";
     text3="225 DKK"
   >
     <Image class="shop8" src={shop8} alt="shop8" />
-    <ShopKnap />
+    <a href="../beskrivelseshop"><ShopKnap /></a>
   </ShoppingCard>
   <ShoppingCard
     class="placering1 farve"
@@ -125,18 +126,30 @@ import ShopKnap from "./ShopKnap.astro";
     text3="25 DKK"
   >
     <Image class="shop9" src={shop9} alt="shop9" />
-    <ShopKnap />
+    <a href="../beskrivelseshop"><ShopKnap /></a>
   </ShoppingCard>
 </section>
 <section>
-  <h4 class="h4">
+  <h3 class="h4">
     Wondering which product will make your skin fall head over heels?
-  </h4>
+  </h3>
   <p class="p">Our quick quiz will set you up with your ideal skincare match</p>
   <Image class="shop10" src={shop10} alt="shop10" />
 </section>
 
 <style>
+  @font-face {
+    font-family: ZapfHumanist;
+    src: url("/fonts/ZapfHumanist601Regular.ttf");
+  }
+  @font-face {
+    font-family: PlayfairdisplayRegular;
+    src: url("/fonts/PlayfairDisplay-Regular.ttf");
+  }
+  @font-face {
+    font-family: fahkwangRegular;
+    src: url("/fonts/Fahkwang-Regular.ttf");
+  }
   @media (min-width: 1025px) {
     body {
       background-color: #f5f1eb;
@@ -147,6 +160,14 @@ import ShopKnap from "./ShopKnap.astro";
     .menu {
       margin-left: 30px;
       margin-top: 50px;
+    }
+    h5 {
+      font-family: PlayfairdisplayRegular;
+      width: 500px;
+      font-size: 30px;
+      margin-left: 50px;
+      position: absolute;
+      margin-top: 150px;
     }
     .min-sektion {
       background-color: #161616; /* Tilpas farven efter behov */
@@ -159,20 +180,28 @@ import ShopKnap from "./ShopKnap.astro";
       justify-content: space-between;
       list-style: none;
       color: white;
+      font-family: ZapfHumanist;
+      font-size: 20px;
     }
 
     h1 {
       margin-top: 100px;
       margin-left: 50px;
+      font-size: 36px;
     }
     .grid {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
     }
     p {
-      margin-top: 180px;
-      width: 370px;
+      width: 529px;
       margin-left: 50px;
+      margin-top: 365px;
+      font-size: 20px;
+    }
+    a {
+      text-decoration: none;
+      color: black;
     }
     .shop1,
     .shop2,
@@ -204,9 +233,12 @@ import ShopKnap from "./ShopKnap.astro";
     }
     .h4 {
       margin-top: 500px;
+      width: 550px;
+      font-size: 25px;
     }
     .p {
-      margin-top: 550px;
+      margin-top: 580px;
+      font-size: 20px;
     }
     .shop10 {
       margin-top: 50px;

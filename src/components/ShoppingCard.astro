@@ -5,12 +5,20 @@ const { text, text2, text3 } = Astro.props;
 <section class="container">
   <div class="farve">
     <slot />
-    <h2>{text}</h2>
-    <h3>{text2}</h3>
+    <h1>{text}</h1>
+    <h4>{text2}</h4>
     <p>{text3}</p>
   </div>
 </section>
 <style>
+  @font-face {
+    font-family: fahkwangRegular;
+    src: url("/fonts/Fahkwang-Regular.ttf");
+  }
+  @font-face {
+    font-family: ZapfHumanist;
+    src: url("/fonts/ZapfHumanist601Regular.ttf");
+  }
   .container {
     display: flex;
     justify-content: center;
@@ -24,13 +32,16 @@ const { text, text2, text3 } = Astro.props;
     padding: 20px;
     margin-top: 150px;
   }
-  h2 {
+  h1 {
     text-align: center;
     margin-top: 10px;
+    font-size: 20px;
   }
-  h3 {
+  h4 {
     text-align: center;
     margin-top: 10px;
+    font-family: ZapfHumanist;
+    font-size: 16px;
   }
   p {
     text-align: center;

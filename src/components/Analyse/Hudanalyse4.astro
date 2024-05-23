@@ -35,10 +35,10 @@ import HudAnalyseKnap from "./HudAnalyseKnap.astro";
 </section>
 <section class="flex">
   <div class="button2">
-    <a href="/Hudanalyse/analyse3"> <HudAnalyseKnap title="BACK" /></a>
+    <a href="/Hudanalyse/analyse3"> <p class="next">BACK</p></a>
   </div>
   <div class="button2">
-    <a href="/Hudanalyse/analyse5"> <HudAnalyseKnap title="NEXT" /></a>
+    <a href="/Hudanalyse/analyse5"> <p class="next">NEXT</p></a>
   </div>
 </section>
 
@@ -109,6 +109,7 @@ import HudAnalyseKnap from "./HudAnalyseKnap.astro";
       padding: 50px;
       margin: 120px;
       text-align: center;
+      font-size: 22px;
     }
     .boks2 {
       margin-top: -50px;
@@ -123,17 +124,28 @@ import HudAnalyseKnap from "./HudAnalyseKnap.astro";
       color: black;
     }
     .button2 {
-      border: 1px solid black;
       width: 200px;
       height: 35px;
-      margin-left: 400px;
+      position: relative;
+      display: inline-block;
       text-align: center;
       color: black;
       padding: 10px;
-      margin-top: 20px;
+      margin-bottom: 70px;
+      margin-top: -30px;
+      margin-left: 400px;
+    }
+    .button2::after {
+      content: "";
+      position: absolute;
+      left: -10px; /* Juster startpunktet for linjen */
+      right: -10px; /* Juster slutpunktet for linjen */
+      bottom: -2px; /* Juster afstanden fra teksten */
+      height: 2px; /* Juster tykkelsen af linjen */
+      background-color: black; /* Juster farven på linjen */
     }
   }
-  @media (max-width: 599px) {
+  @media (min-width: 600px) and (max-width: 1024px) {
     body {
       background-image: url(../../assets/images/hudanalyse1.png);
     }
@@ -144,12 +156,14 @@ import HudAnalyseKnap from "./HudAnalyseKnap.astro";
     h1 {
       text-align: center;
       margin-top: 150px;
+      font-size: 25px;
     }
     .tekst {
       width: 306px;
       text-align: center;
-      margin-left: 53px;
+      margin-left: 230px;
       margin-top: 20px;
+      font-size: 16px;
     }
 
     .boks input[type="checkbox"] {
@@ -203,6 +217,98 @@ import HudAnalyseKnap from "./HudAnalyseKnap.astro";
       margin-left: 120px;
     }
     .button2 {
+      width: 200px;
+      height: 35px;
+      position: relative;
+      display: inline-block;
+      text-align: center;
+      color: black;
+      padding: 10px;
+      margin-bottom: 70px;
+      margin-top: -30px;
+      margin-left: 120px;
+    }
+    .button2::after {
+      content: "";
+      position: absolute;
+      left: -10px; /* Juster startpunktet for linjen */
+      right: -10px; /* Juster slutpunktet for linjen */
+      bottom: -2px; /* Juster afstanden fra teksten */
+      height: 2px; /* Juster tykkelsen af linjen */
+      background-color: black; /* Juster farven på linjen */
+    }
+
+    .next {
+      font-family: fahkwangLight;
+      font-size: 16px;
+    }
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      color: black;
+    }
+  }
+  @media (max-width: 599px) {
+    body {
+      background-image: url(../../assets/images/hudanalyse1.png);
+    }
+
+    .menu {
+      display: none;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 150px;
+      font-size: 25px;
+    }
+    .tekst {
+      width: 306px;
+      text-align: center;
+      margin-left: 53px;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    .boks input[type="checkbox"] {
+      /* Skjul den standard checkboks */
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      /* Opret en brugerdefineret checkboks */
+      width: 16px;
+      height: 16px;
+
+      border: 1px solid black;
+      border-radius: 20px; /* Gør kanterne lidt afrundede */
+      margin-right: 10px; /* Tilføj lidt plads mellem checkboksen og teksten */
+    }
+
+    /* Opret checkhakket inden i den brugerdefinerede checkboks */
+    .boks input[type="checkbox"]::before {
+      content: "\2713"; /* Brug unicode-tegnet for check-hakket */
+      font-size: 12px; /* Juster størrelsen efter behov */
+
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: black; /* Farve på checkhakket */
+      opacity: 0; /* Start med at være usynlig */
+    }
+
+    /* Stil den brugerdefinerede checkboks, når den er markeret */
+    .boks input[type="checkbox"]:checked::before {
+      opacity: 1; /* Gør checkhakket synligt */
+    }
+
+    .boks {
+      border: 1px solid black;
+      background-color: transparent;
+      padding: 50px;
+      margin: 55px;
+      text-align: center;
+    }
+
+    .button {
       border: 1px solid black;
       width: 200px;
       height: 35px;
@@ -212,6 +318,32 @@ import HudAnalyseKnap from "./HudAnalyseKnap.astro";
       margin-bottom: 70px;
       margin-top: -30px;
       margin-left: 120px;
+    }
+    .button2 {
+      width: 200px;
+      height: 35px;
+      position: relative;
+      display: inline-block;
+      text-align: center;
+      color: black;
+      padding: 10px;
+      margin-bottom: 70px;
+      margin-top: -30px;
+      margin-left: 120px;
+    }
+    .button2::after {
+      content: "";
+      position: absolute;
+      left: -10px; /* Juster startpunktet for linjen */
+      right: -10px; /* Juster slutpunktet for linjen */
+      bottom: -2px; /* Juster afstanden fra teksten */
+      height: 2px; /* Juster tykkelsen af linjen */
+      background-color: black; /* Juster farven på linjen */
+    }
+
+    .next {
+      font-family: fahkwangLight;
+      font-size: 16px;
     }
     a {
       text-decoration: none;

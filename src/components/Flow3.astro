@@ -40,7 +40,7 @@ import Klarna from "../assets/images/klarna.png";
         <h2>OTHER PAYMENT METODE</h2>
 
         <div class="label other-payment">
-          <label>
+          <label class="betaling">
             <input type="checkbox" name="paypal" value="paypal" />
             Paypal
           </label>
@@ -48,7 +48,7 @@ import Klarna from "../assets/images/klarna.png";
         </div>
         <div class="line5"></div>
         <div class="label other-payment">
-          <label>
+          <label class="betaling">
             <input type="checkbox" name="klarna" value="klarna" />
             Klarna
           </label>
@@ -56,7 +56,7 @@ import Klarna from "../assets/images/klarna.png";
         </div>
         <div class="line5"></div>
         <div class="label other-payment">
-          <label>
+          <label class="betaling">
             <input type="checkbox" name="mobilepay" value="mobilepay" />
             MobilePay
           </label>
@@ -79,7 +79,7 @@ import Klarna from "../assets/images/klarna.png";
       <div class="line3"></div>
       <div class="flex2">
         <Image class="flow" src={flow} alt="flow" />
-        <h4>I am purified</h4>
+        <h4>I AM PURIFIED</h4>
         <div class="boks">
           <p class="boks1">1</p>
         </div>
@@ -103,6 +103,14 @@ import Klarna from "../assets/images/klarna.png";
   </div>
 </section>
 <style>
+  @font-face {
+    font-family: fahkwangRegular;
+    src: url("/fonts/Fahkwang-Regular.ttf");
+  }
+  @font-face {
+    font-family: ZapfHumanist;
+    src: url("/fonts/ZapfHumanist601Regular.ttf");
+  }
   @media (min-width: 1025px) {
     .menu1 {
       display: none;
@@ -114,10 +122,13 @@ import Klarna from "../assets/images/klarna.png";
       margin-bottom: 50px;
       margin-left: 50px;
     }
-
     .container {
       display: flex;
       height: 100vh;
+    }
+    .betaling {
+      font-family: ZapfHumanist;
+      font-size: 20px;
     }
 
     .white-side {
@@ -135,12 +146,16 @@ import Klarna from "../assets/images/klarna.png";
     h1 {
       margin-left: 47px;
       margin-top: 110px;
+      font-size: 24px;
     }
     h2 {
       margin-left: 50px;
       margin-top: 50px;
       margin-bottom: 50px;
+      font-family: fahkwangRegular;
+      font-size: 24px;
     }
+
     .p {
       margin-left: 50px;
     }
@@ -150,6 +165,14 @@ import Klarna from "../assets/images/klarna.png";
     .label {
       margin-left: 200px;
     }
+    label {
+      font-family: ZapfHumanist;
+      font-size: 14px;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
     .knap {
       margin-left: 200px;
     }
@@ -157,6 +180,7 @@ import Klarna from "../assets/images/klarna.png";
       width: 240px;
       margin-top: 35px;
     }
+
     .line3 {
       border-bottom: 1px solid white;
       width: 80%;
@@ -184,6 +208,8 @@ import Klarna from "../assets/images/klarna.png";
     h4 {
       color: white;
       margin-top: 100px;
+      font-family: fahkwangRegular;
+      font-size: 20px;
     }
     .boks {
       border: 1px solid white;
@@ -260,6 +286,321 @@ import Klarna from "../assets/images/klarna.png";
     .klarna {
       width: 50px;
       margin-left: 400px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+
+  @media (min-width: 600px) and (max-width: 1024px) {
+    .menu {
+      display: none;
+    }
+    .logo {
+      display: none;
+    }
+
+    .menu1 {
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: #e7dfd4;
+    }
+    .logo {
+      display: none;
+    }
+
+    .paypal {
+      width: 50px;
+    }
+    .mobilepay {
+      width: 70px;
+    }
+    .klarna {
+      width: 50px;
+    }
+    .betaling {
+      margin-left: 0px;
+    }
+
+    .line5 {
+      border-bottom: 1px solid black;
+      width: 50%;
+      margin-bottom: 20px;
+      margin-left: 150px;
+      margin-top: 10px;
+    }
+
+    label {
+      font-family: ZapfHumanist;
+      font-size: 14px;
+      margin-left: 130px;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .white-side {
+      flex: 2;
+      background-color: #e7dfd4;
+      display: grid;
+    }
+    .black-side {
+      flex: 2;
+      background-color: #1d1d1d;
+      display: grid;
+    }
+    .flex {
+      display: flex;
+      gap: 20px;
+    }
+    h1 {
+      margin-top: 150px;
+      font-size: 30px;
+      margin-left: 300px;
+    }
+    h2 {
+      font-size: 24px;
+      font-family: fahkwangRegular;
+      margin-left: 150px;
+      margin-top: 40px;
+    }
+    .p {
+      font-size: 18px;
+      margin-top: 20px;
+      margin-left: 128px;
+    }
+    .left {
+      margin-left: 20px;
+    }
+    .label {
+      margin-top: 20px;
+      margin-left: 150px;
+    }
+    .knap {
+      margin-left: 200px;
+    }
+    .flow {
+      width: 290px;
+      margin-top: 35px;
+    }
+    .line3 {
+      border-bottom: 1px solid white;
+      width: 80%;
+      margin-bottom: 10px;
+      margin-left: 50px;
+      margin-top: 150px;
+    }
+    .line4 {
+      border-bottom: 1px solid white;
+      width: 80%;
+      margin-bottom: 10px;
+      margin-left: 50px;
+      margin-top: 50px;
+    }
+    .flex2 {
+      display: flex;
+    }
+    h4 {
+      color: white;
+      margin-top: 100px;
+      font-family: fahkwangRegular;
+      font-size: 30px;
+    }
+    p {
+      font-size: 30px;
+    }
+    .boks {
+      border: 1px solid white;
+      width: 114px;
+      margin-top: 88px;
+      height: 59px;
+      margin-left: 50px;
+      padding: 10px;
+    }
+    .boks1 {
+      text-align: center;
+      color: white;
+    }
+    .p2,
+    .p3 {
+      color: white;
+      margin-top: -88px;
+      font-size: 24px;
+    }
+    .flex3 {
+      display: flex;
+      gap: 60px;
+    }
+    .p2 {
+      margin-left: 305px;
+      margin-top: -90px;
+      font-size: 24px;
+    }
+    .grid_1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .p4 {
+      color: white;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: 120px;
+      font-size: 24px;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .menu {
+      display: none;
+    }
+    .menu1 {
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: #e7dfd4;
+    }
+    .logo {
+      display: none;
+    }
+
+    label {
+      font-family: ZapfHumanist;
+      font-size: 14px;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .white-side {
+      flex: 2;
+      background-color: #e7dfd4;
+      display: grid;
+    }
+    .black-side {
+      flex: 2;
+      background-color: #1d1d1d;
+      display: grid;
+    }
+    .flex {
+      display: flex;
+      gap: 20px;
+    }
+    h1 {
+      margin-top: 150px;
+      font-size: 30px;
+      margin-left: 20px;
+    }
+    h2 {
+      font-size: 24px;
+      font-family: fahkwangRegular;
+      margin-left: 20px;
+      margin-top: 40px;
+    }
+    .p {
+      font-size: 18px;
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+    .left {
+      margin-left: 20px;
+    }
+    .label {
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+    .knap {
+      margin-left: 80px;
+    }
+
+    .line5 {
+      border-bottom: 1px solid black;
+      width: 80%;
+      margin-bottom: 20px;
+      margin-left: 23px;
+      margin-top: 10px;
+    }
+    .flow {
+      width: 140px;
+      margin-top: 35px;
+    }
+    .line3 {
+      border-bottom: 1px solid white;
+      width: 80%;
+      margin-bottom: 10px;
+      margin-left: 50px;
+      margin-top: 150px;
+    }
+    .line4 {
+      border-bottom: 1px solid white;
+      width: 80%;
+      margin-bottom: 10px;
+      margin-left: 50px;
+      margin-top: 50px;
+    }
+    .flex2 {
+      display: flex;
+    }
+    h4 {
+      color: white;
+      margin-top: 100px;
+      font-family: fahkwangRegular;
+      font-size: 20px;
+    }
+    p {
+      font-size: 16px;
+    }
+    .boks {
+      border: 1px solid white;
+      width: 60px;
+      margin-top: 100px;
+      height: 20px;
+      margin-left: 50px;
+    }
+    .boks1 {
+      text-align: center;
+      color: white;
+    }
+    .p2,
+    .p3 {
+      color: white;
+      margin-top: 29px;
+    }
+    .flex3 {
+      display: flex;
+      gap: 60px;
+    }
+    .p2 {
+      margin-left: 140px;
+      margin-top: 30px;
+    }
+    .grid_1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .p4 {
+      color: white;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: 75px;
+    }
+    .paypal {
+      width: 50px;
+    }
+    .mobilepay {
+      width: 70px;
+    }
+    .klarna {
+      width: 50px;
+    }
+    label {
+      font-family: ZapfHumanist;
+      font-size: 14px;
+      margin-left: 20px;
     }
   }
 </style>

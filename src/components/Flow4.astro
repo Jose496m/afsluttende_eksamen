@@ -44,7 +44,7 @@ import Flow4knap from "../components/Flow4knap.astro";
       <div class="line3"></div>
       <div class="flex2">
         <Image class="flow" src={flow} alt="flow" />
-        <h4>I am purified</h4>
+        <h4>I AM PURIFIED</h4>
         <div class="boks">
           <p class="boks1">1</p>
         </div>
@@ -68,6 +68,14 @@ import Flow4knap from "../components/Flow4knap.astro";
   </div>
 </section>
 <style>
+  @font-face {
+    font-family: fahkwangRegular;
+    src: url("/fonts/Fahkwang-Regular.ttf");
+  }
+  @font-face {
+    font-family: ZapfHumanist;
+    src: url("/fonts/ZapfHumanist601Regular.ttf");
+  }
   @media (min-width: 1025px) {
     .menu1 {
       display: none;
@@ -100,6 +108,7 @@ import Flow4knap from "../components/Flow4knap.astro";
     h1 {
       margin-left: 47px;
       margin-top: 110px;
+      font-size: 40px;
     }
     h2 {
       margin-left: 50px;
@@ -149,6 +158,8 @@ import Flow4knap from "../components/Flow4knap.astro";
     h4 {
       color: white;
       margin-top: 100px;
+      font-family: fahkwangRegular;
+      font-size: 20px;
     }
     .boks {
       border: 1px solid white;
@@ -182,6 +193,7 @@ import Flow4knap from "../components/Flow4knap.astro";
       margin-top: 10px;
       margin-bottom: 10px;
       margin-left: 100px;
+      font-size: 20px;
     }
 
     .other-payment input[type="checkbox"] {
@@ -225,6 +237,9 @@ import Flow4knap from "../components/Flow4knap.astro";
     .klarna {
       width: 50px;
       margin-left: 400px;
+    }
+    p {
+      font-size: 16px;
     }
   }
 </style>

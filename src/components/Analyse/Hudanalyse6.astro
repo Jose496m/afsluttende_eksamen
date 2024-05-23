@@ -8,6 +8,7 @@ import hudtest5 from "../../assets/images/hudtest5.png";
 import hudtest6 from "../../assets/images/hudtest6.png";
 import Menu from "../Menu.astro";
 import Menumobil from "../Menumobil.astro";
+import Produktknap from "../Produktknap.astro";
 ---
 
 <section class="baggrund">
@@ -19,6 +20,9 @@ import Menumobil from "../Menumobil.astro";
     <h3>I AM PURIFIED</h3>
   </div>
   <Image class="hudtest" src={hudtest} alt="hudtest" />
+  <div class="knap">
+    <a href="/flowkoebs"><Produktknap text="BUY NOW" /></a>
+  </div>
 </section>
 
 <section>
@@ -27,8 +31,8 @@ import Menumobil from "../Menumobil.astro";
       <Image class="hudtest2" src={hudtest2} alt="hudtest2" />
       <div class="line"></div>
     </div>
-    <h2>NOT JUST A</h2>
-    <h3 class="h3">FACE OIL</h3>
+    <h2 class="h2">NOT JUST A</h2>
+    <h3 class="h3">CLEANSER</h3>
     <div>
       <p>
         I AM PURITY is more than just a facial cleanser - it's a daily reminder
@@ -52,7 +56,7 @@ import Menumobil from "../Menumobil.astro";
 
 <section>
   <h4>
-    I AM HEALING it's a daily dose of purity, ensuring your skin feels as
+    I AM PURRIFIED it's a daily dose of purity, ensuring your skin feels as
     radiant as your most cherished moments. Add it to your narrative for skin
     that's not just seen but celebrated.
   </h4>
@@ -62,7 +66,7 @@ import Menumobil from "../Menumobil.astro";
 
 <section>
   <div>
-    <h2 class="h2">Discover Your Perfect Pair</h2>
+    <h2 class="sec3">Discover Your Perfect Pair</h2>
   </div>
   <div class="grid">
     <div>
@@ -85,12 +89,27 @@ import Menumobil from "../Menumobil.astro";
 </section>
 
 <style>
+  @font-face {
+    font-family: SackersGothic;
+    src: url("/fonts/SackersGothicStdLight.ttf");
+  }
+  @font-face {
+    font-family: fahkwangMedium;
+    src: url("/fonts/Fahkwang-Medium.ttf");
+  }
+
+  @font-face {
+    font-family: PlayfairdisplayRegular;
+    src: url("/fonts/PlayfairDisplay-Regular.ttf");
+  }
+  @font-face {
+    font-family: fahkwangRegular;
+    src: url("/fonts/Fahkwang-Regular.ttf");
+  }
+
   @media (min-width: 1025px) {
     body {
       background-color: #f5f1eb;
-    }
-    .baggrund {
-      background-image: url(../../assets/images/hudanalyse1.png);
     }
 
     .menu {
@@ -122,6 +141,15 @@ import Menumobil from "../Menumobil.astro";
       margin-top: 226px;
       margin-left: 280px;
     }
+    .knap {
+      margin-left: 1100px;
+      margin-top: -100px;
+    }
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      color: black;
+    }
     .hudtest2 {
       width: 740px;
     }
@@ -131,15 +159,17 @@ import Menumobil from "../Menumobil.astro";
     h2 {
       text-align: center;
       margin-top: 130px;
+      font-size: 30px;
     }
     p {
       width: 500px;
       margin-top: 256px;
-      margin-left: -132px;
+      margin-left: -193px;
     }
     .h3 {
       margin-top: 165px;
-      margin-left: 762px;
+      margin-left: 912px;
+      font-size: 50px;
     }
     .text3 {
       margin-top: 20px;
@@ -151,8 +181,8 @@ import Menumobil from "../Menumobil.astro";
     .line {
       border-bottom: 2px solid black;
       width: 63%;
-      margin-top: -638px;
-      margin-left: 761px;
+      margin-top: -620px;
+      margin-left: 900px;
     }
     .hudtest3 {
       margin-top: 350px;
@@ -183,54 +213,70 @@ import Menumobil from "../Menumobil.astro";
     }
     .h2 {
       text-align: left;
-      margin-left: 150px;
+      margin-left: 14px;
     }
     .p {
       margin-left: 86px;
       margin-bottom: 250px;
       margin-top: 13px;
+      font-size: 20px;
     }
     h5 {
-      margin-left: 50px;
+      margin-left: 20px;
+      font-family: fahkwangRegular;
+      font-size: 24px;
     }
     .text {
-      margin-left: 72px;
+      margin-left: 52px;
     }
     .text2 {
-      margin-left: 8px;
+      margin-left: -6px;
     }
   }
 
-  @media (max-width: 599px) {
+  @media (min-width: 600px) and (max-width: 1024px) {
     body {
       background-color: #f5f1eb;
     }
-    .baggrund {
-      background-image: url(../../assets/images/hudanalyse1.png);
-    }
+
     .menu {
       display: none;
     }
     h1 {
-      margin-left: 100px;
+      margin-left: 50px;
       margin-top: 50px;
+      font-size: 30px;
     }
     h3 {
-      margin-left: 150px;
+      margin-left: 140px;
       margin-top: 5px;
+      font-size: 20px;
+    }
+    .knap {
+      margin-left: 1100px;
+      margin-top: -100px;
+    }
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      color: black;
     }
 
     h4 {
       position: absolute;
-      margin-top: 251px;
+      margin-top: 285px;
       color: white;
-      width: 400px;
+      width: 250px;
+      font-family: PlayfairdisplayRegular;
+      font-size: 14px;
+      margin-left: 20px;
     }
     .hudtest2 {
       display: none;
     }
     .hudtest3 {
       margin-top: 100px;
+      height: 300px;
     }
 
     .hudtest4 {
@@ -253,6 +299,7 @@ import Menumobil from "../Menumobil.astro";
       margin-left: 50px;
       width: 350px;
       margin-top: 30px;
+      font-size: 14px;
     }
     .h3 {
       margin-left: 50px;
@@ -266,6 +313,7 @@ import Menumobil from "../Menumobil.astro";
     .h3 {
       text-align: center;
       margin-top: 20px;
+      font-size: 50px;
     }
     h5 {
       margin-left: 170px;
@@ -277,6 +325,115 @@ import Menumobil from "../Menumobil.astro";
     }
     .text {
       margin-left: 190px;
+    }
+    .h2 {
+      font-family: SackersGothic;
+      font-size: 30px;
+    }
+    h5 {
+      font-family: fahkwangRegular;
+    }
+  }
+
+  @media (max-width: 599px) {
+    body {
+      background-color: #f5f1eb;
+    }
+
+    .menu {
+      display: none;
+    }
+    h1 {
+      margin-left: 50px;
+      margin-top: 50px;
+      font-size: 30px;
+    }
+    h3 {
+      margin-left: 140px;
+      margin-top: 5px;
+      font-size: 20px;
+    }
+    .h2 {
+    }
+
+    h4 {
+      position: absolute;
+      margin-top: 285px;
+      color: white;
+      width: 250px;
+      font-family: PlayfairdisplayRegular;
+      font-size: 14px;
+      margin-left: 20px;
+    }
+    .hudtest2 {
+      display: none;
+    }
+    .hudtest3 {
+      margin-top: 100px;
+      height: 300px;
+    }
+
+    .hudtest4 {
+      width: 169px;
+      height: 293px;
+      margin-left: 147px;
+    }
+    .hudtest5,
+    .hudtest6 {
+      width: 150px;
+      height: 270px;
+      margin-left: 147px;
+    }
+
+    .text3 {
+      width: 350px;
+      margin-top: 10px;
+    }
+    p {
+      margin-left: 50px;
+      width: 350px;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+    .h3 {
+      margin-left: 50px;
+      margin-left: 26px;
+      margin-top: 50px;
+    }
+    h2 {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .h3 {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 50px;
+    }
+    h5 {
+      margin-left: 170px;
+    }
+    .p {
+      text-align: center;
+      margin-bottom: 60px;
+      margin-top: 10px;
+    }
+    .text {
+      margin-left: 190px;
+    }
+    .h2 {
+      font-family: SackersGothic;
+      font-size: 30px;
+    }
+    h5 {
+      font-family: fahkwangRegular;
+    }
+    .knap {
+      margin-left: 80px;
+    }
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      color: black;
     }
   }
 </style>

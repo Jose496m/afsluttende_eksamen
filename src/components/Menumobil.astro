@@ -76,4 +76,59 @@ import logo from "../assets/images/logo.png";
       margin-right: 50px;
     }
   }
+  @media (min-width: 600px) and (max-width: 1024px) {
+    .burger-menu {
+      display: none;
+    }
+
+    .burger-icon {
+      display: grid;
+      cursor: pointer;
+      flex-direction: row;
+      margin-top: -80px;
+      margin-right: 50px;
+      justify-content: flex-end;
+      font-size: 60px;
+    }
+
+    #burger-toggle {
+      display: none;
+    }
+
+    #burger-toggle:checked ~ .burger-menu {
+      display: block;
+    }
+
+    .burger-menu ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .burger-menu li {
+      margin-bottom: 10px;
+      display: flex;
+      cursor: pointer;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .burger-menu a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .logo {
+      width: 70px;
+      height: auto;
+      margin-top: 53px;
+      margin-left: 40px;
+    }
+    li {
+      list-style: none;
+      font-family: ZapfHumanist;
+    }
+    li a {
+      margin-right: 50px;
+    }
+  }
 </style>

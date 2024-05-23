@@ -1,5 +1,5 @@
 ---
-import { Image, imageConfig } from "astro:assets";
+import { Image } from "astro:assets";
 import abouthero from "../assets/images/heropic.png";
 import about2 from "../assets/images/about2.jpeg";
 import about3 from "../assets/images/about3.png";
@@ -88,6 +88,10 @@ import Menumobil from "./Menumobil.astro";
 </section>
 
 <style>
+  @font-face {
+    font-family: fahkwangRegular;
+    src: url("/fonts/Fahkwang-Regular.ttf");
+  }
   body {
     background-color: #f5f1eb;
   }
@@ -98,6 +102,7 @@ import Menumobil from "./Menumobil.astro";
     .hidden {
       display: none;
     }
+
     .menu {
       position: absolute;
       margin-top: 40px;
@@ -112,6 +117,7 @@ import Menumobil from "./Menumobil.astro";
       margin-top: 100px;
       margin-left: 50px;
       color: white;
+      font-size: 36px;
     }
     .about {
       position: absolute;
@@ -119,6 +125,7 @@ import Menumobil from "./Menumobil.astro";
       margin-left: 50px;
       width: 500px;
       color: white;
+      font-size: 20px;
     }
     .flex {
       display: flex;
@@ -140,27 +147,33 @@ import Menumobil from "./Menumobil.astro";
     }
     .color1 {
       width: 500px;
+      font-size: 16px;
+      margin-top: 10px;
     }
     .center {
       text-align: center;
     }
     .value {
-      width: 400px;
-      margin-left: 600px;
+      width: 700px;
+      margin-left: 440px;
+      font-size: 20px;
+      margin-top: 20px;
     }
     .value2 {
       margin-top: 120px;
     }
     .center1 {
-      text-align: center;
       margin-top: 250px;
-      margin-left: 90px;
-      color: white;
-    }
-    .about4 {
-      width: 500px;
       margin-left: 150px;
       color: white;
+      margin-bottom: 20px;
+      font-size: 32px;
+    }
+    .about4 {
+      width: 530px;
+      margin-left: 150px;
+      color: white;
+      font-size: 16px;
     }
     .about3 {
       margin-top: 89px;
@@ -179,9 +192,13 @@ import Menumobil from "./Menumobil.astro";
       margin-bottom: 150px;
       width: 1000px;
     }
+    h2 {
+      font-family: fahkwangRegular;
+      font-size: 32px;
+    }
   }
 
-  @media (max-width: 999px) {
+  @media (max-width: 599px) {
     .menu {
       display: none;
     }
@@ -195,15 +212,21 @@ import Menumobil from "./Menumobil.astro";
     }
     .baggrundsfarve {
       background-color: #46433b;
-      width: 100%;
+      width: 1712px;
       padding: 374px;
       margin-top: -10px;
     }
     h1 {
       color: white;
+      font-size: 80px;
+      margin-left: -295px;
     }
     .about {
       color: white;
+      font-size: 60px;
+      width: 1500px;
+      margin-top: 20px;
+      margin-left: -300px;
     }
     .abouthero {
       height: 1300px;
@@ -226,24 +249,28 @@ import Menumobil from "./Menumobil.astro";
       margin-top: 150px;
     }
     .color1 {
-      width: 860px;
-      margin-left: 445px;
+      width: 1376px;
+      margin-left: 200px;
       margin-bottom: 150px;
+      font-size: 50px;
     }
     .center {
       text-align: center;
       margin-left: 550px;
     }
     .value {
-      width: 600px;
+      width: 1200px;
       color: white;
       text-align: left;
-      margin-left: -50px;
+      margin-left: -300px;
+      font-size: 40px;
+      margin-top: 20px;
     }
     .value2 {
       margin-top: 120px;
       margin-left: -450px;
       color: white;
+      font-size: 60px;
     }
     .center1 {
       text-align: center;
@@ -251,8 +278,11 @@ import Menumobil from "./Menumobil.astro";
       margin-left: 90px;
     }
     .about4 {
-      width: 500px;
+      width: 1400px;
       margin-left: 150px;
+      font-size: 50px;
+      margin-bottom: 100px;
+      margin-top: 20px;
     }
     .about3 {
       width: 1700px;
@@ -264,11 +294,12 @@ import Menumobil from "./Menumobil.astro";
       margin-left: 275px;
       margin-top: 150px;
       margin-bottom: 150px;
+      width: 1200px;
     }
     .baggrund2 {
       background-color: #46433b;
       padding: 100px;
-      width: 1510px;
+      width: 1712px;
       margin-top: -5px;
     }
   }

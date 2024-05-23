@@ -1,6 +1,5 @@
 ---
 import Flowinput from "../components/Flowinput.astro";
-import Menu from "./Menu.astro";
 import Menumobil from "./Menumobil.astro";
 import { Image } from "astro:assets";
 import logo from "../assets/images/logo.png";
@@ -57,7 +56,7 @@ import Input from "./Input.astro";
       <div class="line3"></div>
       <div class="flex2">
         <Image class="flow" src={flow} alt="flow" />
-        <h4>I am purified</h4>
+        <h4>I AM PURIFIED</h4>
         <div class="boks">
           <p class="boks1">1</p>
         </div>
@@ -81,6 +80,14 @@ import Input from "./Input.astro";
   </div>
 </section>
 <style>
+  @font-face {
+    font-family: fahkwangRegular;
+    src: url("/fonts/Fahkwang-Regular.ttf");
+  }
+  @font-face {
+    font-family: ZapfHumanist;
+    src: url("/fonts/ZapfHumanist601Regular.ttf");
+  }
   @media (min-width: 1025px) {
     .menu1 {
       display: none;
@@ -92,7 +99,14 @@ import Input from "./Input.astro";
       margin-bottom: 50px;
       margin-left: 50px;
     }
-
+    label {
+      font-family: ZapfHumanist;
+      font-size: 14px;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
     .container {
       display: flex;
       height: 100vh;
@@ -113,12 +127,17 @@ import Input from "./Input.astro";
     h1 {
       margin-left: 47px;
       margin-top: 110px;
+      font-size: 24px;
     }
     h2 {
       margin-left: 50px;
+      font-size: 24px;
+      font-family: fahkwangRegular;
     }
     .p {
       margin-left: 50px;
+      font-size: 15px;
+      margin-top: 20px;
     }
     .left {
       margin-left: 150px;
@@ -153,6 +172,11 @@ import Input from "./Input.astro";
     h4 {
       color: white;
       margin-top: 100px;
+      font-family: fahkwangRegular;
+      font-size: 20px;
+    }
+    p {
+      font-size: 20px;
     }
     .boks {
       border: 1px solid white;
@@ -186,6 +210,270 @@ import Input from "./Input.astro";
       margin-top: 10px;
       margin-bottom: 10px;
       margin-left: 100px;
+    }
+  }
+
+  @media (min-width: 600px) and (max-width: 1024px) {
+    .menu {
+      display: none;
+    }
+    .logo {
+      display: none;
+    }
+
+    .menu1 {
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: #e7dfd4;
+    }
+    .logo {
+      display: none;
+    }
+
+    label {
+      font-family: ZapfHumanist;
+      font-size: 14px;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .white-side {
+      flex: 2;
+      background-color: #e7dfd4;
+      display: grid;
+    }
+    .black-side {
+      flex: 2;
+      background-color: #1d1d1d;
+      display: grid;
+    }
+    .flex {
+      display: flex;
+      gap: 20px;
+    }
+    h1 {
+      margin-top: 150px;
+      font-size: 30px;
+      margin-left: 300px;
+    }
+    h2 {
+      font-size: 24px;
+      font-family: fahkwangRegular;
+      margin-left: 250px;
+    }
+    .p {
+      font-size: 18px;
+      margin-top: 20px;
+      margin-left: 128px;
+    }
+    .left {
+      margin-left: 20px;
+    }
+    .label {
+      margin-left: 150px;
+    }
+    .knap {
+      margin-left: 200px;
+    }
+    .flow {
+      width: 290px;
+      margin-top: 35px;
+    }
+    .line3 {
+      border-bottom: 1px solid white;
+      width: 80%;
+      margin-bottom: 10px;
+      margin-left: 50px;
+      margin-top: 150px;
+    }
+    .line4 {
+      border-bottom: 1px solid white;
+      width: 80%;
+      margin-bottom: 10px;
+      margin-left: 50px;
+      margin-top: 50px;
+    }
+    .flex2 {
+      display: flex;
+    }
+    h4 {
+      color: white;
+      margin-top: 100px;
+      font-family: fahkwangRegular;
+      font-size: 30px;
+    }
+    p {
+      font-size: 30px;
+    }
+    .boks {
+      border: 1px solid white;
+      width: 114px;
+      margin-top: 88px;
+      height: 59px;
+      margin-left: 50px;
+      padding: 10px;
+    }
+    .boks1 {
+      text-align: center;
+      color: white;
+    }
+    .p2,
+    .p3 {
+      color: white;
+      margin-top: -88px;
+      font-size: 24px;
+    }
+    .flex3 {
+      display: flex;
+      gap: 60px;
+    }
+    .p2 {
+      margin-left: 305px;
+      margin-top: -90px;
+      font-size: 24px;
+    }
+    .grid_1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .p4 {
+      color: white;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: 120px;
+      font-size: 24px;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .menu {
+      display: none;
+    }
+    .menu1 {
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: #e7dfd4;
+    }
+    .logo {
+      display: none;
+    }
+
+    label {
+      font-family: ZapfHumanist;
+      font-size: 14px;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .white-side {
+      flex: 2;
+      background-color: #e7dfd4;
+      display: grid;
+    }
+    .black-side {
+      flex: 2;
+      background-color: #1d1d1d;
+      display: grid;
+    }
+    .flex {
+      display: flex;
+      gap: 20px;
+    }
+    h1 {
+      margin-top: 150px;
+      font-size: 30px;
+      margin-left: 20px;
+    }
+    h2 {
+      font-size: 24px;
+      font-family: fahkwangRegular;
+      margin-left: 20px;
+    }
+    .p {
+      font-size: 18px;
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+    .left {
+      margin-left: 20px;
+    }
+    .label {
+      margin-left: 100px;
+    }
+    .knap {
+      margin-left: 80px;
+    }
+    .flow {
+      width: 140px;
+      margin-top: 35px;
+    }
+    .line3 {
+      border-bottom: 1px solid white;
+      width: 80%;
+      margin-bottom: 10px;
+      margin-left: 50px;
+      margin-top: 150px;
+    }
+    .line4 {
+      border-bottom: 1px solid white;
+      width: 80%;
+      margin-bottom: 10px;
+      margin-left: 50px;
+      margin-top: 50px;
+    }
+    .flex2 {
+      display: flex;
+    }
+    h4 {
+      color: white;
+      margin-top: 100px;
+      font-family: fahkwangRegular;
+      font-size: 20px;
+    }
+    p {
+      font-size: 16px;
+    }
+    .boks {
+      border: 1px solid white;
+      width: 60px;
+      margin-top: 100px;
+      height: 20px;
+      margin-left: 50px;
+    }
+    .boks1 {
+      text-align: center;
+      color: white;
+    }
+    .p2,
+    .p3 {
+      color: white;
+      margin-top: 29px;
+    }
+    .flex3 {
+      display: flex;
+      gap: 60px;
+    }
+    .p2 {
+      margin-left: 140px;
+      margin-top: 30px;
+    }
+    .grid_1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .p4 {
+      color: white;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: 75px;
     }
   }
 </style>

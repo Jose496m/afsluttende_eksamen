@@ -214,7 +214,128 @@ import Menumobil from "./Menumobil.astro";
     }
   }
 
-  @media (max-width: 599px) {
+  /* ------ IPAD ----------*/
+  @media (min-width: 600px) and (max-width: 1024px) {
+    .menu {
+      display: none;
+    }
+
+    .menu1 {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000; /* Sørg for, at Menumobil er øverst */
+    }
+    .baggrundsfarve {
+      background-color: #46433b;
+      width: 1024px;
+      height: 650px;
+      /*padding: 374px;*/
+      margin-top: 550px;
+    }
+    h1 {
+      color: white;
+      font-size: 30px;
+      /*margin-left: -295px;*/
+      margin-left: 170px;
+      padding-top: 150px;
+    }
+    .about {
+      color: white;
+      font-size: 19px;
+      width: 700px;
+      margin-top: 50px;
+      /*margin-left: -300px;*/
+      margin-left: 170px;
+    }
+    .abouthero {
+      height: 1024px;
+      width: 1024px;
+    }
+    /* .illustration {
+      width: 1710px;
+      height: 360px;
+    }*/
+
+    .baggrund {
+    }
+    .about2 {
+      margin-top: -10%;
+      width: 1024px;
+      height: 800px;
+    }
+    .color {
+      margin-left: 170px;
+      font-size: 30;
+      margin-top: -1255px;
+    }
+    .color1 {
+      width: 700px;
+      margin-left: 170px;
+      margin-bottom: 100px;
+      margin-top: 50px;
+      font-size: 20px;
+    }
+    .center {
+      /*text-align: center;
+      margin-left: 550px;*/
+      width: 700px;
+    }
+    .value {
+      text-align: center;
+      color: black;
+      font-size: 19px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+    .value2 {
+      text-align: center;
+      margin-top: 50px;
+      color: black;
+      font-size: 30px;
+    }
+    .center1 {
+      background-color: #46433b;
+      color: white;
+      padding-top: 15%;
+      margin-left: 170px;
+      font-size: 20;
+      margin-top: -10px;
+    }
+    .about4 {
+      background-color: #46433b;
+      color: white;
+      width: 700px;
+      margin-left: 170px;
+      font-size: 19px;
+      margin-bottom: 100px;
+      margin-top: 50px;
+    }
+    .about3 {
+      width: 1024px;
+      height: 1000px;
+    }
+    .baggrund1 {
+      height: 590px;
+      background-color: #46433b;
+      width: 1024px;
+      margin-bottom: 32%;
+    }
+    .about5 {
+      position: absolute;
+      margin-left: 150px;
+      margin-top: 690px;
+      width: 700px;
+    }
+    .baggrund2 {
+      padding: 100px;
+      width: 600px;
+      margin-top: -5px;
+    }
+  }
+
+  @media (min-width: 393px) and (max-width: 600px) {
     .menu {
       display: none;
     }

@@ -1,13 +1,21 @@
+---
+import { Image } from "astro:assets";
+import instagram from "../assets/images/instagram.svg";
+---
+
 <section>
   <h1>I AM</h1>
   <div class="flex">
-    <div>
-      <p>Email: hey@iamselfcare.dk</p>
-      <p>Telefon: +45 21951612</p>
+    <div class="linje1">
+      <p class="email">Email: <br /> hey@iamselfcare.dk</p>
+      <p class="telefon">Telefon: <br />+45 21951612</p>
+    </div>
+    <div class="linje2">
+      <p class="adresse">Adresse: <br /> Degnebanken 25, 4681 Herfølge</p>
+      <p class="cvr">CVR <br /> 37932493</p>
     </div>
     <div>
-      <p>Adresse: Degnebanken 25, 4681 Herfølge</p>
-      <p>CVR 37932493</p>
+      <Image class="instagram" src={instagram} alt="instagram" />
     </div>
   </div>
 </section>
@@ -16,6 +24,8 @@
   @media (min-width: 1025px) {
     section {
       background-color: #120f0c;
+      padding-top: 50px;
+      padding-left: 40px;
     }
     .flex {
       display: flex;
@@ -23,6 +33,17 @@
     }
     h1 {
       color: white;
+      margin-bottom: 30px;
+    }
+
+    .email,
+    .adresse {
+      margin-bottom: 30px;
+    }
+
+    .telefon,
+    .cvr {
+      margin-bottom: 80px;
     }
     p {
       color: white;

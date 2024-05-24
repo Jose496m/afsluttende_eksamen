@@ -158,7 +158,8 @@ import ShopKnap from "./ShopKnap.astro";
       display: none;
     }
     .menu {
-      margin-left: 30px;
+      align-items: center;
+      /* margin-left: 30px;*/
       margin-top: 50px;
     }
     h5 {
@@ -219,6 +220,7 @@ import ShopKnap from "./ShopKnap.astro";
     .shop2 {
       margin-top: 50px;
       width: 260px;
+
       margin-left: 45px;
     }
     .shop1 {
@@ -229,41 +231,106 @@ import ShopKnap from "./ShopKnap.astro";
     .h4 {
       position: absolute;
       color: white;
-      margin-left: 1000px;
+      margin-left: 600px;
     }
     .h4 {
-      margin-top: 500px;
+      margin-top: 420px;
       width: 550px;
       font-size: 25px;
     }
     .p {
-      margin-top: 580px;
+      margin-top: 510px;
       font-size: 20px;
     }
     .shop10 {
       margin-top: 50px;
     }
   }
-  @media (max-width: 599px) {
+
+  /*------- Mobil ------*/
+  @media (max-width: 800px) {
     body {
       background-color: #f5f1eb;
     }
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
     .menu1 {
+      display: block;
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       z-index: 1000;
     }
+
     .menu {
       display: none;
     }
+
+    h1.product {
+      margin-top: 12rem;
+      margin-left: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .min-sektion {
+      background-color: #161616;
+      color: white;
+      padding: 1rem;
+      margin-top: 3rem;
+      width: 100%;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      font-family: ZapfHumanist;
+    }
+
+    ul li {
+      list-style: none;
+      padding: 0.5rem 0;
+      text-align: center;
+    }
+
+    h5 {
+      font-family: PlayfairdisplayRegular;
+      width: 100%;
+      font-size: 1.4rem;
+      margin-left: 1rem;
+      margin-top: 3rem;
+    }
+
+    p {
+      margin-left: 1rem;
+      margin-right: 4rem;
+    }
+
     .grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
+      gap: 0rem;
+      margin-top: 2rem;
     }
+
+    .intro-text {
+      width: 100%;
+      margin-left: 1rem;
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
+
     .shop1,
-    .shop2,
+    .shop2 {
+      width: 80%;
+      margin-top: 5rem;
+      margin-left: 40px;
+    }
+
     .shop3,
     .shop4,
     .shop5,
@@ -271,60 +338,35 @@ import ShopKnap from "./ShopKnap.astro";
     .shop7,
     .shop8,
     .shop9 {
-      width: 200px;
-      margin-left: 80px;
-      margin-top: 20px;
-    }
-    .shop2 {
-      margin-top: 44px;
-      width: 357px;
-      margin-left: 0px;
-    }
-    .shop1 {
-      margin-top: 44px;
-      width: 357px;
-      margin-left: 0px;
-    }
-    .p,
-    .h4 {
-      position: absolute;
-      color: white;
-      margin-left: 700px;
-    }
-    .h4 {
-      margin-top: 300px;
-      width: 250px;
-    }
-    .p {
-      margin-top: 400px;
-      width: 250px;
-    }
-    .shop10 {
-      margin-top: 50px;
-      width: 1076px;
-    }
-    h1 {
-      margin-top: 200px;
-      margin-left: 50px;
+      width: 80%;
+      height: 340px;
+      margin-left: 40px;
     }
 
-    p {
-      margin-top: 180px;
-      width: 370px;
-      margin-left: 50px;
-    }
-    .min-sektion {
-      background-color: #161616; /* Tilpas farven efter behov */
-      padding: 20px; /* Tilføj eventuelt ekstra padding for at give plads omkring indholdet */
-      margin-top: 50px;
-      width: 1075px;
-    }
-    ul {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      list-style: none;
+    .h4,
+    .p {
       color: white;
+      margin-left: 50px;
+      width: 80%;
+      text-align: center;
+    }
+
+    .h4 {
+      position: absolute;
+      margin-top: 6rem;
+      font-size: 1.5rem;
+    }
+
+    .p {
+      margin-top: 16rem;
+      font-size: 1.2rem;
+      position: absolute;
+    }
+
+    .shop10 {
+      width: 100%;
+      height: 400px;
+      margin-top: 1rem;
     }
   }
 </style>

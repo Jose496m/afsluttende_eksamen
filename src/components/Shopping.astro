@@ -38,6 +38,7 @@ import ShopKnap from "./ShopKnap.astro";
     </div>
   </div>
 </section>
+
 <h5>
   “I AM, empowers self-awareness through mantras, guiding you to actively shape
   your journey and become an expert in yourself”
@@ -152,7 +153,6 @@ import ShopKnap from "./ShopKnap.astro";
   }
   @media (min-width: 1025px) {
     body {
-      background-color: #f5f1eb;
     }
     .menu1 {
       display: none;
@@ -247,6 +247,135 @@ import ShopKnap from "./ShopKnap.astro";
     }
   }
 
+  /*-------- IPAD -------*/
+  @media (min-width: 600px) and (max-width: 1024px) {
+    body {
+      background-color: #f5f1eb;
+    }
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .menu1 {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .menu {
+      display: none;
+    }
+
+    h1.product {
+      margin-top: 12rem;
+      margin-left: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .min-sektion {
+      background-color: #161616;
+      color: white;
+      padding: 1rem;
+      margin-top: 3rem;
+      width: 100%;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      font-family: ZapfHumanist;
+    }
+
+    ul li {
+      list-style: none;
+      padding: 0.5rem 0;
+      text-align: center;
+    }
+
+    h5 {
+      position: absolute;
+      font-family: PlayfairdisplayRegular;
+      width: 50%;
+      font-size: 1.4rem;
+      margin-left: 1rem;
+      margin-top: 22rem;
+    }
+
+    p {
+      margin-left: 1rem;
+      margin-right: 4rem;
+      margin-top: 28rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0rem;
+      margin-top: 2rem;
+    }
+
+    .intro-text {
+      width: 100%;
+      margin-left: 1rem;
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
+    .shop1 {
+      width: 80%;
+      margin-left: 40px;
+    }
+    .shop2 {
+      width: 80%;
+      margin-top: 5rem;
+      margin-left: 40px;
+    }
+
+    .shop3,
+    .shop4,
+    .shop5,
+    .shop6,
+    .shop7,
+    .shop8,
+    .shop9 {
+      width: 60%;
+      height: 340px;
+      margin-left: 80px;
+    }
+
+    .h4,
+    .p {
+      color: white;
+      margin-left: 50px;
+      width: 80%;
+      text-align: center;
+    }
+
+    .h4 {
+      position: absolute;
+      margin-top: 14rem;
+      font-size: 1.5rem;
+      margin-left: 7rem;
+    }
+
+    .p {
+      margin-top: 18rem;
+      font-size: 1.2rem;
+      position: absolute;
+      margin-left: 7rem;
+    }
+
+    .shop10 {
+      width: 100%;
+      height: 400px;
+      margin-top: 5rem;
+    }
+  }
+
   /*------- Mobil ------*/
   @media (max-width: 800px) {
     body {
@@ -259,7 +388,7 @@ import ShopKnap from "./ShopKnap.astro";
 
     .menu1 {
       display: block;
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
       width: 100%;

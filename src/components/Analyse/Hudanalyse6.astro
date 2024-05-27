@@ -17,7 +17,7 @@ import Produktknap from "../Produktknap.astro";
 
   <div class="plads1">
     <h1>MEET YOUR MATCH</h1>
-    <h3>I AM PURIFIED</h3>
+    <h3 class="tekst">I AM PURIFIED</h3>
   </div>
   <Image class="hudtest" src={hudtest} alt="hudtest" />
   <div class="knap">
@@ -25,28 +25,28 @@ import Produktknap from "../Produktknap.astro";
   </div>
 </section>
 
-<section>
+<section class="content-section">
   <div class="flex">
     <div>
       <Image class="hudtest2" src={hudtest2} alt="hudtest2" />
       <div class="line"></div>
     </div>
-    <h2 class="h2">NOT JUST A</h2>
-    <h3 class="h3">CLEANSER</h3>
-    <div>
-      <p>
+    <div class="text-content">
+      <h2 class="h2">NOT JUST A</h2>
+      <h3 class="h3">CLEANSER</h3>
+      <p class="text3">
         I AM PURITY is more than just a facial cleanser - it's a daily reminder
-        to embrace purity in all aspects of your life.Infused with natural
+        to embrace purity in all aspects of your life. Infused with natural
         ingredients like Strawberry and Calendula, this cleanser helps to uplift
         your spirit and promote inner peace. Made with only the purest, most
         natural ingredients, it's gentle enough for even the most sensitive skin
         types. Discover the power of purity with I AM PURITY, and let it nourish
         and rejuvenate your skin, leaving it feeling soft, smooth, and
-        refreshed,making it the perfect addition to your skincare routine.
+        refreshed, making it the perfect addition to your skincare routine.
       </p>
       <p class="text3">Ingrediens:</p>
       <p class="text3">
-        Aqua/Water, Glycerin, Cetyl Alcohol, Stearic Acid.Dimethicone,
+        Aqua/Water, Glycerin, Cetyl Alcohol, Stearic Acid, Dimethicone,
         Tocopheryl Acetate (Vitamin E Acetate), Disodium EDTA,
         Ethylhexylglycerin, Hyaluronic Acid, Sodium Lauroyl Sarcosinate:
       </p>
@@ -54,17 +54,16 @@ import Produktknap from "../Produktknap.astro";
   </div>
 </section>
 
-<section>
+<section class="content-section">
   <h4>
-    I AM PURRIFIED it's a daily dose of purity, ensuring your skin feels as
+    I AM PURRIFIED is a daily dose of purity, ensuring your skin feels as
     radiant as your most cherished moments. Add it to your narrative for skin
     that's not just seen but celebrated.
   </h4>
-
   <Image class="hudtest3" src={hudtest3} alt="hudtest3" />
 </section>
 
-<section>
+<section class="content-section">
   <div>
     <h2 class="sec3">Discover Your Perfect Pair</h2>
   </div>
@@ -79,7 +78,6 @@ import Produktknap from "../Produktknap.astro";
       <h5 class="text">I AM YIN</h5>
       <p class="p text2">limited edition oil cleanser</p>
     </div>
-
     <div>
       <Image class="hudtest6" src={hudtest6} alt="hudtest6" />
       <h5>I AM HEALING</h5>
@@ -97,7 +95,6 @@ import Produktknap from "../Produktknap.astro";
     font-family: fahkwangMedium;
     src: url("/fonts/Fahkwang-Medium.ttf");
   }
-
   @font-face {
     font-family: PlayfairdisplayRegular;
     src: url("/fonts/PlayfairDisplay-Regular.ttf");
@@ -107,328 +104,218 @@ import Produktknap from "../Produktknap.astro";
     src: url("/fonts/Fahkwang-Regular.ttf");
   }
 
+  .baggrund {
+    padding: 20px;
+  }
+
+  .menu1,
+  .menu {
+    display: none;
+  }
+
+  .plads1 {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin: 20px 0;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+
+  .hudtest,
+  .hudtest2,
+  .hudtest3,
+  .hudtest4,
+  .hudtest5,
+  .hudtest6 {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+  }
+
+  .knap {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .content-section {
+    padding: 20px;
+    margin: 20px 0;
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 20px;
+  }
+
+  .line {
+    border-bottom: 2px solid black;
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  h2,
+  h4,
+  h5 {
+    font-family: "SackersGothic", sans-serif;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin: 20px 0;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin: 20px 0;
+  }
+
+  h4 {
+    font-size: 1rem;
+    margin: 20px 0;
+  }
+
+  h5 {
+    font-size: 1.25rem;
+    margin: 10px 0;
+  }
+
+  p {
+    font-size: 1rem;
+    margin: 10px 0;
+    line-height: 1.5;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .p {
+    text-align: center;
+  }
+
+  @media (max-width: 599px) {
+    .menu1 {
+      display: block;
+    }
+
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hudtest4,
+    .hudtest5,
+    .hudtest6 {
+      width: 80%;
+    }
+
+    .knap {
+      margin: 20px auto;
+    }
+  }
+
   @media (min-width: 1025px) {
     body {
       background-color: #f5f1eb;
+    }
+    .menu {
+      display: block;
     }
 
     .menu1 {
       display: none;
     }
-    .plads1 {
-      text-align: center;
-    }
-    h1 {
-      margin-top: 150px;
-      position: absolute;
-      text-align: center;
-      margin-left: 670px;
-    }
-    h3 {
-      margin-top: 208px;
-      position: absolute;
-      text-align: center;
-      margin-left: 730px;
-    }
-    .hudtest {
-      width: 1100px;
-      height: auto;
-      margin-top: 226px;
-      margin-left: 280px;
-    }
-    .knap {
-      margin-left: 1100px;
-      margin-top: -100px;
-    }
-    a {
-      text-decoration: none;
-      cursor: pointer;
-      color: black;
-    }
-    .hudtest2 {
-      width: 740px;
-    }
-    .break1 {
-      margin-top: 50px;
-    }
-    h2 {
-      text-align: center;
-      margin-top: 130px;
-      font-size: 30px;
-    }
-    p {
-      width: 500px;
-      margin-top: 256px;
-      margin-left: -193px;
-    }
-    .h3 {
-      margin-top: 165px;
-      margin-left: 912px;
-      font-size: 50px;
-    }
-    .text3 {
-      margin-top: 20px;
-    }
-    .flex {
-      display: flex;
+
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
     }
 
+    .hudtest {
+      width: 60%;
+      margin: 20px auto;
+    }
     .line {
       border-bottom: 2px solid black;
-      width: 63%;
-      margin-top: -620px;
-      margin-left: 900px;
-    }
-    .hudtest3 {
-      margin-top: 350px;
-      width: 100%;
-      height: 700px;
-    }
-    h4 {
+      width: 41%;
+      margin: 20px auto;
       position: absolute;
-      margin-left: 30px;
-      margin-top: 934px;
-      color: white;
-      width: 500px;
+      margin-top: -40%;
+      margin-left: 44%;
     }
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      margin-left: 150px;
-      margin-top: 150px;
+
+    .hudtest2 {
+      width: 50%;
+      margin-left: -11%;
     }
-    .hudtest4 {
-      width: 243px;
-      height: 420px;
+
+    .knap {
+      margin: 20px auto;
+      margin-left: 70%;
     }
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    h2,
+    h4,
+    h5 {
+      font-size: 2rem;
+    }
+    h2 {
+      margin-top: -130%;
+      margin-left: 55%;
+    }
+    h3 {
+      font-size: 50px;
+      margin-left: 59%;
+    }
+
+    p {
+      font-size: 1.25rem;
+    }
+    .hudtest4,
     .hudtest5,
     .hudtest6 {
-      width: 200px;
-      height: 400px;
+      width: 50%;
     }
-    .h2 {
+    .text3 {
+      font-size: 20px;
+      width: 600px;
+      margin-left: 60%;
       text-align: left;
-      margin-left: 14px;
     }
-    .p {
-      margin-left: 86px;
-      margin-bottom: 250px;
-      margin-top: 13px;
-      font-size: 20px;
+    .sec3 {
+      margin-top: 20px;
+      margin-left: 35%;
+      font-size: 35px;
     }
-    h5 {
-      margin-left: 20px;
-      font-family: fahkwangRegular;
-      font-size: 24px;
-    }
-    .text {
-      margin-left: 52px;
-    }
-    .text2 {
-      margin-left: -6px;
-    }
-  }
-
-  @media (min-width: 600px) and (max-width: 1024px) {
-    body {
-      background-color: #f5f1eb;
-    }
-
-    .menu {
-      display: none;
-    }
-    h1 {
-      margin-left: 50px;
-      margin-top: 50px;
-      font-size: 30px;
-    }
-    h3 {
-      margin-left: 140px;
-      margin-top: 5px;
-      font-size: 20px;
-    }
-    .knap {
-      margin-left: 1100px;
-      margin-top: -100px;
+    .tekst {
+      margin-left: 1%;
+      font-size: 25px;
     }
     a {
       text-decoration: none;
-      cursor: pointer;
-      color: black;
-    }
-
-    h4 {
-      position: absolute;
-      margin-top: 285px;
-      color: white;
-      width: 250px;
-      font-family: PlayfairdisplayRegular;
-      font-size: 14px;
-      margin-left: 20px;
-    }
-    .hudtest2 {
-      display: none;
-    }
-    .hudtest3 {
-      margin-top: 100px;
-      height: 300px;
-    }
-
-    .hudtest4 {
-      width: 169px;
-      height: 293px;
-      margin-left: 147px;
-    }
-    .hudtest5,
-    .hudtest6 {
-      width: 150px;
-      height: 270px;
-      margin-left: 147px;
-    }
-
-    .text3 {
-      width: 350px;
-      margin-top: 10px;
-    }
-    p {
-      margin-left: 50px;
-      width: 350px;
-      margin-top: 30px;
-      font-size: 14px;
-    }
-    .h3 {
-      margin-left: 50px;
-      margin-left: 26px;
-      margin-top: 50px;
-    }
-    h2 {
-      text-align: center;
-      margin-top: 50px;
-    }
-    .h3 {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 50px;
-    }
-    h5 {
-      margin-left: 170px;
-    }
-    .p {
-      text-align: center;
-      margin-bottom: 60px;
-      margin-top: 10px;
-    }
-    .text {
-      margin-left: 190px;
-    }
-    .h2 {
-      font-family: SackersGothic;
-      font-size: 30px;
-    }
-    h5 {
-      font-family: fahkwangRegular;
-    }
-  }
-
-  @media (max-width: 599px) {
-    body {
-      background-color: #f5f1eb;
-    }
-
-    .menu {
-      display: none;
-    }
-    h1 {
-      margin-left: 50px;
-      margin-top: 50px;
-      font-size: 30px;
-    }
-    h3 {
-      margin-left: 140px;
-      margin-top: 5px;
-      font-size: 20px;
-    }
-    .h2 {
-    }
-
-    h4 {
-      position: absolute;
-      margin-top: 285px;
-      color: white;
-      width: 250px;
-      font-family: PlayfairdisplayRegular;
-      font-size: 14px;
-      margin-left: 20px;
-    }
-    .hudtest2 {
-      display: none;
-    }
-    .hudtest3 {
-      margin-top: 100px;
-      height: 300px;
-    }
-
-    .hudtest4 {
-      width: 169px;
-      height: 293px;
-      margin-left: 147px;
-    }
-    .hudtest5,
-    .hudtest6 {
-      width: 150px;
-      height: 270px;
-      margin-left: 147px;
-    }
-
-    .text3 {
-      width: 350px;
-      margin-top: 10px;
-    }
-    p {
-      margin-left: 50px;
-      width: 350px;
-      margin-top: 30px;
-      font-size: 14px;
-    }
-    .h3 {
-      margin-left: 50px;
-      margin-left: 26px;
-      margin-top: 50px;
-    }
-    h2 {
-      text-align: center;
-      margin-top: 50px;
-    }
-    .h3 {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 50px;
-    }
-    h5 {
-      margin-left: 170px;
-    }
-    .p {
-      text-align: center;
-      margin-bottom: 60px;
-      margin-top: 10px;
-    }
-    .text {
-      margin-left: 190px;
-    }
-    .h2 {
-      font-family: SackersGothic;
-      font-size: 30px;
-    }
-    h5 {
-      font-family: fahkwangRegular;
-    }
-    .knap {
-      margin-left: 80px;
-    }
-    a {
-      text-decoration: none;
-      cursor: pointer;
-      color: black;
     }
   }
 </style>

@@ -10,17 +10,42 @@
     font-family: SackersGothic;
     src: url("/fonts/SackersGothicStdLight.ttf");
   }
-  .line {
-    border-bottom: 2px solid black;
-    width: 100%;
+
+  @media (min-width: 1025px) {
+    .line {
+      border-bottom: 2px solid black;
+      width: 100%;
+    }
+    section {
+      position: absolute;
+      margin-top: 120px;
+      margin-left: 130px;
+    }
+    p {
+      font-family: SackersGothic;
+      font-size: 20px;
+    }
   }
-  section {
-    position: absolute;
-    margin-top: 120px;
-    margin-left: 130px;
+  @media (min-width: 600px) and (max-width: 1024px) {
+    .line {
+      border-bottom: 2px solid black;
+      width: 45%;
+    }
+
+    p {
+      font-family: SackersGothic;
+      font-size: 25px;
+    }
   }
-  p {
-    font-family: SackersGothic;
-    font-size: 20px;
+  @media (max-width: 599px) {
+    .line {
+      border-bottom: 2px solid black;
+      width: 60%;
+    }
+
+    p {
+      font-family: SackersGothic;
+      font-size: 20px;
+    }
   }
 </style>

@@ -22,17 +22,18 @@ import Produktknap from "./Produktknap.astro";
   <div class="menu1"><Menumobil /></div>
   <div class="menu"><Menu /></div>
 </section>
-<section>
+
+<section class="product-section">
   <div class="grid">
-    <div>
+    <div class="product-images">
       <Image class="produkt1" src={pro1} alt="produkt1" />
       <Image class="produkt2" src={pro2} alt="produkt2" />
       <Image class="produkt3" src={pro3} alt="produkt3" />
     </div>
-    <div>
+    <div class="main-image">
       <Image class="shop1" src={pro} alt="shop1" />
     </div>
-    <div>
+    <div class="product-details">
       <h1>I AM PURIFIED</h1>
       <p class="p1">
         Our "I AM Bundles" offer includes our luxurious Body oil, our gentle yet
@@ -45,11 +46,9 @@ import Produktknap from "./Produktknap.astro";
         <Image class="stjerne" src={stjerne} alt="stjerne" />
         <Image class="stjerne" src={stjerne} alt="stjerne" />
         <Image class="stjerne" src={stjerne} alt="stjerne" />
-
         <p class="p2">10 reviews</p>
       </div>
-      <p>225,00 DKK</p>
-
+      <p class="pris">225,00 DKK</p>
       <div class="boks">
         <p class="boks1">- 1 +</p>
       </div>
@@ -64,13 +63,13 @@ import Produktknap from "./Produktknap.astro";
       <div class="line2"></div>
       <h3>Key ingredients</h3>
       <p>
-        Raspberry Seed Oil, Kalahari Melon Seed Oil,Nourishing Pequi Oil,
+        Raspberry Seed Oil, Kalahari Melon Seed Oil, Nourishing Pequi Oil,
         Balancing Squalene, Pequi Oil, Vitamin-E Non GMO.
       </p>
     </div>
   </div>
 
-  <section>
+  <section class="how-to-use">
     <div class="grid_1-1">
       <div>
         <Image class="produkt4" src={pro4} alt="produkt4" />
@@ -84,7 +83,7 @@ import Produktknap from "./Produktknap.astro";
         <div class="line3"></div>
         <h5>Some of the skin loving benefits:</h5>
         <p class="p4">
-          Rich in antioxidants and Vitamin C, reduces redness,and protects
+          Rich in antioxidants and Vitamin C, reduces redness, and protects
           against environmental damage. Enhances skin elasticity and supports a
           healthy skin barrier, leaving the skin fresh and revitalized. Smoothes
           irritated skin and promotes the skin's natural healing.
@@ -98,7 +97,8 @@ import Produktknap from "./Produktknap.astro";
       </div>
     </div>
   </section>
-  <section>
+
+  <section class="other-customers">
     <div>
       <h2>OTHER CUSTOMER BOUGHT</h2>
       <div class="flex2">
@@ -126,285 +126,185 @@ import Produktknap from "./Produktknap.astro";
       font-family: ZapfHumanist;
       src: url("/fonts/ZapfHumanist601Regular.ttf");
     }
-    @media (min-width: 1025px) {
-      body {
-        background-color: #f5f1eb;
-      }
-      a {
-        text-decoration: none;
-        color: black;
-      }
-      .menu1 {
-        display: none;
-      }
-      .menu {
-        margin-left: 30px;
-        margin-top: 50px;
-      }
-      .produkt1,
-      .produkt2,
-      .produkt3 {
-        width: 100px;
-        display: flex;
-        margin-left: 50px;
-        margin-top: 50px;
-      }
-      .shop1 {
-        width: 500px;
-        margin-left: -150px;
-      }
-      .grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-      }
-      .stjerne {
-        width: 15px;
-        height: 15px;
-      }
-      .boks {
-        border: 1px solid black;
-        width: 60px;
-        margin-top: 10px;
-      }
-      .boks1 {
-        text-align: center;
-      }
-      .p3 {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 20px;
-      }
-      .line {
-        border-bottom: 2px solid black;
-        width: 70%;
-        margin-bottom: 10px;
-      }
-      .line2 {
-        border-bottom: 1px solid black;
-        width: 70%;
-        margin-bottom: 10px;
-        margin-top: 10px;
-      }
-      .produkt4 {
-        width: 800px;
-        height: auto;
-        margin-top: 150px;
-      }
-      .grid_1-1 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-      }
-      .flex {
-        display: flex;
-        gap: 100px;
-      }
-      .produkt5,
-      .produkt6,
-      .produkt7,
-      .produkt8 {
-        width: 100px;
-      }
-      .flex2 {
-        display: flex;
-        gap: 250px;
-      }
-      .flex3 {
-        display: flex;
-        gap: 5px;
-      }
-      .shop3,
-      .shop5,
-      .shop6 {
-        width: 300px;
-        height: auto;
-        margin-left: 40px;
-        margin-top: 150px;
-      }
-      h1 {
-        margin-top: 90px;
-        font-size: 36px;
-      }
-      .p1 {
-        width: 380px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 20px;
-      }
-      .stjerne {
-        margin-bottom: 10px;
-        margin-top: 20px;
-      }
-      .p2 {
-        margin-bottom: 10px;
-        font-size: 20px;
-        margin-top: 15px;
-        margin-left: 10px;
-      }
-      h3 {
-        margin-top: 10px;
-        margin-bottom: 10px;
-      }
-      h4 {
-        margin-top: 150px;
-        margin-left: 50px;
-      }
-      h5 {
-        width: 400px;
-        margin-left: 50px;
-      }
-      .line3 {
-        border-bottom: 1px solid black;
-        width: 70%;
-        margin-bottom: 10px;
-        margin-left: 50px;
-        margin-top: 10px;
-      }
-      .p4 {
-        margin-left: 50px;
-        width: 500px;
-        margin-bottom: 40px;
-      }
-      p {
-        font-size: 20px;
-        width: 500px;
-      }
+    body {
+      background-color: #f5f1eb;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+    }
+    .menu1 {
+      display: none;
+    }
+    .menu {
+      margin-left: 30px;
+      margin-top: 50px;
+    }
+    .product-section {
+      padding: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+    }
+    .product-images,
+    .main-image,
+    .product-details {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    @media (max-width: 599px) {
-      body {
-        background-color: #f5f1eb;
-      }
-      a {
-        text-decoration: none;
-        color: black;
-      }
-      .menu {
-        display: none;
-      }
+    .produkt1,
+    .produkt2,
+    .produkt3 {
+      width: 15vh;
+      margin: 3vh;
+    }
+    .shop1 {
+      width: 40vh;
+      margin-left: -30vh;
+      margin-top: 10vh;
+    }
+    .stjerne {
+      width: 15px;
+      height: 15px;
+      margin-left: -47px;
+    }
+    .boks {
+      border: 1px solid black;
+      width: 70px;
+      margin-top: 10px;
+      text-align: center;
+    }
+    .p3 {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+    .line,
+    .line2,
+    .line3 {
+      border-bottom: 1px solid black;
+      width: 70%;
+      margin: 10px 0;
+    }
+    .produkt4 {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      margin-top: 150px;
+    }
+    .grid_1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .flex {
+      display: flex;
+      gap: 20px;
+    }
+    .produkt5,
+    .produkt6,
+    .produkt7,
+    .produkt8 {
+      width: 100px;
+    }
+    .flex2 {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .flex3 {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+    }
+    .shop3,
+    .shop5,
+    .shop6 {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      margin-top: 150px;
+    }
+    h1 {
+      margin-top: 90px;
+      font-size: 36px;
+      margin-left: -150px;
+    }
+    .p1 {
+      margin: 10px 0;
+      font-size: 20px;
+      width: 418px;
+    }
+    h4,
+    h5,
+    p {
+      margin-left: 50px;
+      width: 100%;
+      max-width: 500px;
+    }
 
-      .menu1 {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-      }
-
-      .produkt1,
-      .produkt2,
-      .produkt3 {
-        width: 200px;
-        display: flex;
-        margin-left: 50px;
-        margin-top: 150px;
-      }
-      .shop1 {
-        width: 800px;
-        margin-top: 250px;
-      }
+    p {
+      margin-left: 137px;
+      font-size: 24px;
+    }
+    .pris {
+      margin-top: 20px;
+      font-size: 30px;
+    }
+    .boks1 {
+      margin-left: 3px;
+    }
+    .boks {
+      margin-left: -300px;
+    }
+    @media (max-width: 1024px) {
       .grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-      }
-      .stjerne {
-        width: 15px;
-        height: 15px;
-      }
-      .boks {
-        border: 1px solid black;
-        width: 60px;
-        margin-top: 10px;
-      }
-      .boks1 {
-        text-align: center;
-      }
-      .p3 {
-        margin-top: 10px;
-        margin-bottom: 10px;
-      }
-      .line {
-        border-bottom: 2px solid black;
-        width: 70%;
-        margin-bottom: 10px;
-      }
-      .line2 {
-        border-bottom: 1px solid black;
-        width: 70%;
-        margin-bottom: 10px;
-        margin-top: 10px;
-      }
-      .produkt4 {
-        width: 600px;
-        height: auto;
-        margin-top: 150px;
+        grid-template-columns: 1fr;
       }
       .grid_1-1 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
       }
-      .flex {
-        display: flex;
-        gap: 100px;
-      }
-      .produkt5,
-      .produkt6,
-      .produkt7,
-      .produkt8 {
-        width: 100px;
-      }
-      .flex2 {
-        display: flex;
-        gap: 250px;
-      }
-      .flex3 {
-        display: flex;
-        gap: 5px;
-      }
+      .produkt4,
+      .shop1,
       .shop3,
       .shop5,
       .shop6 {
-        width: 300px;
-        height: auto;
-        margin-left: 40px;
-        margin-top: 150px;
+        margin: 0 auto;
       }
-      h1 {
-        margin-top: 190px;
+    }
+    @media (max-width: 599px) {
+      .menu {
+        display: none;
       }
-      .p1 {
-        width: 380px;
-        margin-top: 10px;
-        margin-bottom: 10px;
+      .menu1 {
+        display: block;
       }
-      .stjerne {
-        margin-bottom: 10px;
+      .produkt1,
+      .produkt2,
+      .produkt3,
+      .produkt4,
+      .shop1,
+      .shop3,
+      .shop5,
+      .shop6 {
+        width: 100%;
       }
-      .p2 {
-        margin-bottom: 10px;
-      }
-      h3 {
-        margin-top: 10px;
-        margin-bottom: 10px;
-      }
+      .p1,
+      h5,
+      p,
       h4 {
-        margin-top: 150px;
-        margin-left: 50px;
-      }
-      h5 {
-        width: 400px;
-        margin-left: 50px;
-      }
-      .line3 {
-        border-bottom: 1px solid black;
-        width: 70%;
-        margin-bottom: 10px;
-        margin-left: 50px;
-        margin-top: 10px;
-      }
-      .p4 {
-        margin-left: 50px;
-        width: 500px;
-        margin-bottom: 40px;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 380px;
       }
     }
   </style>

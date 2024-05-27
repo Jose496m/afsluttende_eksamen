@@ -25,6 +25,10 @@ const { variant } = Astro.props;
     src: url("/fonts/ZapfHumanist601Regular.ttf");
   }
   @media (min-width: 1025px) {
+    nav {
+      position: relative;
+      margin-top: 2%;
+    }
     ul {
       display: flex;
       align-items: center;
@@ -40,7 +44,7 @@ const { variant } = Astro.props;
       flex-direction: row;
       justify-content: end;
       align-items: center;
-      gap: 12px;
+      margin-left: -10%;
     }
     a {
       text-decoration: none;
@@ -50,10 +54,12 @@ const { variant } = Astro.props;
     .bag {
       width: 40px;
       height: auto;
+      margin-left: -50%;
     }
     .logo {
       width: 60px;
       height: auto;
+      margin-left: 30%;
     }
   }
 </style>

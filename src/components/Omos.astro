@@ -218,7 +218,7 @@ import Menumobil from "./Menumobil.astro";
     }
 
     .menu1 {
-      position: absolute;
+      position: relative;
       top: 0;
       left: 0;
       width: 100%;
@@ -332,123 +332,144 @@ import Menumobil from "./Menumobil.astro";
     }
   }
 
-  @media screen and (max-width: 800px) {
+  @media (max-width: 599px) {
     .menu {
       display: none;
     }
 
     .menu1 {
-      position: absolute;
+      position: relative;
       top: 0;
       left: 0;
       width: 100%;
       z-index: 1000; /* Sørg for, at Menumobil er øverst */
     }
+
     .baggrundsfarve {
       background-color: #46433b;
-      width: 400px;
-      height: 850px;
-      /*padding: 374px;*/
-      margin-top: 950px;
+      width: 100%;
+      height: auto;
+      padding: 20px;
+      margin-top: 600px;
     }
+
     h1 {
       color: white;
       font-size: 30px;
-      /*margin-left: -295px;*/
       margin-left: 50px;
-      padding-top: 150px;
     }
+
     .about {
       color: white;
       font-size: 19px;
       width: 300px;
       margin-top: 50px;
-      /*margin-left: -300px;*/
-      margin-left: 50px;
+      margin-left: 10%;
     }
+
     .abouthero {
       height: 550px;
-      width: 400px;
+      width: 100%;
+      margin-top: -16%;
     }
-    /* .illustration {
-      width: 1710px;
-      height: 360px;
-    }*/
 
     .baggrund {
+      padding: 20px;
     }
+
     .about2 {
-      margin-top: -35%;
-      width: 400px;
-      height: 330px;
+      margin-top: -11%;
+      width: 100%;
+      height: auto;
     }
+
     .color {
-      margin-left: 50px;
-      font-size: 30;
-      margin-top: -1750px;
+      margin-left: 5%;
+      font-size: 30px;
+      margin-top: -1325px;
     }
+
     .color1 {
-      width: 300px;
-      margin-left: 50px;
+      width: 307px;
       margin-bottom: 125px;
-      margin-top: 50px;
-      font-size: 20px;
+      margin-top: 35px;
+      font-size: 16px;
+      line-height: 25px;
+      margin-left: 5%;
     }
+
     .center {
-      /*text-align: center;
-      margin-left: 550px;*/
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
     }
+
     .value {
       text-align: center;
-      margin-left: -43px;
+      margin-left: auto;
+      margin-right: auto;
       color: black;
       font-size: 19px;
       margin-top: 50px;
       margin-bottom: 50px;
       width: 300px;
     }
+
     .value2 {
       margin-top: 50px;
       color: black;
       font-size: 30px;
+      text-align: center;
     }
+
     .center1 {
       background-color: #46433b;
       color: white;
       padding-top: 20%;
-      margin-left: 50px;
-      font-size: 20;
+      margin-left: 5%;
+      font-size: 20px;
       margin-top: -10px;
     }
+
     .about4 {
       background-color: #46433b;
       color: white;
       width: 300px;
-      margin-left: 50px;
+      margin-left: 5%;
       font-size: 19px;
       margin-bottom: 100px;
       margin-top: 50px;
     }
+
     .about3 {
-      width: 400px;
-      height: 400px;
+      width: 100%;
+      height: auto;
     }
+
     .baggrund1 {
-      height: 725px;
+      height: auto;
       background-color: #46433b;
-      width: 400px;
-      margin-bottom: 40%;
+      width: 100%;
+      padding: 20px;
     }
+
     .about5 {
-      position: absolute;
+      position: relative;
       margin-left: 40px;
-      margin-top: 780px;
+      margin-top: 10%;
       width: 300px;
+      margin-bottom: 10%;
     }
+
     .baggrund2 {
-      padding: 100px;
-      width: 300px;
+      padding: 20px;
+      width: 100%;
       margin-top: -5px;
+    }
+
+    .flex,
+    .flex1 {
+      display: block;
     }
   }
 </style>

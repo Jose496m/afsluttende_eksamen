@@ -76,24 +76,30 @@ import Produktknap from "./Produktknap.astro";
   <h2 class="produkter">OTHER PRODUCTS</h2>
   <div class="produkt">
     <div>
-      <Image class="pic2" src={pro3} alt="pro1" />
-      <p class="tekst">I AM HEALING <br /> FACE OIL <br /> 415 kr</p>
+      <Image class="pic2 picture" src={pro3} alt="pro1" />
+      <div>
+        <p class="tekst">I AM HEALING <br /> FACE OIL <br /> 415 kr</p>
+      </div>
     </div>
     <div>
       <Image class="pic2" src={pro1} alt="pro1" />
-      <p class="tekst">
-        I AM PURIFIED <br />
-        FACE WASH <br />
-        225 kr
-      </p>
+      <div>
+        <p class="tekst">
+          I AM PURIFIED <br />
+          FACE WASH <br />
+          225 kr
+        </p>
+      </div>
     </div>
     <div>
       <Image class="pic2" src={pro2} alt="pro1" />
-      <p class="tekst">
-        I AM NOURISHED <br />
-        BODY OIL <br />
-        355 kr
-      </p>
+      <div>
+        <p class="tekst">
+          I AM NOURISHED <br />
+          BODY OIL <br />
+          355 kr
+        </p>
+      </div>
     </div>
   </div>
 </section>
@@ -354,6 +360,7 @@ import Produktknap from "./Produktknap.astro";
       margin: 0 auto;
       margin-left: 22vh;
     }
+
     .hero {
       width: 73%;
       margin: 0 auto;
@@ -366,6 +373,8 @@ import Produktknap from "./Produktknap.astro";
       text-align: center;
       width: 700px;
       margin-left: 5%;
+      margin-top: 10%;
+      margin-bottom: 10%;
     }
     .bestseller {
       flex-direction: column;
@@ -373,13 +382,12 @@ import Produktknap from "./Produktknap.astro";
     .bestseller1 {
       text-align: center;
       background-color: #46433b;
-      padding: 35px;
-      width: 724px;
-      margin-left: -33px;
+      padding: 56px;
+      width: 100%;
     }
     .best {
       font-size: 8vw;
-      margin-left: -14vh;
+      text-align: left;
     }
     .bestseller2 {
       width: 100%;
@@ -388,6 +396,7 @@ import Produktknap from "./Produktknap.astro";
     }
     .bestseller3 {
       font-size: 5vw;
+      text-align: left;
     }
     .produkt {
       flex-direction: column;
@@ -397,6 +406,7 @@ import Produktknap from "./Produktknap.astro";
       font-size: 6vw;
       margin-top: 20px;
       margin-bottom: 50px;
+      margin-bottom: 40%;
     }
     .flex {
       display: flex;
@@ -415,7 +425,6 @@ import Produktknap from "./Produktknap.astro";
       width: 100%;
       height: auto;
       margin-top: 0;
-      margin-left: -2vh;
     }
     .produkter {
       text-align: center;
@@ -424,12 +433,9 @@ import Produktknap from "./Produktknap.astro";
       margin: 20px 0;
     }
     .pic2 {
-      width: 50vh;
-      margin-left: 11vh;
-    }
-    .land {
-      width: 366px;
-      height: auto;
+      width: 50%;
+      margin-left: 25%;
+      margin-top: 15%;
     }
   }
 

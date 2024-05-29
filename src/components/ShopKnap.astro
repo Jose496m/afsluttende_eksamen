@@ -1,6 +1,6 @@
 <section>
   <div>
-    <h6>SEE DETAILS</h6>
+    <h6 class="hover-text">SEE DETAILS</h6>
   </div>
   <div class="line"></div>
 </section>
@@ -13,6 +13,7 @@
   .line {
     border-bottom: 2px solid black;
     width: 100%;
+    transition: border-color 0.3s ease; /* Tilføjer en transition for glidende effekt */
   }
   section {
     position: absolute;
@@ -22,6 +23,13 @@
   h6 {
     font-family: SackersGothic;
     font-size: 13px;
+    transition: color 0.3s ease; /* Tilføjer en transition for glidende effekt */
+  }
+  section:hover .hover-text {
+    color: #a2a2a2; /* Hover farve for teksten */
+  }
+  section:hover .line {
+    border-color: #a2a2a2; /* Hover farve for stregen */
   }
 
   @media (max-width: 599px) {

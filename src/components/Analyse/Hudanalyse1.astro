@@ -125,6 +125,7 @@ import HudAnalyseKnap from "./HudAnalyseKnap.astro";
       text-decoration: none;
       cursor: pointer;
       color: black;
+      transition: color 0.3s ease; /* Tilføjer en transition for glidende effekt */
     }
     .button2 {
       width: 200px;
@@ -137,6 +138,10 @@ import HudAnalyseKnap from "./HudAnalyseKnap.astro";
       margin-bottom: 70px;
       margin-top: -30px;
       margin-left: 43%;
+      transition: color 0.3s ease; /* Tilføjer en transition for glidende effekt */
+    }
+    .button2:hover {
+      color: #393939; /* Sort farve ved hover */
     }
     .button2::after {
       content: "";
@@ -146,8 +151,14 @@ import HudAnalyseKnap from "./HudAnalyseKnap.astro";
       bottom: -2px; /* Juster afstanden fra teksten */
       height: 2px; /* Juster tykkelsen af linjen */
       background-color: black; /* Juster farven på linjen */
+      transition: background-color 0.3s ease; /* Tilføjer en transition for glidende effekt */
     }
-
+    .button2:hover::after {
+      background-color: #a2a2a2; /* Grå farve ved hover */
+    }
+    .button2:hover .next {
+      color: #a2a2a2; /* Grå farve */
+    }
     .next {
       font-family: fahkwangLight;
       font-size: 22px;

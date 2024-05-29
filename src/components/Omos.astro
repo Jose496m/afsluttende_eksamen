@@ -7,6 +7,7 @@ import about5 from "../assets/images/about5.png";
 import about4 from "../assets/images/about4.png";
 import Menu from "./Menu.astro";
 import Menumobil from "./Menumobil.astro";
+import Omosknap from "./Omosknap.astro";
 ---
 
 <section>
@@ -18,17 +19,16 @@ import Menumobil from "./Menumobil.astro";
     <p class="about">
       We met in Copenhagen November 2019. Nelle, a holistic beauty expert, and
       Blake, a photographer, both entrepreneurs sharing the same mission: to
-      bring more pleasure, presence, and nature into people’s lives. Quickly
+      bring more pleasure, presence, and nature into people's lives. Quickly
       discovering our commonalities, we realized we were living parallel lives,
       navigating life's profound questions, and always finding our way back to
-      our essence through nature. 
+      our essence through nature.
       <br />
-      <br /> As partners, our mission and desires grew clearer over the years.
-      We aimed to craft products that nurture a profound connection with
-      oneself, elevating daily life by bringing more pleasure to the everyday
-      experience through nature's enchanting ingredients. Our products transcend
-      gender, race, skin color, and age, focusing on the essence of the human
-      being.
+      <br />As partners, our mission and desires grew clearer over the years. We
+      aimed to craft products that nurture a profound connection with oneself,
+      elevating daily life by bringing more pleasure to the everyday experience
+      through nature's enchanting ingredients. Our products transcend gender,
+      race, skin color, and age, focusing on the essence of the human being.
     </p>
   </div>
 </section>
@@ -86,8 +86,11 @@ import Menumobil from "./Menumobil.astro";
       <br />
       Say goodbye to guesswork and hello to glowing, radiant skin! With just a few
       simple questions, you'll be on your way to discovering the skincare solution
-      you've been dreaming of.So why wait?
+      you've been dreaming of so why wait?
     </p>
+    <div class="knap">
+      <a href="/Hudanalyse/analyse"><Omosknap /></a>
+    </div>
   </div>
 </section>
 
@@ -109,7 +112,10 @@ import Menumobil from "./Menumobil.astro";
     .hidden {
       display: none;
     }
-
+    .knap {
+      margin-left: 2%;
+      margin-top: -8%;
+    }
     .abouthero {
       height: 1300px;
       width: 100%;

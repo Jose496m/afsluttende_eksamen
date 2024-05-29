@@ -1,0 +1,43 @@
+<section>
+  <div>
+    <h6 class="hover-text">TAKE THE TEST HERE</h6>
+  </div>
+  <div class="line"></div>
+</section>
+
+<style>
+  @font-face {
+    font-family: SackersGothic;
+    src: url("/fonts/SackersGothicStdLight.ttf");
+  }
+  .line {
+    border-bottom: 2px solid white;
+    width: 144%;
+    transition: border-color 0.3s ease;
+    margin-top: 3%;
+  }
+  section {
+    position: absolute;
+    margin-top: 120px;
+    margin-left: 120px;
+  }
+  h6 {
+    font-family: SackersGothic;
+    font-size: 13px;
+    color: white; /* Sætter teksten til hvid som standard */
+    transition: color 0.3s ease; /* Tilføjer en transition for glidende effekt */
+  }
+  section:hover .hover-text {
+    color: #a2a2a2; /* Hover farve for teksten */
+  }
+  section:hover .line {
+    border-color: #a2a2a2; /* Hover farve for stregen */
+  }
+
+  @media (max-width: 599px) {
+    section {
+      margin-top: 115px;
+      margin-left: 95px;
+    }
+  }
+</style>

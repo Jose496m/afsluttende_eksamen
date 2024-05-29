@@ -89,27 +89,6 @@ import Input from "./Input.astro";
     src: url("/fonts/ZapfHumanist601Regular.ttf");
   }
 
-  body {
-    background-color: #f5f1eb;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  .header {
-    flex: 0 0 auto;
-  }
-  .main-section {
-    flex: 1 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .footer {
-    flex: 0 0 auto;
-  }
   @media (min-width: 1025px) {
     .menu1 {
       display: none;
@@ -137,10 +116,18 @@ import Input from "./Input.astro";
     .white-side {
       flex: 2;
       background-color: #e7dfd4;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-bottom: 20px;
     }
     .black-side {
       flex: 2;
       background-color: #1d1d1d;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-bottom: 20px;
     }
     .flex {
       display: flex;

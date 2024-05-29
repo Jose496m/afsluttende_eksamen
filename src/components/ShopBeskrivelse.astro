@@ -109,18 +109,18 @@ import Produktknap from "./Produktknap.astro";
       <div class="flex2">
         <div>
           <Image class="shop3" src={shop3} alt="shop3" />
-          <p>I AM YIN</p>
-          <p>limited edition oil cleanser</p>
+          <p class="p8">I AM YIN</p>
+          <p class="p11">Limited edition oil cleanser</p>
         </div>
         <div>
           <Image class="shop6" src={shop6} alt="shop6" />
-          <p>I AM NOURISHED</p>
-          <p>body oil</p>
+          <p class="p9">I AM NOURISHED</p>
+          <p class="p12">Body oil</p>
         </div>
         <div>
           <Image class="shop5" src={shop5} alt="shop5" />
-          <p>I AM HEALING</p>
-          <p>face oil</p>
+          <p class="p10">I AM HEALING</p>
+          <p class="p13">Face oil</p>
         </div>
       </div>
     </div>
@@ -232,9 +232,10 @@ import Produktknap from "./Produktknap.astro";
     }
     .flex2 {
       display: flex;
-      gap: 20px;
+      gap: 40px;
       flex-wrap: wrap;
       justify-content: center;
+      margin-left: 8%;
     }
     .flex3 {
       display: flex;
@@ -345,6 +346,47 @@ import Produktknap from "./Produktknap.astro";
       .line3 {
         margin-left: 7%;
         width: 70%;
+      }
+      h2 {
+        margin-left: 10%;
+        margin-top: 10%;
+      }
+      .shop3 {
+        width: 60%;
+      }
+      .shop5 {
+        width: 67%;
+        margin-top: 23%;
+        height: 57%;
+        margin-left: 5%;
+      }
+      .shop6 {
+        width: 70%;
+        height: 54%;
+        margin-top: 28%;
+      }
+      .p8,
+      .p9,
+      .p10 {
+        font-family: fahkwangRegular;
+      }
+      .p8 {
+        margin-left: 20%;
+      }
+      .p9 {
+        margin-left: 10%;
+      }
+      .p10 {
+        margin-left: 20%;
+      }
+      .p11 {
+        margin-left: 0%;
+      }
+      .p12 {
+        margin-left: 24%;
+      }
+      .p13 {
+        margin-left: 31%;
       }
     }
     @media (max-width: 599px) {

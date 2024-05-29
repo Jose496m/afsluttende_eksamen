@@ -64,7 +64,7 @@ import Produktknap from "./Produktknap.astro";
       <h3>Skin feel</h3>
       <p>Radiant, nourished, healthy and youthfull.</p>
       <div class="line2"></div>
-      <h3>Key ingredients</h3>
+      <h3 class="key">Key ingredients</h3>
       <p>
         Raspberry Seed Oil, Kalahari Melon Seed Oil, Nourishing Pequi Oil,
         Balancing Squalene, Pequi Oil, Vitamin-E Non GMO.
@@ -188,15 +188,16 @@ import Produktknap from "./Produktknap.astro";
     .p3 {
       margin-top: 10px;
       margin-bottom: 10px;
-      font-size: 20px;
-      margin-left: 14%;
+      font-size: 18px;
+      margin-left: 10%;
     }
     .line,
     .line2,
     .line3 {
       border-bottom: 1px solid black;
-      width: 70%;
+      width: 60%;
       margin: 10px 0;
+      margin-left: -29%;
     }
     .produkt4 {
       width: 100%;
@@ -289,6 +290,13 @@ import Produktknap from "./Produktknap.astro";
       }
       .knap {
         margin-left: -29%;
+      }
+      h3 {
+        margin-left: -71%;
+        margin-top: 2%;
+      }
+      .key {
+        margin-left: -54%;
       }
     }
     @media (max-width: 599px) {

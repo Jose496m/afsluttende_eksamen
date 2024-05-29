@@ -172,6 +172,7 @@ import Produktknap from "./Produktknap.astro";
       width: 15px;
       height: 15px;
       margin-left: -47px;
+      margin-top: 20px;
     }
     .boks {
       border: 1px solid black;
@@ -236,11 +237,7 @@ import Produktknap from "./Produktknap.astro";
       font-size: 36px;
       margin-left: -150px;
     }
-    .p1 {
-      margin: 10px 0;
-      font-size: 20px;
-      width: 418px;
-    }
+
     h4,
     h5,
     p {
@@ -250,8 +247,9 @@ import Produktknap from "./Produktknap.astro";
     }
 
     p {
-      margin-left: 137px;
-      font-size: 20px;
+      margin-left: 150px;
+      font-size: 16px;
+      margin-top: 20px;
     }
     .pris {
       margin-top: 20px;
@@ -264,9 +262,9 @@ import Produktknap from "./Produktknap.astro";
     .boks {
       margin-left: -300px;
     }
-    @media (max-width: 1024px) {
+    @media (min-width: 1025px) {
       .grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
       }
       .grid_1-1 {
         grid-template-columns: 1fr;
@@ -277,6 +275,11 @@ import Produktknap from "./Produktknap.astro";
       .shop5,
       .shop6 {
         margin: 0 auto;
+      }
+      .p1 {
+        margin-left: -13%;
+        font-size: 16px;
+        width: 354px;
       }
     }
     @media (max-width: 599px) {

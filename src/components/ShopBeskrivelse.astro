@@ -59,15 +59,15 @@ import Produktknap from "./Produktknap.astro";
       <p class="p3">Free shipping in EU above 499 DKK</p>
       <div class="line"></div>
       <h3>Suited to</h3>
-      <p class="p2">
+      <p class="p6">
         Oily, combination and open-pored skin, warm and humid climates
       </p>
       <div class="line2"></div>
       <h3>Skin feel</h3>
-      <p class="p2">Radiant, nourished, healthy and youthfull.</p>
+      <p class="p6">Radiant, nourished, healthy and youthfull.</p>
       <div class="line2"></div>
       <h3 class="key">Key ingredients</h3>
-      <p class="p2">
+      <p class="p6">
         Raspberry Seed Oil, Kalahari Melon Seed Oil, Nourishing Pequi Oil,
         Balancing Squalene, Pequi Oil, Vitamin-E Non GMO.
       </p>
@@ -131,6 +131,16 @@ import Produktknap from "./Produktknap.astro";
       font-family: ZapfHumanist;
       src: url("/fonts/ZapfHumanist601Regular.ttf");
     }
+    @font-face {
+      font-family: fahkwangRegular;
+      src: url("/fonts/Fahkwang-Regular.ttf");
+    }
+
+    @font-face {
+      font-family: fahkwangMedium;
+      src: url("/fonts/Fahkwang-Medium.ttf");
+    }
+
     body {
       background-color: #f5f1eb;
     }
@@ -172,7 +182,7 @@ import Produktknap from "./Produktknap.astro";
     .stjerne {
       width: 15px;
       height: 15px;
-      margin-left: -50px;
+      margin-left: 4%;
       margin-top: 20px;
     }
     .boks {
@@ -272,7 +282,7 @@ import Produktknap from "./Produktknap.astro";
         grid-template-columns: 1fr 1fr 1fr;
       }
       .grid_1-1 {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
       }
       .produkt4,
       .shop1,
@@ -293,7 +303,7 @@ import Produktknap from "./Produktknap.astro";
         margin-left: -29%;
       }
       h3 {
-        margin-left: -71%;
+        margin-left: -70%;
         margin-top: 2%;
       }
       .key {
@@ -301,10 +311,28 @@ import Produktknap from "./Produktknap.astro";
       }
       .p2 {
         width: 350px;
-        margin-left: -12%;
+        margin-left: 4%;
       }
       .produkt4 {
-        width: 40%;
+        width: 100%;
+        margin-top: 10%;
+      }
+      .p6 {
+        width: 350px;
+        margin-left: -10%;
+      }
+      h4 {
+        font-family: fahkwangRegular;
+        font-size: 18px;
+        margin-top: 20%;
+      }
+      h5 {
+        font-family: fahkwangMedium;
+        font-size: 22px;
+      }
+      .line3 {
+        margin-left: 7%;
+        width: 70%;
       }
     }
     @media (max-width: 599px) {

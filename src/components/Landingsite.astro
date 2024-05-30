@@ -45,7 +45,7 @@ import Produktknap from "./Produktknap.astro";
   </div>
 </section>
 <section class="bestseller">
-  <div class="bestseller1">
+  <div class="bestseller1 baggrund">
     <h2 class="best">BEST SELLER</h2>
     <h3 class="bestseller3">I AM PURIFIED Cleansing Oil</h3>
     <p class="bestseller2">Some of the love-infused benefits:</p>
@@ -305,9 +305,10 @@ import Produktknap from "./Produktknap.astro";
       margin-left: 10%;
     }
     .bestseller2 {
-      width: 640px;
+      width: 555px;
       text-align: left;
       margin-left: 10%;
+      font-size: 16px;
     }
     .knap {
       margin-left: 10vh;
@@ -325,6 +326,16 @@ import Produktknap from "./Produktknap.astro";
       gap: 160px;
       align-items: center;
       margin: 30px;
+    }
+    .baggrund {
+      background-color: #46433b;
+      padding: 100px;
+      margin-left: -2%;
+    }
+    .pic1 {
+      margin-top: 15px;
+      width: 692px;
+      height: 694px;
     }
   }
 
@@ -378,6 +389,7 @@ import Produktknap from "./Produktknap.astro";
     }
     .bestseller {
       flex-direction: column;
+      padding: 0px;
     }
     .bestseller1 {
       text-align: center;
